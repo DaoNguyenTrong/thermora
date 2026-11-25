@@ -12,8 +12,8 @@ Product requirements and the technology stack are not defined yet: the work star
 | Path rules | `.claude/rules/*.md` (stack parts are `TODO(stack)`) |
 | Commands and skills | `.claude/commands/git-accept.md`; plugins `superpowers` and `release-kit` |
 | Guards | `.claude/settings.json` + `scripts/claude-bash-guard.ts`, `lefthook.yml`, commitlint, secretlint, branch protection |
-| Check scripts | `scripts/risk-tier.ts`, `check-comments.ts`, `check-personas.ts`, `check-prd-approval.ts`, `check-release-plan.ts`, `plane-sync.ts`, `test-gate.sh` (+ tests) |
-| CI and release | `.github/workflows/{ci,test,release,plane-sync}.yml`, `.claude/plane.example.json`, `.claude/release-kit.json`, `scripts/setup-branch-protection.sh` |
+| Check scripts | `scripts/risk-tier.ts`, `check-comments.ts`, `check-personas.ts`, `check-prd-approval.ts`, `check-release-plan.ts`, `test-gate.sh` (+ tests) |
+| CI and release | `.github/workflows/{ci,test,release}.yml`, `.claude/release-kit.json`, `scripts/setup-branch-protection.sh` |
 | Codex layer | `.codex/agents/*.toml`, `.codex/hooks.json`, `.agents/skills/` |
 
 ## How work flows
@@ -40,13 +40,4 @@ Still to do:
 4. Add an `AGENTS.md` inside each source directory listing the rule files that apply to it.
 5. Verify the symbol tools on that stack (`.claude/rules/serena.md`).
 
-## Turning Plane on (optional)
-
-Without `.claude/plane.json` every Plane step is skipped and story points and status live in `docs/process/progress.md`. To use Plane (`docs/process/lifecycle.md` § Plane):
-
-1. Create the project, its states, a `bug` label and your layer labels on Plane.
-2. Copy `.claude/plane.example.json` to `.claude/plane.json` and fill it in; delete the placeholder layer label. Remove the `.claude/plane.json` line from `.gitignore` and commit the file through a PR (it holds no secret; CI reads it from `dev`).
-3. Create a low-privilege bot account that belongs to that one project, and add its token as the repository secret `PLANE_API_KEY`. Anyone who can push a branch can read it. Never make `plane-sync` a required check.
-4. Choose the language of Plane content (the `TODO(team)` marker in `docs/process/lifecycle.md` § Plane).
-
-Only the session of a module's Owner writes to Plane (the Sprint owner's for the Cycle); subagents never do.
+Story points and status live in `docs/process/progress.md`; the project uses no external tracker.

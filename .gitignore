@@ -44,5 +44,3 @@ verify-output/
 
 # TODO(stack): add the stack's build output, generated code and secret-bearing config files
 
-# Plane config. A project that adopts Plane removes this line and commits the file: CI reads it from dev (README.md).
-.claude/plane.json

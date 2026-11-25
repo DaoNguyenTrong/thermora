@@ -31,7 +31,7 @@ The **source directories** are the code rows above (everything except `scripts/`
 | Release | Release manager | |
 | Escalations from `solution-architect` | business → PO; technical → Tech lead; security → Security owner | |
 
-A solo maintainer holds every role. Change logs record the role and name, e.g. `user decision (PO: <name>)`. Exactly one orchestrator owns a module or phase at a time (the *Owner* column of `docs/process/progress.md`); each member works in their own checkout. Only that Owner's session writes Plane and the module's `progress.md` rows, and subagents never call Plane; each sprint also names one Sprint owner, whose session handles velocity and the Cycle (`docs/process/lifecycle.md` § Plane, § Sprint loop).
+A solo maintainer holds every role. Change logs record the role and name, e.g. `user decision (PO: <name>)`. Exactly one orchestrator owns a module or phase at a time (the *Owner* column of `docs/process/progress.md`); each member works in their own checkout. Only that Owner's session writes the module's `progress.md` rows; each sprint also names one Sprint owner, whose session handles velocity and the *Sprint* row (`docs/process/lifecycle.md` § Sprint loop).
 
 <!-- TODO(team): the names behind each role. -->
 

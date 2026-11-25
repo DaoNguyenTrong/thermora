@@ -2,6 +2,10 @@
 
 Log of Thermora process decisions, newest on top. The rules currently in force live in `lifecycle.md`; this file records why they changed.
 
+### 2026-11-25 - Track progress in the repository, not on Plane
+
+User decision (PO and Tech lead). Story points, status and sprint numbers live only in `progress.md`, so there is one source of truth and no second tool to keep in step. Cost: no board view, and time spent in *Pending* is not measured. Rejected: keeping Plane optional, which kept a long section of rules and a CI job for a tool the project does not use.
+
 ### 2026-11-25 - Plan after the PRD in releases and sprints, with Plane optional
 
 Ported from DAONT-BASE (user's order). The old flow was a waterfall inside each module: nothing was delivered by value before the whole module was designed. Now a PRD is followed by a release plan and an architecture runway, then design, technical design and code go release by release in half-month sprints with DoR/DoD, a PO review and a retro. Rules: `lifecycle.md`. Applied outside a retro because no module is running (`progress.md` is empty).

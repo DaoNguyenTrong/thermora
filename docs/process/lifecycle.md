@@ -8,7 +8,7 @@ This document describes the path from idea to release: who does each stage, who 
 |---|---|---|---|---|---|
 | 0 | Idea and vision | Personas (`docs/prd/00-personas.md`), vision, module list, priority order | Main session (`superpowers:brainstorming`) with the orchestrator; personas written by `product-manager`, reviewed by `business-analyst` (§ Personas) | PO | Personas are *Approved*, the module catalogue in `docs/prd/README.md` is fixed |
 | 1 | Requirements | PRD in `docs/prd/` | `product-manager`, reviewed by `business-analyst` | PO | PRD is *Approved* |
-| 1b | Backlog and release plan | `docs/backlog/PRDxx-<name>.md`: releases `REL-n`, T-shirt sizes, dependencies; work items on Plane | `product-manager` cuts the releases, `tech-lead` sizes them, `business-analyst` reviews | PO | Release plan is *Approved* (§ Release plan) |
+| 1b | Backlog and release plan | `docs/backlog/PRDxx-<name>.md`: releases `REL-n`, T-shirt sizes, dependencies | `product-manager` cuts the releases, `tech-lead` sizes them, `business-analyst` reviews | PO | Release plan is *Approved* (§ Release plan) |
 | 1c-UI | UI design of `REL-1` | Design boards of the stories in `REL-1`, tagged with requirement codes | `ui-designer` | PO + Design lead | Every FR of those stories with a new screen or new interaction pattern has a board; screens that follow an existing pattern only name the pattern; dark boards only for new patterns (`ui-designer.md` rule 1); approved |
 | 1c | Architecture runway | Technical design v1.0 in `docs/tech/`: common part and `REL-1`; points of the `REL-1` stories | `tech-lead` (`appsec` first when a security area is touched) | Tech lead (+ Security owner for a security area) | Common part and `REL-1` are *Approved* (§ Architecture runway) |
 | 2 | Refinement: UI design of the next release | Design boards of the stories in `REL-n` | `ui-designer` | PO + Design lead | As 1c-UI, for `REL-n` |
@@ -64,7 +64,7 @@ Once a PRD is *Approved*, the module has one file `docs/backlog/PRDxx-<name>.md`
 **Two levels of estimate**, each kept in one place and never copied to the other:
 - **T-shirt size (S/M/L/XL) per release**, in the release plan. `tech-lead` writes it at stage 1b, before any architecture exists, as a rough forecast only: it fills the *Size* column and adds one change-log row with source `tech-lead`, without changing status or version. `product-manager` owns every other edit of the plan, and writes that row itself only when the sizes were returned to it instead of written. A size changes only when the plan is revised for another reason; no docs PR exists just to change a size.
 - **Story points per story or story part** (Fibonacci 1, 2, 3, 5, 8, 13). `tech-lead` sets them at refinement, once the tech section exists (for `REL-1`, at stage 1c); the PO confirms them at sprint planning.
-  - The source of truth is Plane; without Plane it is the *Story* table of `progress.md` (§10).
+  - The source of truth is the *Story* table of `progress.md` (§10).
   - A sprint plan records the points at commitment time for velocity; that snapshot is never updated.
   - Changing points before a story enters a sprint needs no approval.
   - A story above 8 points is split by AC set before it enters a sprint.
@@ -90,19 +90,19 @@ Version 1.0 of a module's technical design holds:
 
 ## Sprint loop
 
-A sprint is half a month: `SPR-YYYY-MM-S1` from day 1 to 15, `SPR-YYYY-MM-S2` from day 16 to the end of the month; on Plane it is a Cycle of that name. A sprint may hold stories of several modules, each module with its own sprint plan file. **Every sprint has one Sprint owner**, recorded in each of its sprint plans: that person's session computes velocity and creates, completes and transfers the Cycle, also when the sprint holds several modules. For `REL-1`, refinement is stages 1c-UI and 1c; from `REL-2`, refinement for sprint N+1 runs during sprint N, so work is prepared exactly one sprint ahead.
+A sprint is half a month: `SPR-YYYY-MM-S1` from day 1 to 15, `SPR-YYYY-MM-S2` from day 16 to the end of the month. A sprint may hold stories of several modules, each module with its own sprint plan file. **Every sprint has one Sprint owner**, recorded in each of its sprint plans: that person's session computes velocity and writes the *Sprint* row of `progress.md`, also when the sprint holds several modules. For `REL-1`, refinement is stages 1c-UI and 1c; from `REL-2`, refinement for sprint N+1 runs during sprint N, so work is prepared exactly one sprint ahead.
 
 1. **Refinement.** For the stories meant for the next sprint, the main session calls `ui-designer` and then `tech-lead`, for those stories only. A story that meets the DoR (§ Definition of Ready and Done) moves to *Todo*.
 2. **Sprint planning**, on the first day.
    - The Sprint owner's session computes velocity, the mean *Done* points of the last 3 sprints, and proposes the *Todo* stories in backlog order until their points reach it. With fewer than 3 sprints, the PO sets the capacity.
-   - The PO decides the sprint goal (one sentence) and the list of committed stories. The Sprint owner's session puts them in the Cycle and writes the goal in the Cycle description; each module's Owner writes its sprint plan with `superpowers:writing-plans` (§6).
+   - The PO decides the sprint goal (one sentence) and the list of committed stories. Each module's Owner writes its sprint plan, with the goal and its committed stories, with `superpowers:writing-plans` (§6).
    - The Tech lead approves each sprint plan file. The sprint is then committed.
-3. **Implementation and merge** as stages 5-6. Plane states follow the milestones in § Plane.
+3. **Implementation and merge** as stages 5-6.
 4. **Sprint review**, on the last day.
    - The main session writes a demo script per story from its AC, with evidence: e2e tests by `qa-app`, screenshots taken on `dev` with the `run` skill.
    - The PO accepts story by story: accepted becomes *Done*; not accepted stays open with the reason in a comment; a new requirement goes back to the PRD (size M) and is not built within the sprint.
    - Each Owner's session, and the Sprint owner's, asks the Tech lead for permission to push and open its own PR recording the sprint's results (§10).
-5. **Sprint retro**, right after the review (§8). On Plane the Sprint owner's session completes the Cycle and moves unfinished stories to the next one (`transfer_workitems`), under the write rights in § Plane.
+5. **Sprint retro**, right after the review (§8). Unfinished stories stay *Todo* and may enter the next sprint.
 
 ## Definition of Ready and Done
 
@@ -125,88 +125,13 @@ The brief given to `implementer` and the review of `pr-reviewer` point to this s
 - no major design deviation is left unhandled;
 - the PO accepted it at the sprint review.
 
-## Plane
-
-The repository is the source of truth for content; Plane is where the team follows progress. Plane is optional.
-
-**Configuration.** A project that uses Plane copies `.claude/plane.example.json` to `.claude/plane.json` and fills in `baseUrl` (the `https` address of Plane), `workspaceSlug`, the project id and identifier, the id of each state, and the ids of the `bug` label and of its own layer labels under `labels.layers` <!-- TODO(stack): the layer labels, e.g. one per source directory -->. The template ignores the file in git; a project that turns Plane on removes that `.gitignore` line and commits the file, which holds no secret, because CI reads it from the base commit. Release labels `PRDxx-REL-n` are created as needed and are not listed. **Without `.claude/plane.json`, skip every Plane step**; points and story status then live in the *Story* table of `progress.md` (§10).
-
-**CI configuration.** Set the repository secret `PLANE_API_KEY`. **Anyone who can push a branch can read it:** any workflow on any pushed branch (for example a new file that runs `on: push`) gets the repository's secrets. Switching to `pull_request_target` alone would not close the gap; pairing it with an environment secret limited to `dev` was not adopted (nor checked against GitHub's documentation). Checking out the base commit only fixes which script runs while the workflow is unedited. Required:
-- the token belongs to a low-privilege bot account that is a member of that one project, and has an expiry date if Plane allows one;
-- rotate it when a person loses push access;
-- pull requests from forks get no secret only while the repository setting that sends secrets to fork workflows is off (the setting exists for private repositories);
-- `plane-sync` is never a required check.
-
-**Mapping:**
-
-| Repository | Plane |
-|---|---|
-| Module (PRD) | Module `[PRDxx] <feature name>` (split by feature, not by layer) |
-| Story `PRDxx-US-nn`, or a part by AC set | Work item (title and description: below), `external_source` = the identifier of the repository that adopted the template (for example `<owner>/<repo>`), `external_id` = `PRDxx-US-nn` (a part adds `#AC-07,AC-08`) |
-| Release `REL-n` | Label `PRDxx-REL-n` |
-| Technical layer | The project's layer labels |
-| Sprint | Cycle `SPR-YYYY-MM-Sn` |
-| Points | Estimate point |
-| Bug (size S) | Work item with the `bug` label |
-
-When the Plane instance cannot write estimate points, record points as the labels `pt-1`, `pt-2`, `pt-3`, `pt-5`, `pt-8`, `pt-13`.
-
-**Work item content.** Everything written on Plane (title, description, comment, Cycle goal) is in the team's language <!-- TODO(team): the language of Plane content -->, short, and in the end user's words; codes and proper names stay as they are. A description is at most about 8 lines.
-
-*Story.* Title `PRDxx-US-nn — <verb + object>`: at most about 60 characters after the dash, no technical terms (API, DTO, endpoint); a partial delivery adds `(part 1)`, `(part 2)`. Example: `PRD03-US-02 — Filter records by status`. Description:
-
-```
-As <persona>, I want <action> so that <benefit>.
-
-Scope this time: <one sentence; only for a partial delivery>
-
-PRD: <link> · Design: <link> · Tech: <link>
-```
-
-*Bug.* Title `[Bug] <what is wrong> when <when>`, for example `[Bug] Filters are lost when the records page reloads`. Description:
-
-```
-Current: <what happens>
-Expected: <what should happen>
-Steps to reproduce: <at most 3 steps>
-```
-
-AC are not copied to Plane: the detail stays in the PRD. The PR link is attached to the work item as a work item link.
-
-**`Plane:` line and trailer** (only with `.claude/plane.json`). The `## Requirements` section of a PR description has a line `Plane: PRJ-12, PRJ-15` listing the work items the PR serves. A PR serving none (a process PR from a retro, tooling, docs) says `Plane: none (<reason>)`; a PR that implements a story or a `bug` item must list ids. A commit that serves a story or a `bug` ends with the trailer `Plane: PRJ-12`; other commits need none. Every id on the description's line is carried by the trailer of at least one commit of the PR. Branch names do not change.
-
-**State milestones:**
-
-| Milestone in the repository | Plane state |
-|---|---|
-| PRD and release plan *Approved* | Create work items in *Backlog*, with Module and labels (points come later, at refinement) |
-| A bug is reported (size S) | Create a work item with the `bug` label in *Backlog* |
-| A story meets the DoR | *Todo* |
-| `implementer` starts a task of the story | *In Progress* |
-| The story's PR is opened | *Ready For Testing* |
-| The PR merges into `dev` | *Testing* |
-| The PO accepts at the sprint review and the story meets the DoD | *Done* |
-| Blocked by a business question or a major deviation | *Pending*, with a comment pointing to the question |
-| The story is dropped from the release plan | *Cancelled* |
-
-**CI sync.** `scripts/plane-sync.ts` (`.github/workflows/plane-sync.yml`) takes ids from the `Plane:` lines of the description and commit messages of a PR into `dev`:
-- opened or updated, not a draft: link the PR and set *Ready For Testing*; an item already in *Testing* stays there;
-- merged: set *Testing*;
-- closed without merging, or converted to draft: an item in *Ready For Testing* goes back to *In Progress*, any other state stays.
-
-CI never changes an item that is *Done*, *Cancelled* or *Pending*, and a Plane error never fails a PR. It skips PRs from forks and the post-release reconcile PR (`chore/reconcile-main-*`), and does not run for PRs into `release/*`. The main session does the other milestones, and does these by hand when CI skips a PR or prints a warning.
-
-**Write rights.** Besides the CI job, only the session of the module's Owner (the *Owner* column of `progress.md`) writes to Plane, and for the Cycle the Sprint owner's session. Subagents never call Plane.
-- Without asking, at the milestones above: create work items, change state, label or points, attach links, comment.
-- The PO confirms each time: create, `complete` or edit a Cycle; add a story to a Cycle or remove it (that is the sprint commitment); delete anything; create or edit a Module.
-
 ## 2. Work Size
 
 The main session sets the size at the start of each task and says so; the orchestrator may change it.
 
 | Size | When | Path |
 |---|---|---|
-| **S** | Bug fix, chore, small change that alters no behaviour or contract | A bug gets a `bug` work item in *Backlog* (§ Plane); it enters the current sprint if the PO agrees, otherwise the next one. Technical path: skip stages 0-4, a failing test first for a bug, `implementer`, then review by tier |
+| **S** | Bug fix, chore, small change that alters no behaviour or contract | A bug enters the current sprint if the PO agrees, otherwise the next one. Technical path: skip stages 0-4, a failing test first for a bug, `implementer`, then review by tier |
 | **M** | Change or add behaviour in an existing module | Edit the PRD (raise the version, back to *In review*, then re-approve), update the release plan, refine (design and tech doc only for the affected parts), then it enters the backlog like a new story |
 | **L** | New module, or a change touching permissions, sessions or identity | Stages 0 to 1c, then the sprint loop; `appsec` when a security area is touched |
 
@@ -237,7 +162,7 @@ The path and marker lists for each tier live only in `scripts/risk-tier.ts`. The
 - **Business questions that arise in a later stage go back to the PRD**, edited by `product-manager`, not decided where found. Technical questions belong to `tech-lead`.
 - **Changes after approval:** editing a PRD returns it to *In review* and requires re-examining the affected design, tech doc and plan. Affected documents also return to *In review* and raise their version; a tech doc does so per release (§ Architecture runway). Exception: filling or fixing the link and metadata rows (*Design*, *Plan*, *Updated*) is not a change.
 - **After 3 fix rounds on a PR that still does not pass:** `pr-reviewer` returns `ESCALATE`, naming the document to rethink (PRD, design or plan). There is no 4th fix round.
-- **Human-gated areas:** authentication, tokens, cookies, sessions, permissions, tenant/data isolation, API keys, `.claude/`, `.github/`, `AGENTS.md`, CI and Lefthook config, `scripts/risk-tier.ts`, `scripts/plane-sync.ts`, DB migrations, deployment config, signing and release config, edits or deletions of existing `.claude/decisions.md` entries or a `Supersedes:` line, plus <!-- TODO(stack): product-specific sensitive areas (e.g. payment flows, encryption keys, webhook secrets) -->. `pr-reviewer` does not merge these PRs; they are merged by the human approver of the area (`AGENTS.md` § Team Roles).
+- **Human-gated areas:** authentication, tokens, cookies, sessions, permissions, tenant/data isolation, API keys, `.claude/`, `.github/`, `AGENTS.md`, CI and Lefthook config, `scripts/risk-tier.ts`, DB migrations, deployment config, signing and release config, edits or deletions of existing `.claude/decisions.md` entries or a `Supersedes:` line, plus <!-- TODO(stack): product-specific sensitive areas (e.g. payment flows, encryption keys, webhook secrets) -->. `pr-reviewer` does not merge these PRs; they are merged by the human approver of the area (`AGENTS.md` § Team Roles).
 
 ## 4. Design Deviations During Implementation
 
@@ -276,7 +201,7 @@ When unsure, treat it as major. To surface major deviations early, the plan make
 By default push or open a PR only when a human orders it. At stage 4, when approving the sprint plan, the Tech lead may grant **one permission for the whole plan**: each time a phase is done and `scripts/test-gate.sh` passes, `implementer` may push that phase's branch and open one PR into `dev`. The permission is recorded at the top of the plan and in the brief given to `implementer`; it does not apply to `main`, and does not replace the `pr-reviewer` gate.
 
 **Sprint plan.** The plan of stage 4 is a sprint plan, one file per module, `docs/superpowers/plans/YYYY-MM-DD-<module>-<SPR-…>.md`; the file name contains the sprint code `SPR-YYYY-MM-S1` or `-S2`. Its header records:
-- the sprint goal and Cycle name;
+- the sprint goal;
 - the **Sprint owner** (§ Sprint loop);
 - the committed stories and AC, with their points;
 - the releases involved, with full codes `PRDxx-REL-n`;
@@ -291,7 +216,7 @@ By default push or open a PR only when a human orders it. At stage 4, when appro
 **Merge order: near-linear history.** At any moment only one PR into `dev` is reviewed and merged. Before review the branch must be rebased onto the latest `origin/dev` (`git rebase origin/dev`, then `git push --force-with-lease`); merge with `gh pr merge --merge` so each PR still has a merge commit marking its boundary. Rebase the next branch only after this PR is merged. A branch that is not rebased gets *not ready* from `pr-reviewer` and `/git-accept` (`NOT_READY`), which does not count as a round. The main session orders the queue and requests rebases.
 
 **Team rule.**
-- One orchestrator per module or phase at a time, recorded in the *Owner* column of `progress.md`. Only that session writes the module's `progress.md` rows and Plane items (§ Plane).
+- One orchestrator per module or phase at a time, recorded in the *Owner* column of `progress.md`. Only that session writes the module's `progress.md` rows.
 - Each member works in their own checkout; two implementers never share one.
 - One PR into `dev` at a time through a shared queue: the GitHub merge queue once there are 3 or more PRs per day into `dev` (`CONTRIBUTING.md` § Repository Setup), otherwise an agreed convention of who rebases and merges first. An unrebased branch makes `pr-reviewer` return `NOT_READY`.
 - `progress.md`, `docs/prd/README.md` and `docs/tech/README.md` often conflict when several people edit them: edit only your module's row, and rebase right before merging.
@@ -313,14 +238,14 @@ Use the skill `release-kit:git-release` (configured in `.claude/release-kit.json
 
 ## 7. Traceability
 
-Requirement codes run through the whole chain: persona (`P-nn`) -> user story (`PRDxx-US-nn`) -> requirement (`PRDxx-FR-nn`) -> release (`PRDxx-REL-n`) -> design board title -> tech doc section -> sprint plan -> task -> test -> the `PRD:` line of the feature-map -> PR description (with its `Plane:` line, § Plane). A code with no downstream, or a component with no upstream code, is a finding in any review. So are a Must story in no release and, when the project has `.claude/plane.json`, a PR whose `Plane:` line is missing or breaks § Plane.
+Requirement codes run through the whole chain: persona (`P-nn`) -> user story (`PRDxx-US-nn`) -> requirement (`PRDxx-FR-nn`) -> release (`PRDxx-REL-n`) -> design board title -> tech doc section -> sprint plan -> task -> test -> the `PRD:` line of the feature-map -> PR description. A code with no downstream, or a component with no upstream code, is a finding in any review. So is a Must story in no release.
 
 ## 8. Recurring Errors and End-of-Module Retro
 
 When the same review comment appears twice, do not add another text rule: turn it into a lint, an architecture test or a generator (`AGENTS.md`).
 
 **Sprint retro.** After each sprint review (§ Sprint loop):
-- The main session records: committed against *Done* points, stories moved to the next sprint, stories rejected at the review, the sprint's `fix` commits and, with Plane, the time stories sat in *Pending*, taken from Plane; when Plane cannot give it, write `not measured`. Without Plane this measure is dropped. §10 says what goes into `progress.md` and which PR carries it.
+- The main session records: committed against *Done* points, stories moved to the next sprint, stories rejected at the review and the sprint's `fix` commits. §10 says what goes into `progress.md` and which PR carries it.
 - Adjust at once: capacity and how the next sprint is arranged.
 - Process improvements that are not applied at once go in the *Pending retro* section of `docs/agent-error-log.md` (process freeze below).
 
@@ -346,15 +271,15 @@ The process decision log is `docs/process/decisions.md`, newest on top.
 
 The progress table is `docs/process/progress.md`. A module's rows are updated only by the session of its Owner (the *Owner* column); a *Sprint* row is written by the Sprint owner's session.
 - **Module table**, one row per module: Owner, PRD, Release plan, Runway, UI/Tech by REL (latest release approved in both, over the total, for example `REL-2/4`), appsec (`not needed` while no part touches a security area, § Architecture runway), REL done (for example `1/4`), Merged. Update it in the docs PR when a document is approved, write *REL done* in the PR after the sprint (below), and mark *Merged* in the module's next docs PR, only after the end-of-module retro (§8) is done.
-- **Story table**, used only without `.claude/plane.json`, where it is the source of truth for points and story status. One row per story or story part: Story, REL, Points, Status, Cycle. Written only where a commit exists to carry it:
+- **Story table**, the source of truth for points and story status. One row per story or story part: Story, REL, Points, Status, Sprint. Written only where a commit exists to carry it:
   - refinement: add the row with its points and *Todo*, in the docs PR of that release (§5);
-  - sprint planning: the Cycle, committed with the sprint plan;
+  - sprint planning: the sprint, committed with the sprint plan;
   - sprint retro: *Done* if the story meets the DoD, otherwise it stays *Todo* (PR after the sprint).
 
   States in between are not written: the PRs show them.
-- **Sprint table**, one row per sprint: Cycle, Sprint owner, goal, committed points, *Done* points, stories moved, stories rejected, time in *Pending* (§8; `-` without Plane). With Plane the numbers come from the Cycle.
+- **Sprint table**, one row per sprint: Sprint, Sprint owner, goal, committed points, *Done* points, stories moved, stories rejected (§8).
 - **Metrics table**, eight numbers per module: calendar days (from the first PRD draft to the merge of the last PR), PR count, the `fix` commit ratio (`git log`), the `fix` ratio by tier (`bun scripts/risk-tier.ts --fix-ratio`), questions asked to humans, agent tokens, number of sprints and mean velocity.
 
-**PR after the sprint.** A story is *Done* only after the PO accepts it, when its feature PRs are already merged. So after the sprint review and retro, small docs-only PRs record the results, each merged through `/git-accept`: every Owner's session opens one with its module's *REL done* and *Story* rows (when used), and the Sprint owner's session puts the *Sprint* row in its own. The permission to push and open them is asked of the Tech lead at the sprint review.
+**PR after the sprint.** A story is *Done* only after the PO accepts it, when its feature PRs are already merged. So after the sprint review and retro, small docs-only PRs record the results, each merged through `/git-accept`: every Owner's session opens one with its module's *REL done* and *Story* rows, and the Sprint owner's session puts the *Sprint* row in its own. The permission to push and open them is asked of the Tech lead at the sprint review.
 
 **Agent tokens.** Each agent's completion report carries that agent's token count. At the end of each phase, the main session records the total by agent type and tier in the `## Verification` section of the phase PR, for example `implementer t1: 210k; pr-reviewer t1: 45k`. The main session's own tokens cannot be measured, so they are not recorded.
