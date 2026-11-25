@@ -3,7 +3,7 @@
 | Item | Value |
 |---|---|
 | Code | `P` (persona prefix `P-nn`, anti-persona `AP-nn`) |
-| Status | In review |
+| Status | Approved |
 | Version | 0.3 |
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
@@ -196,3 +196,4 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.2 | Recorded the first-release delivery decisions (no server, files in a project folder, single-writer rule, module order) in the README catalogue; effect here limited to A11 and the Handed to other PRDs table | SA (on behalf of user) |
 | 2026-11-25 | 0.3 | The PO is outside the 5-person pilot team (weights 80/20 kept); analysts handle incidents and customer replies, so P-01-S5, S6 and related claims are [User] (E3), still later-release (D4); D2 invented clause removed; success lines labelled [User] (E1) | user decision (PO: DaoNguyenTrong) |
 | 2026-11-25 | 0.3 | Applied the BA second review: source column on every situation row; E2 claims relabelled team-level (P-01-F3, forecast checks, per-plant data); new A11; P-02 illustrative name changed to Mai; assumptions renumbered (A7 gap closed; old A8 to A11 are now A7 to A10); credentials and customer-data items handed on; status set to In review | BA review |
+| 2026-11-25 | 0.3 | User approval of personas v0.3, including the Proposed defaults D1 to D4 and the module catalogue and its order in `docs/prd/README.md` | user decision (PO: DaoNguyenTrong) |
