@@ -3,7 +3,7 @@
 | Item | Value |
 |---|---|
 | Code | `P` (persona prefix `P-nn`, anti-persona `AP-nn`) |
-| Status | In review |
+| Status | Approved |
 | Version | 0.4 |
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
@@ -204,3 +204,4 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.4 | Added E4: the pilot team has no shared folder all 5 can open (A10 resolved) and uses both desktop PCs and laptops (usage rows [User], A9 narrowed, new A12 smallest screen); proposed default D5 added (14-inch 1366×768 smallest target) | user decision (PO: DaoNguyenTrong) |
 | 2026-11-25 | 0.4 | Hand-over for the pilot by exported package over Zalo or email, applied to the E4 fact as recorded in the README; export and import of the package handed to PRD02 | SA (on behalf of user) |
 | 2026-11-25 | 0.4 | Applied the BA review: approval row of v0.3 restored; package export/import handed to PRD02 (not PRD01/PRD04); hand-over claim cited as SA decision, not [User]; assumptions A11 and A12 reordered; status In review | BA review |
+| 2026-11-25 | 0.4 | User approval of personas v0.4, including the proposed default D5 | user decision (PO: DaoNguyenTrong) |

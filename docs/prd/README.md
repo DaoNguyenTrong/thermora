@@ -38,7 +38,7 @@ Proposed catalogue, drafted 2026-11-25 from the stage 0 interview and revised th
 
 | Code | PRD | Status | Version | Depends on | Design |
 |---|---|---|---|---|---|
-| P | Personas (`00-personas.md`) | In review | 0.4 | none | - |
+| P | Personas (`00-personas.md`) | Approved | 0.4 | none | - |
 | PRD00 | Common part: glossary, roles, permission matrix, status lifecycle | - | - | P | - |
 | PRD01 | Setup and connection: find Claude Code / Codex on the machine, check sign-in, training-option reminder | - | - | PRD00 | - |
 | PRD02 | Workspace: each report is a project folder with lasting context; export and import of a package (procedure or report) for hand-over over Zalo or email; pick a procedure, load raw files, orchestrator and role agents run it (check and fix loop, at most 3 rounds), reopen unfinished work and continue, report status, head's approval before Excel and PDF export | - | - | PRD00, PRD01 | - |
