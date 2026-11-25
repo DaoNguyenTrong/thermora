@@ -1,6 +1,6 @@
 # Process Decisions
 
-Log of AI-BASE process decisions, newest on top. The rules currently in force live in `lifecycle.md`; this file records why they changed.
+Log of Thermora process decisions, newest on top. The rules currently in force live in `lifecycle.md`; this file records why they changed.
 
 ### 2026-11-25 - Plan after the PRD in releases and sprints, with Plane optional
 

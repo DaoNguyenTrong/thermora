@@ -1,5 +1,5 @@
 {
-  "name": "ai-base",
+  "name": "thermora",
   "private": true,
   "scripts": {
     "prepare": "lefthook install"

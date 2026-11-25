@@ -19,7 +19,7 @@ This document describes the path from idea to release: who does each stage, who 
 | 6b | Sprint review | Demo of each story against its AC | Main session prepares | PO accepts | Each story of the sprint is accepted, or the reason it is not is recorded |
 | 6c | Sprint retro | Sprint numbers, improvement ideas | Main session | — | The *Sprint* table in `progress.md` has the sprint's row |
 | 7 | Release | Release, changelog; usually after one or a few releases of the release plan | Skill `release-kit:git-release` | Release manager | Tagged and merged into `main` |
-| 8 | Operation and feedback | Feedback from the product built on AI-BASE | PO | — | Feedback enters the backlog by work size (§2) |
+| 8 | Operation and feedback | Feedback from Thermora | PO | — | Feedback enters the backlog by work size (§2) |
 
 A module starts in the order 1 → 1b → 1c-UI → 1c → first sprint. Stages 2 to 6c then repeat every sprint (§ Sprint loop).
 

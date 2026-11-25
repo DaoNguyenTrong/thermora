@@ -2,7 +2,7 @@
 
 This file provides guidance to Claude Code and Codex when working with this repository. It is the index of the process: it holds only the rules every session needs at once and points to the file that owns each detail.
 
-AI-BASE is a stack-agnostic workflow template for teams. Every `TODO(stack)` marker is a part the project fills in once it picks its stack (`README.md` § Adopting the template).
+Thermora's product requirements and technology stack are not defined yet. Every `TODO(stack)` marker is a part to fill in once the stack is chosen (`README.md` § Project setup).
 
 ## Repository Layout
 

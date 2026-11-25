@@ -1,4 +1,4 @@
-# Contributing to AI-BASE
+# Contributing to Thermora
 
 The full process (stages, gates, risk tiers, roles) is in [`AGENTS.md`](AGENTS.md) and `docs/process/lifecycle.md`. This file covers branches, commits, PRs, releases and the one-time repository setup.
 

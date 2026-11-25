@@ -1,6 +1,6 @@
-# AI-BASE
+# Thermora
 
-A stack-agnostic workflow template for teams building software with Claude Code (and optionally Codex). It carries the process, not a product: a lifecycle from idea to release, eleven role-based agents, approval gates, git guards, check scripts, CI for those scripts, and release configuration. It is ported from DAONT-BASE v1.6.5 (`docs/process/decisions.md`).
+Product requirements and the technology stack are not defined yet: the work starts with personas and the first PRD. The repository holds the delivery process: a lifecycle from idea to release, eleven role-based agents, approval gates, git guards, check scripts, CI for those scripts, and release configuration.
 
 ## What is inside
 
@@ -30,20 +30,15 @@ scripts/test-gate.sh   # local gate (same as CI)
 
 Tool setup for each team member: [`AI_TOOLS_SETUP.md`](AI_TOOLS_SETUP.md). Branches, PRs and releases: [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
-## Adopting the template
+## Project setup
 
-1. Copy the repo (GitHub "Use this template", or a clean `git archive` of a tag) and rename `AI-BASE` (`grep -rn "AI-BASE" .`).
-2. Fill every `TODO(stack)` and `TODO(team)` marker: `grep -rn "TODO(stack)\|TODO(team)" --exclude=workflow-setup-guide.md .`. The order that works: `AGENTS.md` § Repository Layout → `.claude/rules/commands.md`, `testing.md`, `architecture.md` (with an architecture test) → `scripts/test-gate.sh` and `.github/workflows/test.yml` together → `scripts/risk-tier.ts` lists → `scripts/check-comments.ts` `GENERATED` → agent files.
-3. Add an `AGENTS.md` inside each source directory listing the rule files that apply to it.
-4. Run the repository setup in `CONTRIBUTING.md` § Repository Setup.
-5. Verify the symbol tools on your stack (`.claude/rules/serena.md`).
-6. Open Claude Code at the repo root and start with:
+Still to do:
 
-```text
-Read AGENTS.md and docs/process/lifecycle.md. Check that every `file § section` reference resolves,
-list anything that still names the old project or an old stack command, then start stage 0:
-interview me to build the personas.
-```
+1. Run the repository setup in `CONTRIBUTING.md` § Repository Setup.
+2. Build the personas (stage 0, `docs/process/lifecycle.md`), then the first PRD.
+3. Once the stack is chosen, fill every `TODO(stack)` and `TODO(team)` marker: `grep -rn "TODO(stack)\|TODO(team)" .`. The order that works: `AGENTS.md` § Repository Layout → `.claude/rules/commands.md`, `testing.md`, `architecture.md` (with an architecture test) → `scripts/test-gate.sh` and `.github/workflows/test.yml` together → `scripts/risk-tier.ts` lists → `scripts/check-comments.ts` `GENERATED` → agent files.
+4. Add an `AGENTS.md` inside each source directory listing the rule files that apply to it.
+5. Verify the symbol tools on that stack (`.claude/rules/serena.md`).
 
 ## Turning Plane on (optional)
 
@@ -55,5 +50,3 @@ Without `.claude/plane.json` every Plane step is skipped and story points and st
 4. Choose the language of Plane content (the `TODO(team)` marker in `docs/process/lifecycle.md` § Plane).
 
 Only the session of a module's Owner writes to Plane (the Sprint owner's for the Cycle); subagents never do.
-
-`workflow-setup-guide.md` (Vietnamese) is the original setup guide this template was built from.
