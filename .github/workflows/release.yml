@@ -1,0 +1,44 @@
+# Fired by the v* tag that /git-release pushes: test -> build -> GitHub Release.
+# Protect v* tags (Settings -> Rules -> Rulesets -> tag target v*): whoever can push one publishes a release.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  # The same gate every PR runs (ci.yml), re-run on the tagged commit.
+  test:
+    uses: ./.github/workflows/test.yml
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history + tags, for versioning from the tag
+
+      - name: Check the version source
+        run: test "$(git describe --tags --exact-match)" = "$GITHUB_REF_NAME"
+
+      # TODO(stack): build the release artifacts from the tag (binaries, mobile bundles, packages ...).
+      # TODO(stack): sign them with secrets from GitHub Actions Secrets, never from the repository.
+      - name: Placeholder
+        run: echo "No build configured yet (TODO(stack))."
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          # TODO(stack): attach the build artifacts (files: ...).

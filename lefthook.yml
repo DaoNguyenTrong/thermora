@@ -1,0 +1,50 @@
+pre-commit:
+  piped: true
+  commands:
+    branch-guard:
+      priority: 1
+      run: |
+        branch=$(git rev-parse --abbrev-ref HEAD)
+        if [ "$branch" = "main" ]; then
+          echo "Blocked: direct commits to 'main' aren't allowed — release via a PR (git-release, CONTRIBUTING.md)."
+          exit 1
+        fi
+    conflict-markers:
+      priority: 2
+      run: |
+        if git diff --cached -U0 | grep -qE '^\+(<{7}|={7}|>{7})( |$)'; then
+          echo "Blocked: staged changes contain unresolved merge-conflict markers."
+          exit 1
+        fi
+    signing-material:
+      priority: 3
+      # secretlint does not read binary keystores; refuse them by extension (.gitignore also ignores them).
+      run: |
+        if git diff --cached --name-only --diff-filter=AM | grep -qiE '\.(jks|keystore|p12|mobileprovision)$'; then
+          echo "Blocked: signing material is staged. Keep it in CI secrets or fastlane match, never in git."
+          exit 1
+        fi
+    secretlint:
+      priority: 4
+      glob: "**"
+      run: bunx secretlint {staged_files}
+    # gobwas/glob's `dir/**/*` needs >=1 intermediate directory, so it skips files directly in `dir/`.
+    # Use two patterns per directory to cover both depths.
+    prettier:
+      priority: 5
+      glob:
+        - "scripts/*.ts"
+        - "scripts/**/*.ts"
+        # TODO(stack): add the stack's source globs for prettier, or add one command per formatter
+        # (dart format, ktlint, swiftformat, dotnet format, gofmt, ...) with stage_fixed: true.
+      run: bunx prettier --write {staged_files}
+      stage_fixed: true
+    # .claude/rules/comments.md. Last, so it reads the staged blobs after formatters re-staged them.
+    comments:
+      priority: 9
+      run: bun scripts/check-comments.ts --staged
+
+commit-msg:
+  commands:
+    commitlint:
+      run: bunx commitlint --edit {1}

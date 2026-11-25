@@ -1,0 +1,20 @@
+{
+  "baseUrl": "",
+  "workspaceSlug": "",
+  "projectId": "",
+  "projectIdentifier": "",
+  "states": {
+    "backlog": "",
+    "todo": "",
+    "inProgress": "",
+    "readyForTesting": "",
+    "testing": "",
+    "done": "",
+    "pending": "",
+    "cancelled": ""
+  },
+  "labels": {
+    "layers": { "TODO(stack): layer label name": "" },
+    "bug": ""
+  }
+}

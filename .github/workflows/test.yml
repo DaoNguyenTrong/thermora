@@ -1,0 +1,58 @@
+# The test gate, shared by ci.yml (every PR, every push to dev) and release.yml (the v* tag), so the
+# gate a PR must pass and the gate a release must pass can't drift apart. scripts/test-gate.sh is the
+# local twin (and /git-release's gate) — change both together.
+name: Test
+
+on:
+  workflow_call:
+    inputs:
+      app:
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  # The process scripts. No input: runs on every change.
+  scripts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: "1.3.14"
+
+      - name: Test the scripts
+        run: bun test scripts/
+
+      - name: Check comment length
+        run: bun scripts/check-comments.ts
+
+      - name: Check personas (docs/process/lifecycle.md § Personas)
+        run: bun scripts/check-personas.ts
+
+      - name: Check release plans (docs/process/lifecycle.md § Release plan)
+        run: bun scripts/check-release-plan.ts
+
+      - name: Check PRD approval order
+        run: |
+          shopt -s nullglob
+          prds=(docs/prd/[0-9]*.md)
+          if ((${#prds[@]})); then bun scripts/check-prd-approval.ts "${prds[@]}"; fi
+
+  # TODO(stack): replace the placeholder with this project's build and test steps. Add one job per
+  # platform or part (api, contract, android, ios ...) with its own input, as in scripts/test-gate.sh.
+  app:
+    if: inputs.app
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # TODO(stack): set up the toolchain (e.g. actions/setup-node, setup-dotnet, setup-java, flutter-action).
+      # TODO(stack): install dependencies, then lint / type-check.
+      # TODO(stack): run the unit tests (coverage is reported, not gated).
+      - name: Placeholder
+        run: echo "No app checks configured yet (TODO(stack))."

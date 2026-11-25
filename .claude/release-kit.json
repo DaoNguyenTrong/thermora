@@ -1,0 +1,28 @@
+{
+  "$schema": "https://raw.githubusercontent.com/DaoNguyenTrong/daont-claude-plugins/main/plugins/release-kit/release-kit.schema.json",
+  "prCli": "gh",
+  "devBranch": "dev",
+  "mainBranch": "main",
+  "versioningNote": "The git tag vX.Y.Z is the version. TODO(stack): list how each part reads it (e.g. MinVer, a version file bumped via versionFiles, build number from CI).",
+  "versionFiles": [],
+  "gate": {
+    "phase1": "scripts/test-gate.sh",
+    "mandatory": "scripts/test-gate.sh"
+  },
+  "changelogPath": "CHANGELOG.md",
+  "devWrites": "pr",
+  "devMergeCommand": "/git-accept",
+  "pushAfterRebase": "force-with-lease",
+  "prExtraSections": [
+    "Requirements",
+    "Minor design deviations",
+    "Verification",
+    "Risk tier"
+  ],
+  "ciTriggerNote": ".github/workflows/release.yml triggers on the v* tag push: test (reusable test.yml), then build, then the GitHub release. PRs into dev, main and release/** and pushes to dev run the same test gate (.github/workflows/ci.yml). changes, test / scripts and test / app are required checks on main and dev, so a release PR merges only after they pass: wait for them to finish, then merge; never gh pr merge --auto.",
+  "modes": [
+    "standard",
+    "quick",
+    "hotfix"
+  ]
+}
