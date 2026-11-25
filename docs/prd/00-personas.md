@@ -4,7 +4,7 @@
 |---|---|
 | Code | `P` (persona prefix `P-nn`, anti-persona `AP-nn`) |
 | Status | Approved |
-| Version | 0.4 |
+| Version | 0.5 |
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
 | Product | Thermora |
@@ -13,7 +13,7 @@ Source labels for every claim: **[User]** confirmed by a user; **[Data]** has ev
 
 Evidence note: no end user has been interviewed yet. In this document **[User] means "stated by the PO"** about the team they know first-hand (E1, E3): size, workflow, roles, accounts, machines. **[Data]** rests on a work chat log between the team's technical-support person and the department head (E2). Needs and behaviours inferred from these are [Assumption] and each has a row in §6; the department head is the persona representative and verifies them (see §6). This is a proto-persona set.
 
-Naming: "PRD00" is the common part (glossary, roles, permission matrix, status lifecycle); this file is "Personas" (code `P`). See `docs/prd/README.md` § Catalogue.
+Naming: "PRD00" is the common part (glossary, shared concepts, lifecycles of procedures and reports); this file is "Personas" (code `P`). See `docs/prd/README.md` § Catalogue.
 
 ## 1. Overview
 
@@ -65,14 +65,14 @@ The primary persona is the one the product favours when two personas conflict. T
 |---|---|---|---|---|
 | P-01-S1 | a new effectiveness report is due for a customer | to start from the department's standard procedure and be asked for anything missing | the report is right the first time and needs no re-briefing | [User] (E1, G1); asking for missing input is A3 |
 | P-01-S2 | they closed the work yesterday with the report half done | to reopen the same job and continue with all earlier context | nothing is re-uploaded or re-explained and the day's time goes into the report itself | [User] (E1) |
-| P-01-S3 | the head sends the report back with corrections | to see what must change and fix it within the same job | the revision is quick | [User] (E1: head reviews and sends back) |
-| P-01-S4 | the report is approved | to export the Excel and PDF deliverables for the customer | the customer receives the final files without manual rework | [User] (E1: Excel and PDF deliverables) |
+| P-01-S3 | the head sends the report back with corrections (in real life, over Zalo; not an app state, PRD00 §3) | to see what must change and fix it within the same job | the revision is quick | [User] (E1: head reviews and sends back) |
+| P-01-S4 | the report is approved (by the head, outside the app, over Zalo) | to export the Excel and PDF deliverables for the customer | the customer receives the final files without manual rework | [User] (E1: Excel and PDF deliverables) |
 | P-01-S5 | *(later release)* a customer reports an incident that is hard to understand | to compare it with earlier similar incidents | the cause is found faster and the reply is consistent | [User] (E3); later release (D4) |
 | P-01-S6 | *(later release)* a reply to a customer is drafted | to have it checked against the tone standard and pass it to a senior colleague for approval | the customer gets an accurate, approved reply | [User] (E3); tone standard and senior approval [Data] E2; later release (D4) |
 
-**Success for them is** [User] (E1; proposed in the interview, accepted by the PO): they continue unfinished work the next day with no re-uploading; the same report takes at least 30% less time than today; the head's send-backs become rarer.
+**Success for them is** [User] (E1; proposed in the interview, accepted by the PO): they continue unfinished work the next day with no re-uploading; the same report takes at least 30% less time than today; the head's send-backs become rarer. Stage-0 signals for the product as a whole, accepted by the PO [User] (E1): at least 80% of the team use it weekly; at least one other department asks for it. Both are measured by asking.
 
-**System roles they usually hold**: analyst-type member of a department (roles defined in PRD00 § Roles; to be named there).
+**Role in the product**: the product has a single kind of user (PRD00 §3). Being an analyst is a real-life job, not an app role or permission.
 
 ### P-02 — Mai, department head
 
@@ -111,12 +111,12 @@ The primary persona is the one the product favours when two personas conflict. T
 |---|---|---|---|---|
 | P-02-S1 | the team starts using AI for a recurring report type | to explain the procedure in her own words (steps, roles, templates, checks) and see it work on a real case | the team has a working, tested standard without anyone writing code | [User] (E1) |
 | P-02-S2 | a report keeps getting the same mistake | to adjust the standard once | every analyst benefits from the change | [Assumption] (A2) |
-| P-02-S3 | an analyst hands over a finished report | to review it against the checklist and approve it or send it back with comments | only correct reports reach the customer | [User] (E1) |
+| P-02-S3 | an analyst hands over a finished report (in real life, over Zalo; the app has no approval state, PRD00 §3) | to review it against the checklist and approve it or send it back with comments | only correct reports reach the customer | [User] (E1) |
 | P-02-S4 | the standard is updated | the 4 analysts to work to the latest version | nobody follows an outdated procedure | [User] (E1: the head writes, the other 4 follow) |
 
-**Success for them is** [User] (E1; proposed in the interview, accepted by the PO): they create or edit a procedure alone in about one session; at least 3 team procedures exist and are in use; analysts' reports pass the checklist with fewer send-backs.
+**Success for them is** [User] (E1; proposed in the interview, accepted by the PO): they create or edit a procedure alone in about one session; at least 3 team procedures exist and are in use; analysts' reports pass the checklist with fewer send-backs. Stage-0 signals for the product as a whole, accepted by the PO [User] (E1): at least 80% of the team use it weekly; at least one other department asks for it. Both are measured by asking.
 
-**System roles they usually hold**: department head with authoring and approval rights (roles defined in PRD00 § Roles; to be named there).
+**Role in the product**: the product has a single kind of user (PRD00 §3). Writing the standard and approving reports are her real-life responsibilities, not rights enforced by the app.
 
 ## 3. Anti-personas
 
@@ -162,7 +162,7 @@ Verification is by interviewing the department head (persona representative) fir
 
 ## 7. Open questions
 
-None. Q1 to Q3 of v0.1 became proposed defaults D1 to D3 below; Q4 (who may change a procedure) is decided by the PO ("the head writes, the other 4 follow") and belongs to PRD00 and the Authoring PRD; Q5 (acceptability of proto-personas) is not a PO question and was removed on BA advice.
+None. Q1 to Q3 of v0.1 became proposed defaults D1 to D3 below; Q4 (who may change a procedure) is decided by the PO ("the head writes, the other 4 follow") and is settled by PRD00 v0.3 (no roles: anyone authors a procedure); Q5 (acceptability of proto-personas) is not a PO question and was removed on BA advice.
 
 ### Proposed defaults
 
@@ -171,7 +171,7 @@ The PO reviews this table once, at approval; anything rejected becomes an open q
 | # | Default | Why | Shapes |
 |---|---|---|---|
 | D1 | Screens and messages are in Vietnamese for the pilot; English may be added later if another department needs it. | Both personas work in Vietnamese (A6). | P-01, P-02 usage rows |
-| D2 | No third persona. The PO (technical support, bug fixes, account issuing) is also the rollout and installation owner for the pilot (source: user decision, PO: DaoNguyenTrong, E3). The PO supports the team from outside and is not one of the 5 pilot-team members. Whoever installs or fixes a machine is an actor that PRD00 § Roles may need to name, not a persona. Revisit and add a persona when a second department asks. | The installer role has no goals of its own in the product yet. | §1, PRD00 |
+| D2 | No third persona. The PO (technical support, bug fixes, account issuing) is also the rollout and installation owner for the pilot (source: user decision, PO: DaoNguyenTrong, E3). The PO supports the team from outside and is not one of the 5 pilot-team members. Whoever installs or fixes a machine is not a persona; PRD00 has no roles, so no role is named for the installer (settled by PRD00 v0.3). Revisit and add a persona when a second department asks. | The installer role has no goals of its own in the product yet. | §1, PRD00 |
 | D3 | The department head writes the standard and approves reports. If the head also analyses (A8), that person acts as P-01 for that job. | Keeps two personas with different main goals. | P-02 |
 | D4 | The first release stays on the product-effectiveness report. Incident analysis and drafting customer replies are real work of the analysts (user decision, PO: DaoNguyenTrong, E3), recorded as typical situations for later (P-01-S5, P-01-S6) and not in scope of the first release. | The PO's success measures are about the report. | P-01-S5, P-01-S6 |
 | D5 | Design for a laptop screen of about 14 inches (1366×768) as the smallest target, scaling up to desktop monitors. The team uses both desktop PCs and laptops (E4); the smallest screen is not yet known (A12). | A design target is needed before REL-1 design; a small-screen default covers every device in use. | P-01, P-02 usage rows |
@@ -180,13 +180,13 @@ The PO reviews this table once, at approval; anything rejected becomes an open q
 
 | To | Item |
 |---|---|
-| PRD00 | May a department head approve a report they produced themselves? (matters if A8 holds.) |
-| PRD00 | Whether the person who installs or supports machines needs a named role. |
-| PRD00 | Report status (draft / submitted / approved) and who may set each. |
-| PRD01 / PRD00 | Credentials have been passed in plain chat (E2): a security consideration for setup and sign-in (PRD01) and for the roles and account rules (PRD00). |
+| PRD00 | ~~May a department head approve a report they produced themselves?~~ Settled by PRD00 v0.3: moot, approval happens outside the app and there are no roles. |
+| PRD00 | ~~Whether the person who installs or supports machines needs a named role.~~ Settled by PRD00 v0.3: no roles. |
+| PRD00 | ~~Report status (draft / submitted / approved) and who may set each.~~ Settled by PRD00 v0.3: two statuses, In progress and Finished; approval stays outside the app. |
+| PRD01 / PRD00 | ~~Credentials have been passed in plain chat (E2): a security consideration for setup and sign-in (PRD01) and for the roles and account rules (PRD00).~~ PRD00 v0.3 carries the credentials rule as a business rule; setup and sign-in detail stays with PRD01. |
 | Later modules handling incidents and customer replies | Customer messages may contain customer data (E2); data handling rules belong to those modules. |
 | PRD02 | Export and import of a package (procedure or report) for hand-over over Zalo or email, since the pilot team has no shared folder (E4). |
-| Sharing PRD (PRD04) | In-app submit, review and return of a report; today the head's approval stays a human act. |
+| Sharing PRD (PRD04) | Deferred (PRD00 v0.3). In-app submit, review and return of a report; today the head's approval stays a human act outside the app. |
 
 ## 8. Change log
 
@@ -205,3 +205,5 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.4 | Hand-over for the pilot by exported package over Zalo or email, applied to the E4 fact as recorded in the README; export and import of the package handed to PRD02 | SA (on behalf of user) |
 | 2026-11-25 | 0.4 | Applied the BA review: approval row of v0.3 restored; package export/import handed to PRD02 (not PRD01/PRD04); hand-over claim cited as SA decision, not [User]; assumptions A11 and A12 reordered; status In review | BA review |
 | 2026-11-25 | 0.4 | User approval of personas v0.4, including the proposed default D5 | user decision (PO: DaoNguyenTrong) |
+| 2026-11-25 | 0.5 | Tidied to match approved PRD00 v0.3 (personal tool, single kind of user, no roles, approval outside the app, statuses In progress/Finished, PRD04 deferred): role lines replaced, naming line, D2, Handed-to rows marked settled, approval situations noted as real life over Zalo, stage-0 signals (80% weekly use, another department asks) added to success lines [User] (E1); status In review | BA review |
+| 2026-11-25 | 0.5 | User approval of personas v0.5 | user decision (PO: DaoNguyenTrong) |
