@@ -90,7 +90,7 @@ Specific to this module: setup happens once per machine and per person; everythi
 | PRD01-FR-11 | When the AI service reports that the plan limit is reached, Thermora says so in plain words, says that work so far is kept, shows when it can be used again if the service tells it, and offers: wait and retry, or, if the other service is Ready, ask whether to use it (FR-07). It does not switch by itself. | US-08 | Must |
 | PRD01-FR-12 | When the AI service cannot be reached or fails in another way, Thermora says in plain words that it could not connect, that work so far is kept, and offers: try again, run the health check, or copy the details for the supporter (the text of FR-10 plus the service's own error text, with no sign-in detail). | US-08 | Must |
 | PRD01-FR-13 | A sign-in that lapses while Thermora is open is treated like "Installed but not signed in" (FR-06): the person is told and led to sign in again; work so far is kept. | US-04, US-08 | Must |
-| PRD01-FR-14 | Thermora shows its own version in the health check and in the app's information screen. A new version is delivered by the supporter as an installer; Thermora does not contact any server to update itself (D15). | US-09 | Should |
+| PRD01-FR-14 | Thermora shows its own version in the health check and in the app's information screen. A new version is delivered by the supporter as an installer; Thermora does not contact any server to update itself (D15); see also PRD-00 AC-26. | US-09 | Should |
 | PRD01-FR-15 | Display name, chosen service and "reminder seen" are kept on this machine only. They are not shared. | US-01, US-05 | Must |
 | PRD01-FR-16 | The person can change the chosen service at any time from the settings. | US-05 | Should |
 | PRD01-FR-17 | The health check offers a separate **connection test** that really asks the AI a trivial question to prove the whole path works. It runs only when the person explicitly asks, after a message that says it uses a little of their plan. It is never run at start-up or as part of the health check without that request. | US-07 | Should |
@@ -103,7 +103,7 @@ Specific to this module: setup happens once per machine and per person; everythi
 | PRD01-BR-02 | Sign-in always happens through the AI provider's own sign-in, by the person. Thermora never reads, asks for, shows, stores, copies, packages or sends a password, code, login token or credential file, and offers no login of its own; no message, health-check text or package contains one (PRD-00 FR-11, BR-09). | FR-06, FR-10, FR-12 |
 | PRD01-BR-03 | The display name is required, 1 to 50 characters after leading and trailing spaces are removed; any printable characters (including Vietnamese letters with marks) are allowed. It need not be unique: two people may use the same name. | FR-01, FR-02 |
 | PRD01-BR-04 | The reminders of FR-09 never block, and Thermora never states or implies that the training option is off. The person is responsible for their own plan setting. | FR-09 |
-| PRD01-BR-05 | Detection and the health check send nothing about the person's work. The only traffic is between Thermora and the person's own AI service, plus nothing else (PRD-00 FR-12). | FR-03, FR-10 |
+| PRD01-BR-05 | Detection and the health check send nothing about the person's work and no request to the AI; any other traffic is only with the person's own AI service (PRD-00 FR-12). | FR-03, FR-10 |
 | PRD01-BR-06 | There is no automatic switch between AI services. Each is a separate paid subscription of the person, so the person decides: Thermora asks before using one when both are Ready and before moving to the other. | FR-07, FR-11 |
 | PRD01-BR-07 | Every message in this module says what happened, whether the person's work is safe, and what to do next, in plain Vietnamese without any term from the design's technical-term list. Technical text appears only inside the text the person chooses to copy for the supporter. | FR-05, FR-11, FR-12 |
 | PRD01-BR-08 | Thermora can work only with Claude Code and Codex versions it declares as supported. A version below that is reported as "Version not supported" with the plain next step (ask the person who supports you to update it); the list of supported versions is part of the technical design. | FR-03 |
@@ -127,7 +127,7 @@ Specific to this module: setup happens once per machine and per person; everythi
 | PRD01-AC-08 | FR-03, FR-05 | Codex is not installed | The check runs | Codex shows Not installed, with the next step. |
 | PRD01-AC-09 | FR-03 | Claude Code is installed but the person is signed out | The check runs | Claude Code shows Installed but not signed in. |
 | PRD01-AC-10 | FR-03, BR-08 | An installed version below the supported one | The check runs | It shows Version not supported and tells the person to ask the person who supports them to update it. |
-| PRD01-AC-11 | FR-03, FR-05 | The computer has no internet and Codex is installed | The check runs | The program is found; the sign-in state shows Cannot be checked, with the reason in plain words and the next step (check the internet connection, then check again); nothing is shown as Ready that was not confirmed. |
+| PRD01-AC-11 | FR-03, FR-05 | The sign-in state cannot be confirmed (for example offline) and Codex is installed | The check runs | The program is found; the sign-in state shows Cannot be checked, with the reason in plain words and the next step (check the internet connection, then check again); nothing is shown as Ready that was not confirmed. |
 | PRD01-AC-12 | FR-04 | The app at any screen | The person opens the connection state | Both services and their states are shown, with the one in use marked; the screen is usable at 1366×768. |
 | PRD01-AC-13 | FR-05, BR-07 | Neither service is installed | The person opens the setup help | For each service the missing part and the next steps are shown in numbered plain Vietnamese; no message contains a term from the design's technical-term list; where outside help is needed it says so and offers the text for the person who supports them. |
 | PRD01-AC-14 | FR-06 | A service is installed but signed out | The person follows the sign-in step | Case (a): Thermora starts the provider's own sign-in without a terminal; after sign-in and "check again" the state is Ready. Case (b): Thermora says that outside help is needed to sign in and offers text for the person who supports them. In both cases Thermora has no field for a password, code or token. |
@@ -158,6 +158,8 @@ Specific to this module: setup happens once per machine and per person; everythi
 | PRD01-AC-41 | FR-17 | The person confirmed the connection test | It finishes | It shows OK, or a problem handled as in FR-11 or FR-12. |
 | PRD01-AC-42 | FR-11, BR-06 | Both services have reached their plan limit | Thermora receives the second limit message | Each service is reported separately; no automatic action is taken and nothing is retried without the person asking. |
 | PRD01-AC-43 | FR-01 to FR-17 | Any screen of this module | The person looks for accounts, roles or permissions | None exists: every person on the machine sees the same screens (PRD-00 §3). |
+
+Note: AC-35 and AC-36 were removed in v0.2 as duplicates; their numbers are not reused.
 
 ## 8. States and edge cases
 
@@ -227,7 +229,7 @@ PRD-00 (single kind of user, display name, credential rule, no usage data); Pers
 | PRD02 | History entries keep the display name they were recorded with after the person renames themselves (PRD-00 FR-06); packages never carry per-machine settings (display name setting, chosen service, reminder state) beyond the exported origin. | FR-02, FR-15 |
 | PRD03 | Whether a procedure is written for one service or both, and what a test run does when the person's service is not the one the procedure targets or is not Ready. | FR-07, FR-08 |
 | Later modules (incident, customer replies) | Data rules for customer messages; the reminder here covers only financial and HR data. | FR-09, Personas §7 |
-| Technical design (tech-lead) | Whether the provider's own sign-in can be started without a terminal for each tool (FR-06 case a or b); how a service is found and its version and sign-in status read without any request to the AI (BR-13); the supported version list (BR-08). | FR-03, FR-06 |
+| Technical design (tech-lead) | Whether the provider's own sign-in can be started without a terminal for each tool (FR-06 case a or b); how a service is found and its version and sign-in status read without any request to the AI (BR-13) and without reading credential files; the supported version list (BR-08). | FR-03, FR-06 |
 | PRD-00 (later edit) | The terms Service state, Health check, Plan limit, Setup help and Supporter, now defined at the top of this document, may move to the PRD-00 glossary if another module uses them. | Terms |
 
 ## 13. Open questions
@@ -276,5 +278,6 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 |---|---|---|---|
 | 2026-11-25 | 0.1 | First draft from Personas v0.5 and PRD-00 v0.3 | — |
 | 2026-11-25 | 0.2 | Applied the BA early review: view and export without a Ready service moved to PRD02 (FR-08); AC-14 written as two cases; the minimum choice rule made Must (FR-07, FR-16 split); defined module terms and "supporter" wording; testable ACs (term list, printable characters, 10 seconds); added ACs for Cannot be checked, slow check, rename, both at limit, connection test, no accounts; removed duplicate ACs (former AC-35, AC-36); persona traceability; FR-09 wording | BA review |
+| 2026-11-25 | 0.2 | Applied BA final review non-blocking items: BR-05 wording, AC-11 premise, §12 technical-design row, FR-14 pointer to PRD-00 AC-26, note on removed AC-35 and AC-36 | BA review |
 | 2026-11-25 | 0.2 | Provider terms, option A: BR-01, BR-02, BR-11 to BR-12 and NFR added; accepted risks R1 and R2 with revisit triggers; question 3 removed | user decision (PO: DaoNguyenTrong) |
 | 2026-11-25 | 0.2 | Detection and health check use no plan; connection test only on request (FR-17, BR-13); D9 kept as a proposed default for the PO to confirm; former question 1 became D20 and question 2 merged into D15; status In review with no open questions | SA (on behalf of user) |
