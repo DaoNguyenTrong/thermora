@@ -10,6 +10,10 @@ Write only the **why** — the reasoning and rejected alternative. Never "what w
 
 ---
 
+### 2026-11-25 — Serena runs its REPL interface
+
+Follows Serena's current default, chosen by the user over the per-tool interface. Accepted exposure: `serena_repl` runs unsandboxed Python that bypasses the Bash guard and permission rules; hiding the shell API and a written rule only steer agents. The design-only agent loses Serena, because granting the REPL would let it edit code. Rejected: per-tool interface; running Serena in a container.
+
 ### 2026-11-25 — CI syncs work item state to Plane
 
 State kept by hand from a session drifts when PRs move elsewhere. Accepted exposure: anyone who can push a branch can read the Plane token, so it belongs to a low-privilege bot. `pull_request_target` alone would not close that; adding an environment limited to `dev` was not adopted. Failing or requiring the check is rejected: a Plane outage would block merges. The template ignores its config; an adopting project commits it, because CI reads it from the base commit. Cost: fork PRs are not synced.

@@ -94,15 +94,15 @@ The step-by-step implementation protocol (memory → live state → CodeGraph/Se
 
 ### Tool Selection
 
-Orient with CodeGraph (`codegraph_explore`): how modules connect, what calls what across layers, and what breaks if you change something. Then drill in with Serena or the stack's LSP, then `Read`. Never grep first; never open a file to orient.
+Orient with CodeGraph (`codegraph_explore`): how modules connect, what calls what across layers, and what breaks if you change something. Then drill in with Serena or the stack's LSP, then `Read`. Serena is called through `serena_repl` (`.claude/rules/serena.md` § Calling Serena). Never grep first; never open a file to orient.
 
 | When you already know which symbol to inspect… | Use | Scope |
 | --- | --- | --- |
-| Read a class or function body | Serena `find_symbol` with `include_body=true` | TODO(stack): verified languages |
-| Confirm what a usage resolves to | Serena `find_declaration` | TODO(stack) |
-| Scan a file's public surface | Serena `get_symbols_overview` | TODO(stack) |
-| Find every caller / usage of a symbol | Serena `find_referencing_symbols` | only languages verified in `serena.md`; otherwise CodeGraph blast radius |
-| Rename a symbol across the codebase | Serena `rename_symbol` | only languages verified in `serena.md` |
+| Read a class or function body | Serena `s.lsp.find_symbol` with `include_body=True` | TODO(stack): verified languages |
+| Confirm what a usage resolves to | Serena `s.lsp.find_declaration` | TODO(stack) |
+| Scan a file's public surface | Serena `s.lsp.get_symbols_overview` | TODO(stack) |
+| Find every caller / usage of a symbol | Serena `s.lsp.find_referencing_symbols` | only languages verified in `serena.md`; otherwise CodeGraph blast radius |
+| Rename a symbol across the codebase | Serena `s.lsp.rename_symbol` | only languages verified in `serena.md` |
 | Broad keyword / file search | `grep` (quick), Explore agent (broad) | — |
 
 A language CodeGraph does not index (`codegraph status`) uses grep + `Read`. Verification method and results: `.claude/rules/serena.md`.
