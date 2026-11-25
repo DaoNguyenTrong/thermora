@@ -28,7 +28,7 @@ Any change to an approved PRD returns it to *In review*.
 
 Proposed catalogue, drafted 2026-11-25 from the stage 0 interview and revised the same day; the PO fixed the list and the order on 2026-11-25, when approving Personas v0.3.
 
-**Naming:** "PRD00" (also written PRD-00 in older text) is the common part: glossary, roles, permission matrix, status lifecycle (file `00-common.md`, not yet written). The personas file `00-personas.md` is called "Personas", code `P`. Never call the personas file PRD-00.
+**Naming:** "PRD00" (also written PRD-00 in older text) is the common part: glossary, roles, permission matrix, status lifecycle (file `00-common.md`, first draft 2026-11-25). The personas file `00-personas.md` is called "Personas", code `P`. Never call the personas file PRD-00.
 
 **Order** (proposed by SA on behalf of user; fixed by the PO on 2026-11-25): Personas → PRD00 → PRD01 Setup → PRD02 Workspace → PRD03 Authoring → PRD04 Sharing. The REL-1 walking skeleton spans PRD02 and PRD03: the head authors one procedure, an analyst uses it to produce one report. PRD02 owns running a procedure; PRD03 test-runs a draft through the Workspace engine, so PRD03 depends on PRD02, not the reverse.
 
@@ -39,7 +39,7 @@ Proposed catalogue, drafted 2026-11-25 from the stage 0 interview and revised th
 | Code | PRD | Status | Version | Depends on | Design |
 |---|---|---|---|---|---|
 | P | Personas (`00-personas.md`) | Approved | 0.4 | none | - |
-| PRD00 | Common part: glossary, roles, permission matrix, status lifecycle | - | - | P | - |
+| PRD00 | Common part: glossary, roles, permission matrix, status lifecycle (`00-common.md`) | Draft | 0.1 | P | - |
 | PRD01 | Setup and connection: find Claude Code / Codex on the machine, check sign-in, training-option reminder | - | - | PRD00 | - |
 | PRD02 | Workspace: each report is a project folder with lasting context; export and import of a package (procedure or report) for hand-over over Zalo or email; pick a procedure, load raw files, orchestrator and role agents run it (check and fix loop, at most 3 rounds), reopen unfinished work and continue, report status, head's approval before Excel and PDF export | - | - | PRD00, PRD01 | - |
 | PRD03 | Standard authoring: the head describes a procedure in plain language, AI turns it into rules, skills and agents for Claude Code and Codex, test run through the Workspace engine, publish | - | - | PRD00, PRD01, PRD02 | - |
