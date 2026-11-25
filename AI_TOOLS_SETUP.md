@@ -51,10 +51,19 @@ Restart Claude Code after registering the server. A language that `codegraph sta
 Language-server-backed symbol navigation and editing. Config goes in `.serena/project.yml`, which is gitignored like the rest of `.serena/`, so each member creates it (TODO(stack): the project's languages, plus `ignore_all_files_in_gitignore: true`).
 
 ```bash
-uv tool install -p 3.13 serena-agent
+uv tool install -p 3.13 serena-agent    # 2.x; upgrade: uv tool upgrade serena-agent
 serena init
 claude mcp add --scope user serena -- serena start-mcp-server --context=claude-code --project-from-cwd
 ```
+
+The agent files expect the REPL interface. In `~/.serena/serena_config.yml` set:
+
+```yaml
+agent_interface: REPL
+excluded_apis: ["shell"]
+```
+
+`serena_repl` runs unsandboxed Python that the Bash guard does not see, and `excluded_apis` only hides Serena's own functions. Review its calls before approving them (`.claude/rules/serena.md` § Calling Serena).
 
 Verify its scope on this stack before trusting caller search or rename: `.claude/rules/serena.md`.
 
