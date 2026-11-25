@@ -3,7 +3,7 @@
 | Item | Value |
 |---|---|
 | Code | `PRD00` (prefix for every code in this document) |
-| Status | In review |
+| Status | Approved |
 | Version | 0.3 |
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
@@ -281,3 +281,4 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.2 | Applied the early BA review: module behaviour moved to §12; unsourced success targets removed; testable acceptance criteria and lifecycle ACs added; glossary terms added; persona goal codes in stories; usage measuring became default D9 | BA review |
 | 2026-11-25 | 0.3 | Applied the BA second review: imported procedure status, update beside edited copy, matching by procedure identifier, imported report as importer's copy (BR-12 to BR-15, D12 to D14); listing and import ACs (AC-16, AC-21, AC-22) moved to §12 for PRD02; AC-01 wording; AC-23 marked a design-review check; §10 notices made a note; status In review | BA review |
 | 2026-11-25 | 0.3 | Restored the stage-0 success signals (80% of the team weekly; another department asks) to the shared measures, measured by asking the people | user decision (PO: DaoNguyenTrong), stage-0 interview (E1) |
+| 2026-11-25 | 0.3 | User approval of PRD00 v0.3, including the Proposed defaults D1 to D14 | user decision (PO: DaoNguyenTrong) |
