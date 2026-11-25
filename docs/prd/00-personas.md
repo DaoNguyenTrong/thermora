@@ -3,7 +3,7 @@
 | Item | Value |
 |---|---|
 | Code | `P` (persona prefix `P-nn`, anti-persona `AP-nn`) |
-| Status | In review |
+| Status | Approved |
 | Version | 0.5 |
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
@@ -206,3 +206,4 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.4 | Applied the BA review: approval row of v0.3 restored; package export/import handed to PRD02 (not PRD01/PRD04); hand-over claim cited as SA decision, not [User]; assumptions A11 and A12 reordered; status In review | BA review |
 | 2026-11-25 | 0.4 | User approval of personas v0.4, including the proposed default D5 | user decision (PO: DaoNguyenTrong) |
 | 2026-11-25 | 0.5 | Tidied to match approved PRD00 v0.3 (personal tool, single kind of user, no roles, approval outside the app, statuses In progress/Finished, PRD04 deferred): role lines replaced, naming line, D2, Handed-to rows marked settled, approval situations noted as real life over Zalo, stage-0 signals (80% weekly use, another department asks) added to success lines [User] (E1); status In review | BA review |
+| 2026-11-25 | 0.5 | User approval of personas v0.5 | user decision (PO: DaoNguyenTrong) |
