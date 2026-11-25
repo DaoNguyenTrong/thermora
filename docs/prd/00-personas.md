@@ -4,7 +4,7 @@
 |---|---|
 | Code | `P` (persona prefix `P-nn`, anti-persona `AP-nn`) |
 | Status | Approved |
-| Version | 0.3 |
+| Version | 0.4 |
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
 | Product | Thermora |
@@ -55,9 +55,9 @@ The primary persona is the one the product favours when two personas conflict. T
 
 | Main device | Frequency | When and where | Language | Digital proficiency | Source |
 |---|---|---|---|---|---|---|
-| Own computer; Windows, macOS or Ubuntu (all three in use in the company) | Weekly or more, for the recurring reports | [Assumption] Office hours, at the desk, with a normal office network connection | [Assumption] Vietnamese for daily work (see §7 D1) | Office-level (Excel, documents, slides); does not use a terminal | [User] for devices and proficiency; [Assumption] for the rest (A4, A6, A9) |
+| Own computer, desktop PC or laptop (both in use in the team); Windows, macOS or Ubuntu (all three in use in the company) | Weekly or more, for the recurring reports | [Assumption] Office hours, at the desk, with a normal office network connection | [Assumption] Vietnamese for daily work (see §7 D1) | Office-level (Excel, documents, slides); does not use a terminal | [User] for devices (desktop PCs and laptops, E4) and proficiency; [Assumption] for the rest (A4, A6, A9, A12) |
 
-**Behaviour and constraints**: Works alongside Excel, CSV and JSON files and PDF output, and uses the Zalo PC app on the desktop for team coordination [Data] E2. Analysts handle incidents and write most customer replies [User] (E3). Replies follow a tone standard and need senior approval before they are sent [Data] E2. Customer incident descriptions are often hard to understand, so the person handling one compares it with earlier similar incidents [Data] E2. Accounts are issued per person, not per department, and credentials have been passed in plain chat [Data] E2: a security habit to be aware of, not a rule. Every report waits for the head's approval before it goes to the customer [User]; speed is pursued within that constraint. Pays for their own AI subscription, so a job that burns quota faster than today is a cost to them [Assumption]. Has little tolerance for extra steps compared with plain chat [Assumption]. Hydro data going to external AI services is accepted as today's status quo [User]; no financial or HR data is involved. Customer messages may contain customer data [Data] E2; this is a data consideration for the later modules that handle incidents and customer replies, not a rule here.
+**Behaviour and constraints**: Works alongside Excel, CSV and JSON files and PDF output, and uses the Zalo PC app on the desktop for team coordination [Data] E2. The team has no shared folder that all 5 can open, [User] (E4); for the pilot, procedures and reports therefore move between people as an exported package sent over Zalo or email [SA decision on behalf of user, recorded in `docs/prd/README.md`]. Analysts handle incidents and write most customer replies [User] (E3). Replies follow a tone standard and need senior approval before they are sent [Data] E2. Customer incident descriptions are often hard to understand, so the person handling one compares it with earlier similar incidents [Data] E2. Accounts are issued per person, not per department, and credentials have been passed in plain chat [Data] E2: a security habit to be aware of, not a rule. Every report waits for the head's approval before it goes to the customer [User]; speed is pursued within that constraint. Pays for their own AI subscription, so a job that burns quota faster than today is a cost to them [Assumption]. Has little tolerance for extra steps compared with plain chat [Assumption]. Hydro data going to external AI services is accepted as today's status quo [User]; no financial or HR data is involved. Customer messages may contain customer data [Data] E2; this is a data consideration for the later modules that handle incidents and customer replies, not a rule here.
 
 **Typical situations** (input for user stories)
 
@@ -101,9 +101,9 @@ The primary persona is the one the product favours when two personas conflict. T
 
 | Main device | Frequency | When and where | Language | Digital proficiency | Source |
 |---|---|---|---|---|---|---|
-| Own computer; Windows, macOS or Ubuntu | Authoring: occasional (when a procedure is new or changes). Review: each report | [Assumption] Office hours, at the desk | [Assumption] Vietnamese (see §7 D1) | Office-level; not a programmer | [User] for device and proficiency; [Assumption] for the rest (A4, A6, A9) |
+| Own computer, desktop PC or laptop (both in use in the team); Windows, macOS or Ubuntu | Authoring: occasional (when a procedure is new or changes). Review: each report | [Assumption] Office hours, at the desk | [Assumption] Vietnamese (see §7 D1) | Office-level; not a programmer | [User] for devices (desktop PCs and laptops, E4) and proficiency; [Assumption] for the rest (A4, A6, A9, A12) |
 
-**Behaviour and constraints**: Personal Claude Pro or ChatGPT Plus subscription, like the analysts [User]. Expresses procedures as plain-language descriptions, steps and checklists [User]. Is accountable for what the customer receives, so approval before sending is not optional [User]. Sets a tone standard for customer replies and may ask two senior colleagues to review a sensitive reply before it is sent; a candid draft explaining a fault was held back this way [Data] E2. Coordinates through the Zalo PC app on the desktop [Data] E2. May also do analysis work themselves [Assumption; see A8 and §7 D3].
+**Behaviour and constraints**: Personal Claude Pro or ChatGPT Plus subscription, like the analysts [User]. Expresses procedures as plain-language descriptions, steps and checklists [User]. Is accountable for what the customer receives, so approval before sending is not optional [User]. Sets a tone standard for customer replies and may ask two senior colleagues to review a sensitive reply before it is sent; a candid draft explaining a fault was held back this way [Data] E2. Coordinates through the Zalo PC app on the desktop [Data] E2. There is no shared folder all 5 can open; procedures reach the analysts as an exported package over Zalo or email [SA decision on behalf of user, recorded in `docs/prd/README.md`; the missing shared folder is [User] (E4)]. May also do analysis work themselves [Assumption; see A8 and §7 D3].
 
 **Typical situations** (input for user stories)
 
@@ -139,6 +139,7 @@ None identified. Speed versus approval is a constraint on P-01 (every report wai
 | E1 | expert (PO knowledge) | One interview with the PO, who knows the company and the pilot team first-hand. No end-user interviews yet. | 2026-11-25 | P-01, P-02, AP-01, AP-02 |
 | E2 | work chat log (anonymized) | Team chat on Zalo PC between the technical-support person and the department head, supplied by the PO. Names, customer plant names and credentials removed. Shows: customers are hydropower plants; daily work beyond reports (customer messages, incidents, forecast checks, per-plant data updates, trying a change on one plant first); hard-to-read incident descriptions compared with earlier ones; customer replies with a tone standard and senior approval; tasks handed out in chat with no list; per-person accounts with credentials passed in chat; Zalo PC as the coordination tool. | 2026-11-25 | P-01, P-02 |
 | E3 | expert (PO statement) | The PO is the team's technical-support person (technical support and incidents for the hydropower customers, bug fixes, account issuing) and the rollout and installation owner for the pilot; the department head is the persona representative who verifies the assumptions in §6 together with the analysts. The PO is not one of the 5 pilot-team members (the team is the head plus 4 analysts); the PO supports them from outside. The analysts themselves handle incidents and are the main people who reply to customers. | 2026-11-25 | P-01, P-02 |
+| E4 | expert (PO statement) | The PO states that the pilot team has no shared folder that all 5 can open, and that the team uses both desktop PCs and laptops. Answers to A10 and part of A9. | 2026-11-25 | P-01, P-02 |
 
 ## 6. Assumptions to verify
 
@@ -154,9 +155,10 @@ Verification is by interviewing the department head (persona representative) fir
 | A6 | Vietnamese is the working language of both personas. | P-01, P-02 | Ask the head and the 4 analysts | Before REL-1 design starts |
 | A7 | The standard today lives in people's habits, not in a document. | P-02 | Ask the head for any existing written procedure | Before REL-1 design starts |
 | A8 | The head may also do analysis work. | P-02 | Ask the head how much of her time goes to producing reports | Before REL-1 design starts |
-| A9 | Device detail for all 5 people: laptop or desktop, screen size and resolution, which operating system each uses, and quality of the office network. | P-01, P-02 | Ask the head; short survey of the 5 people | Before REL-1 design starts |
-| A10 | A shared or synced folder is available to all 5 people (relevant to how work files are handed over between them). | P-01, P-02 | Ask the head what shared storage the team uses today | Before REL-1 design starts |
+| A9 | Device detail for all 5 people: which operating system each uses, and quality of the office network. Device type is verified [User] (E4: desktop PCs and laptops both in use); screen size is A12. | P-01, P-02 | Ask the head; short survey of the 5 people | Before REL-1 design starts |
+| A10 | ~~A shared or synced folder is available to all 5 people.~~ Verified false [User] (E4): the pilot team has no shared folder all 5 can open. Resolved: for the pilot, procedures and reports move as an exported package over Zalo or email (SA decision on behalf of user, recorded in the README). | P-01, P-02 | Resolved by the PO (E4) | Resolved 2026-11-25 |
 | A11 | The analysts, not only the head or the PO, also lack a task list and have to ask what they still owe (P-01-F3). | P-01 | Ask the head and the 4 analysts | Before REL-1 design starts |
+| A12 | The smallest screen among the 5 people's computers (the default D5 assumes about 14 inches, 1366×768). | P-01, P-02 | Ask the head for the smallest screen size and resolution in the team; short survey of the 5 people | Before REL-1 design starts |
 
 ## 7. Open questions
 
@@ -172,6 +174,7 @@ The PO reviews this table once, at approval; anything rejected becomes an open q
 | D2 | No third persona. The PO (technical support, bug fixes, account issuing) is also the rollout and installation owner for the pilot (source: user decision, PO: DaoNguyenTrong, E3). The PO supports the team from outside and is not one of the 5 pilot-team members. Whoever installs or fixes a machine is an actor that PRD00 § Roles may need to name, not a persona. Revisit and add a persona when a second department asks. | The installer role has no goals of its own in the product yet. | §1, PRD00 |
 | D3 | The department head writes the standard and approves reports. If the head also analyses (A8), that person acts as P-01 for that job. | Keeps two personas with different main goals. | P-02 |
 | D4 | The first release stays on the product-effectiveness report. Incident analysis and drafting customer replies are real work of the analysts (user decision, PO: DaoNguyenTrong, E3), recorded as typical situations for later (P-01-S5, P-01-S6) and not in scope of the first release. | The PO's success measures are about the report. | P-01-S5, P-01-S6 |
+| D5 | Design for a laptop screen of about 14 inches (1366×768) as the smallest target, scaling up to desktop monitors. The team uses both desktop PCs and laptops (E4); the smallest screen is not yet known (A12). | A design target is needed before REL-1 design; a small-screen default covers every device in use. | P-01, P-02 usage rows |
 
 ### Handed to other PRDs
 
@@ -182,6 +185,7 @@ The PO reviews this table once, at approval; anything rejected becomes an open q
 | PRD00 | Report status (draft / submitted / approved) and who may set each. |
 | PRD01 / PRD00 | Credentials have been passed in plain chat (E2): a security consideration for setup and sign-in (PRD01) and for the roles and account rules (PRD00). |
 | Later modules handling incidents and customer replies | Customer messages may contain customer data (E2); data handling rules belong to those modules. |
+| PRD02 | Export and import of a package (procedure or report) for hand-over over Zalo or email, since the pilot team has no shared folder (E4). |
 | Sharing PRD (PRD04) | In-app submit, review and return of a report; today the head's approval stays a human act. |
 
 ## 8. Change log
@@ -197,3 +201,7 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.3 | The PO is outside the 5-person pilot team (weights 80/20 kept); analysts handle incidents and customer replies, so P-01-S5, S6 and related claims are [User] (E3), still later-release (D4); D2 invented clause removed; success lines labelled [User] (E1) | user decision (PO: DaoNguyenTrong) |
 | 2026-11-25 | 0.3 | Applied the BA second review: source column on every situation row; E2 claims relabelled team-level (P-01-F3, forecast checks, per-plant data); new A11; P-02 illustrative name changed to Mai; assumptions renumbered (A7 gap closed; old A8 to A11 are now A7 to A10); credentials and customer-data items handed on; status set to In review | BA review |
 | 2026-11-25 | 0.3 | User approval of personas v0.3, including the Proposed defaults D1 to D4 and the module catalogue and its order in `docs/prd/README.md` | user decision (PO: DaoNguyenTrong) |
+| 2026-11-25 | 0.4 | Added E4: the pilot team has no shared folder all 5 can open (A10 resolved) and uses both desktop PCs and laptops (usage rows [User], A9 narrowed, new A12 smallest screen); proposed default D5 added (14-inch 1366×768 smallest target) | user decision (PO: DaoNguyenTrong) |
+| 2026-11-25 | 0.4 | Hand-over for the pilot by exported package over Zalo or email, applied to the E4 fact as recorded in the README; export and import of the package handed to PRD02 | SA (on behalf of user) |
+| 2026-11-25 | 0.4 | Applied the BA review: approval row of v0.3 restored; package export/import handed to PRD02 (not PRD01/PRD04); hand-over claim cited as SA decision, not [User]; assumptions A11 and A12 reordered; status In review | BA review |
+| 2026-11-25 | 0.4 | User approval of personas v0.4, including the proposed default D5 | user decision (PO: DaoNguyenTrong) |
