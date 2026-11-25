@@ -10,6 +10,12 @@ Write only the **why** — the reasoning and rejected alternative. Never "what w
 
 ---
 
+### 2026-11-25 — Admins may push to `dev` directly
+
+Supersedes: Human-gated areas are kept by `pr-reviewer`, not by CODEOWNERS
+
+Approved by the user (Tech lead). A solo maintainer needs a way to fix `dev` without a PR round trip. Accepted cost: an admin push to `dev` skips the required checks, so a broken `dev` is caught only by the next PR. `main` still binds admins, so a release cannot skip CI. Agents still reach `dev` only through a PR. The rest of the superseded entry stands.
+
 ### 2026-11-25 — Serena runs its REPL interface
 
 Follows Serena's current default, chosen by the user over the per-tool interface. Accepted exposure: `serena_repl` runs unsandboxed Python that bypasses the Bash guard and permission rules; hiding the shell API and a written rule only steer agents. The design-only agent loses Serena, because granting the REPL would let it edit code. Rejected: per-tool interface; running Serena in a container.
