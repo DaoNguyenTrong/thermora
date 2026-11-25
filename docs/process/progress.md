@@ -9,17 +9,17 @@ Detailed PRD status lives in `docs/prd/README.md` and tech doc status in `docs/t
 
 ## Story
 
-Used only when the project has no `.claude/plane.json`; how to write it: `lifecycle.md` § Module Progress.
+The source of truth for points and story status; how to write it: `lifecycle.md` § Module Progress.
 
-| Story (or part by AC set) | REL | Points | Status | Cycle |
+| Story (or part by AC set) | REL | Points | Status | Sprint |
 |---|---|---|---|---|
 
 ## Sprint
 
 One row per sprint, written at the sprint retro by the Sprint owner's session (`lifecycle.md` § Sprint loop, § Module Progress).
 
-| Cycle | Sprint owner | Goal | Committed points | Done points | Stories moved | Stories rejected | Time in Pending |
-|---|---|---|---|---|---|---|---|
+| Sprint | Sprint owner | Goal | Committed points | Done points | Stories moved | Stories rejected |
+|---|---|---|---|---|---|---|
 
 ## Metrics
 

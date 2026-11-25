@@ -10,6 +10,12 @@ Write only the **why** — the reasoning and rejected alternative. Never "what w
 
 ---
 
+### 2026-11-25 — No Plane sync in CI
+
+Supersedes: CI syncs work item state to Plane
+
+Approved by the user (Tech lead): Thermora tracks no status on Plane. A sync job with no tracker only runs on every PR, and its token exposure no longer buys anything. Rejected: keeping it switched off by the missing config, which leaves dead code and rules that every agent still reads.
+
 ### 2026-11-25 — Admins may push to `dev` directly
 
 Supersedes: Human-gated areas are kept by `pr-reviewer`, not by CODEOWNERS
