@@ -1,6 +1,6 @@
 # Product Requirements Documents (PRD)
 
-One PRD per module, written from `_template.md` by the `product-manager` agent. Terms, roles, the permission matrix and the status lifecycle are defined only in PRD-00; other PRDs refer back to it.
+One PRD per module, written from `_template.md` by the `product-manager` agent. Terms, shared concepts and the status lifecycles are defined only in PRD-00; other PRDs refer back to it.
 
 ## Process
 
@@ -28,21 +28,23 @@ Any change to an approved PRD returns it to *In review*.
 
 Proposed catalogue, drafted 2026-11-25 from the stage 0 interview and revised the same day; the PO fixed the list and the order on 2026-11-25, when approving Personas v0.3.
 
-**Naming:** "PRD00" (also written PRD-00 in older text) is the common part: glossary, roles, permission matrix, status lifecycle (file `00-common.md`, first draft 2026-11-25). The personas file `00-personas.md` is called "Personas", code `P`. Never call the personas file PRD-00.
+**Naming:** "PRD00" (also written PRD-00 in older text) is the common part: glossary, shared concepts, status lifecycles of procedures and reports (file `00-common.md`, first draft 2026-11-25). The personas file `00-personas.md` is called "Personas", code `P`. Never call the personas file PRD-00.
 
-**Order** (proposed by SA on behalf of user; fixed by the PO on 2026-11-25): Personas → PRD00 → PRD01 Setup → PRD02 Workspace → PRD03 Authoring → PRD04 Sharing. The REL-1 walking skeleton spans PRD02 and PRD03: the head authors one procedure, an analyst uses it to produce one report. PRD02 owns running a procedure; PRD03 test-runs a draft through the Workspace engine, so PRD03 depends on PRD02, not the reverse.
+**Order** (proposed by SA on behalf of user; fixed by the PO on 2026-11-25): Personas → PRD00 → PRD01 Setup → PRD02 Workspace → PRD03 Authoring. PRD04 Sharing is deferred (see the catalogue note below). The REL-1 walking skeleton spans PRD02 and PRD03: someone authors one procedure, and a user runs it to produce one report. PRD02 owns running a procedure; PRD03 test-runs a draft through the Workspace engine, so PRD03 depends on PRD02, not the reverse.
 
-**First-release delivery (SA on behalf of user):** no server. A procedure and a report are ordinary files in a project folder, the project's persistent home. For the pilot the team has no shared folder all 5 can open (PO, E4 in Personas v0.4), so procedures and reports move as an exported package over Zalo or email. Single-writer rule: only the head edits a procedure; each report has one analyst owner; corrections come back as a new version. The head's approval stays a human act in REL-1, with a simple report status (draft / submitted / approved); in-app submit, review and return belongs to Sharing (PRD04).
+**First-release delivery (SA on behalf of user):** no server. A procedure and a report are ordinary files in a project folder, the project's persistent home. For the pilot the team has no shared folder all 5 can open (PO, E4 in Personas v0.4), so procedures and reports move as an exported package over Zalo or email. Scope change (PO, 2026-11-25): the first version is a personal tool with one kind of user and no roles or permissions; every user can do everything. Anyone authors a procedure. A procedure can be shared like a file: it is exported as a package, sent, and imported by the receiver, whose copy belongs to them and records its origin. A report has only two statuses, in progress and finished; the head's approval stays outside the app (Zalo). Corrections after a finished report are a new version. Roles are revisited before shared or department use.
 
-**Handed to PRD00 from the personas:** may a head approve a report they produced themselves; whether the person who installs or supports machines needs a named role; the report status values and who may set them.
+**Handed to PRD00 from the personas:** all three items (self-approval, a named role for the installer, report statuses and who sets them) are settled by the scope change: no roles, no approval in the app, statuses in progress and finished.
+
+**Later (deferred, not in the plan):** PRD04 Sharing within a department (in-app submit, review and return of reports; delivery of the latest published procedure; roles and approval inside the app). The code is reserved and not renumbered; it returns when shared or department use is considered.
 
 | Code | PRD | Status | Version | Depends on | Design |
 |---|---|---|---|---|---|
 | P | Personas (`00-personas.md`) | Approved | 0.4 | none | - |
-| PRD00 | Common part: glossary, roles, permission matrix, status lifecycle (`00-common.md`) | Draft | 0.1 | P | - |
-| PRD01 | Setup and connection: find Claude Code / Codex on the machine, check sign-in, training-option reminder | - | - | PRD00 | - |
-| PRD02 | Workspace: each report is a project folder with lasting context; export and import of a package (procedure or report) for hand-over over Zalo or email; pick a procedure, load raw files, orchestrator and role agents run it (check and fix loop, at most 3 rounds), reopen unfinished work and continue, report status, head's approval before Excel and PDF export | - | - | PRD00, PRD01 | - |
-| PRD03 | Standard authoring: the head describes a procedure in plain language, AI turns it into rules, skills and agents for Claude Code and Codex, test run through the Workspace engine, publish | - | - | PRD00, PRD01, PRD02 | - |
-| PRD04 | Sharing within a department: the team gets the latest published version of the standards; in-app submit, review and return of reports | - | - | PRD02, PRD03 | - |
+| PRD00 | Common part: glossary, shared concepts, status lifecycles of procedures and reports (`00-common.md`) | Draft | 0.2 | P | - |
+| PRD01 | Setup and connection: find Claude Code / Codex on the machine, check sign-in, first-use data and training-option reminder, display name | - | - | PRD00 | - |
+| PRD02 | Workspace: each report is a project folder with lasting context; export and import of a package (procedure or report) for hand-over over Zalo or email; pick a procedure, load raw files, orchestrator and role agents run it (check and fix loop, at most 3 rounds), reopen unfinished work and continue, report status (in progress / finished), export of Excel and PDF | - | - | PRD00, PRD01 | - |
+| PRD03 | Standard authoring: anyone describes a procedure in plain language, AI turns it into rules, skills and agents for Claude Code and Codex, test run through the Workspace engine, publish | - | - | PRD00, PRD01, PRD02 | - |
+| PRD04 | Sharing within a department: the team gets the latest published version of the standards; in-app submit, review and return of reports. Deferred: later, not in the plan | Deferred | - | PRD02, PRD03 | - |
 
 When an approved design exists, record its link in the *Design* column and in the matching PRD.
