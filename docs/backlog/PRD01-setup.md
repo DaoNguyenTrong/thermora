@@ -40,8 +40,8 @@ The backbone is the primary persona's (P-01 Linh, data analyst) activities in th
 
 | REL | Goal | Story | Persona | Depends on | Size |
 |---|---|---|---|---|---|
-| PRD01-REL-1 | A person on one machine opens Thermora, gives a name, sees that Claude Code or Codex is ready (or is told in plain Vietnamese what is missing and how to sign in) and is ready to work with the service in use shown | PRD01-US-01; PRD01-US-02; PRD01-US-03; PRD01-US-04 (AC-14, AC-15, AC-16); PRD01-US-05 (AC-17, AC-19) | P-01, P-02 | — | |
-| PRD01-REL-2 | The person is reminded about data once, can choose and change the service, can re-run a health check and copy it for the supporter, can test the connection, understands a plan limit, an unreachable service or a lapsed sign-in, and can rename themselves | PRD01-US-04 (AC-33); PRD01-US-05 (AC-18, AC-20); PRD01-US-06; PRD01-US-07; PRD01-US-08; PRD01-US-09 | P-01, P-02 | PRD01-REL-1 | |
+| PRD01-REL-1 | A person on one machine opens Thermora, gives a name, sees that Claude Code or Codex is ready (or is told in plain Vietnamese what is missing and how to sign in) and is ready to work with the service in use shown | PRD01-US-01; PRD01-US-02; PRD01-US-03; PRD01-US-04 (AC-14, AC-15, AC-16); PRD01-US-05 (AC-17, AC-19) | P-01, P-02 | — | XL |
+| PRD01-REL-2 | The person is reminded about data once, can choose and change the service, can re-run a health check and copy it for the supporter, can test the connection, understands a plan limit, an unreachable service or a lapsed sign-in, and can rename themselves | PRD01-US-04 (AC-33); PRD01-US-05 (AC-18, AC-20); PRD01-US-06; PRD01-US-07; PRD01-US-08; PRD01-US-09 | P-01, P-02 | PRD01-REL-1 | L |
 
 ## 3. Not yet planned
 
@@ -56,3 +56,4 @@ Source labels: `user decision (PO: <name>)`, `SA (on behalf of user)`, `BA revie
 | Date | Version | Change | Source |
 |---|---|---|---|
 | 2026-11-26 | 0.1 | First draft | — |
+| 2026-11-26 | 0.1 | Sizes: REL-1 XL, REL-2 L | tech-lead |
