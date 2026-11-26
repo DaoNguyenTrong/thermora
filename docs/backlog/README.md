@@ -19,4 +19,4 @@ Editing a release plan (reordering, moving a story) raises its own version and t
 
 | Code | PRD | Status | Version | REL done |
 |---|---|---|---|---|
-| [`PRD01-REL`](PRD01-setup.md) | PRD01 Setup and connection | Draft | 0.1 | 0/2 |
+| [`PRD01-REL`](PRD01-setup.md) | PRD01 Setup and connection | In review | 0.2 | 0/2 |
