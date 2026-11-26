@@ -3,7 +3,7 @@
 | Item | Value |
 |---|---|
 | Code | `PRD01` (prefix for every code in this document) |
-| Status | In review |
+| Status | Approved |
 | Version | 0.2 |
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
@@ -51,7 +51,7 @@ This module covers the first run, finding and checking the AI service, guiding t
   - Anyone types, pastes, sends or stores an AI password or token because Thermora asked them to.
   - The reminders are shown so often or so firmly that people click past them, or setup feels harder than plain chat.
   - Setup and checking eat the plan the person needs for real work.
-- **Measuring success**: shared measures are in PRD-00 §1 and are owned by PRD02 and PRD03. This module owns one: **ready without help**, the share of the 5 machines on which the person, once Thermora and an AI tool are installed, reaches the ready state in 5 minutes or less with nobody's help (default D9, a proposed default the PO confirms at approval; not yet PO-approved). Measured in rollout by timing and by asking the people, since Thermora collects no usage data (PRD-00 FR-12). The second failure signal, quota running out faster than before (Personas A5), is checked by asking the people, not by Thermora.
+- **Measuring success**: shared measures are in PRD-00 §1 and are owned by PRD02 and PRD03. This module owns one: **ready without help**, the share of the 5 machines on which the person, once Thermora and an AI tool are installed, reaches the ready state in 5 minutes or less with nobody's help (default D9, confirmed by the PO at approval of v0.2). Measured in rollout by timing and by asking the people, since Thermora collects no usage data (PRD-00 FR-12). The second failure signal, quota running out faster than before (Personas A5), is checked by asking the people, not by Thermora.
 
 ## 3. Users and roles
 
@@ -257,7 +257,7 @@ Accepted by the PO (user decision, PO: DaoNguyenTrong, 2026-11-25), on the evide
 | D6 | With no service Ready, anything needing the AI is unavailable with a reason and a way to setup; which other actions stay available is PRD02's. | FR-08, AC-21, AC-22 | The BA review: view and export belong to PRD02. |
 | D7 | Quota-reached and unreachable messages follow what happened, work is kept, next steps; no time is invented; no automatic switch. | FR-11, FR-12, BR-06, BR-07, AC-29 to AC-32, AC-42 | The person pays for each subscription and needs to know their work is safe. |
 | D8 | Thermora declares minimum supported tool versions; below that, "Version not supported" and ask the person who supports you to update. | FR-03, BR-08, AC-10 | Unsupported versions fail in confusing ways. |
-| D9 | Success measure "ready without help": setup to the ready state in 5 minutes or less with nobody's help once Thermora and a tool are installed, timed in rollout and by asking. Not yet PO-approved: the PO confirms it at approval. | §2 | A number is needed for the failure signal "each machine needs IT". |
+| D9 | Success measure "ready without help": setup to the ready state in 5 minutes or less with nobody's help once Thermora and a tool are installed, timed in rollout and by asking. Confirmed by the PO at approval of v0.2. | §2 | A number is needed for the failure signal "each machine needs IT". |
 | D10 | Settings are per machine, not shared and not in any package. | FR-15, BR-10, AC-37 | No server; packages must never carry personal settings. |
 | D11 | Messages have three parts (what happened, is work safe, what to do) in plain Vietnamese; technical text only inside the copyable text; the list of technical terms is kept in the design. | BR-07, AC-13, AC-31 | Office-level users without a terminal (Personas); testable by the term list. |
 | D12 | A lapsed sign-in during use is treated like signed out. | FR-13, AC-33 | Same fix for the person. |
@@ -281,3 +281,4 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.2 | Applied BA final review non-blocking items: BR-05 wording, AC-11 premise, §12 technical-design row, FR-14 pointer to PRD-00 AC-26, note on removed AC-35 and AC-36 | BA review |
 | 2026-11-25 | 0.2 | Provider terms, option A: BR-01, BR-02, BR-11 to BR-12 and NFR added; accepted risks R1 and R2 with revisit triggers; question 3 removed | user decision (PO: DaoNguyenTrong) |
 | 2026-11-25 | 0.2 | Detection and health check use no plan; connection test only on request (FR-17, BR-13); D9 kept as a proposed default for the PO to confirm; former question 1 became D20 and question 2 merged into D15; status In review with no open questions | SA (on behalf of user) |
+| 2026-11-26 | 0.2 | User approval of PRD01 v0.2, including the Proposed defaults D1 to D20 (D9 confirmed as written) | user decision (PO: DaoNguyenTrong) |
