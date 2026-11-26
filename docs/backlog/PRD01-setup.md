@@ -53,6 +53,9 @@ The backbone is the primary persona's (P-01 Linh, data analyst) activities in th
 - **AC-21 (no service Ready, AI action unavailable):** stays in `REL-1` and is demonstrated with a placeholder AI action standing for the work PRD02 builds; it is not moved to `REL-2`.
 - **Failure messages (AC-29 to AC-32, AC-42):** demonstrated in `REL-2` through the connection test and simulated service failures. Integration with real runs is PRD02's.
 - **Distribution constraint (input to the architecture runway, not a story):** pilot installers are distributed unsigned — no Apple Developer Program membership, no Windows code-signing certificate. The PO installs by hand, following Vietnamese install steps. Revisit when anyone other than the PO installs, or on wider rollout (PO decision, 2026-11-26).
+- **Placeholder AI action also serves AC-17 (N8):** the same `REL-1` placeholder AI action is where AC-17 is demonstrated: when both services are Ready, the person is asked to choose once at the moment they first use the placeholder action. The choice prompt is not shown merely because both services became Ready.
+- **Placeholder lifetime (N9):** the placeholder is removed or replaced when PRD02 delivers real actions and never ships as a product control. FR-09's "re-readable" holds only from `REL-2` (AC-24); in `REL-1` the reminder is read once only.
+- **REL-1 demo (input for tech-lead):** the `REL-1` demo needs both services installed, or simulated machine states, so that AC-17 (both Ready) and AC-21 (none Ready) can be shown.
 - **Sizes:** the tech-lead sizes (`REL-1` XL, `REL-2` L) are kept. Moving US-06 (AC-23, AC-25) and US-07 (AC-27) into `REL-1` adds a little to `REL-1`; the tech lead may re-size.
 
 ## 3. Not yet planned
@@ -71,3 +74,4 @@ Source labels: `user decision (PO: <name>)`, `SA (on behalf of user)`, `BA revie
 | 2026-11-26 | 0.1 | Sizes: REL-1 XL, REL-2 L | tech-lead |
 | 2026-11-26 | 0.2 | Order REL-1 then REL-2, REL-2 not split; US-06 split (AC-23, AC-25 to REL-1; AC-24 stays in REL-2); unsigned pilot installers recorded as a constraint | user decision (PO: DaoNguyenTrong) |
 | 2026-11-26 | 0.2 | AC-27 moved to REL-1 so it does not depend on REL-2 (US-07 split); platforms, "ready" boundary, straddling ACs, AC-21 stub and failure-message demonstration stated | BA review |
+| 2026-11-26 | 0.2 | §2 Notes extended: placeholder AI action also serves AC-17; placeholder lifetime and FR-09 re-readable only from REL-2; REL-1 demo needs both services or simulated states | BA review |
