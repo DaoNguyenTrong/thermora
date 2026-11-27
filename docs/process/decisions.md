@@ -2,6 +2,14 @@
 
 Log of Thermora process decisions, newest on top. The rules currently in force live in `lifecycle.md`; this file records why they changed.
 
+### 2026-11-27 - Design system before any screen
+
+User decision (PO, Design lead and Tech lead: DaoNguyenTrong). Screen boards were drawn before a design system existed, and the window was restyled per screen. Stage 1c-DS now comes before 1c-UI (`lifecycle.md` § Design system). A screen uses only the approved system; a missing component is added to the system first. The REL-1 HTML boards already in `docs/design/prd01/` are not that system and are not stage 1c-UI. Applied mid-module because the missing stage was blocking UI.
+
+### 2026-11-27 - Design canvas is HTML in the repo
+
+User decision (PO and Design lead: DaoNguyenTrong). Claude Design is not used. Figma and Google Stitch were declined. Boards are static HTML in `docs/design/`, opened in a browser and reviewed on the module docs PR. The visual language lives in `docs/design/README.md`. Cost: no separate canvas comments or click-through prototype. Applied mid-module because REL-1 UI design was blocked.
+
 ### 2026-11-25 - Track progress in the repository, not on Plane
 
 User decision (PO and Tech lead). Story points, status and sprint numbers live only in `progress.md`, so there is one source of truth and no second tool to keep in step. Cost: no board view, and time spent in *Pending* is not measured. Rejected: keeping Plane optional, which kept a long section of rules and a CI job for a tool the project does not use.

@@ -12,14 +12,13 @@ You cannot talk to the approvers. The main session relays decisions to you; trea
 
 ## Inputs — refuse a brief that lacks these
 
-- The module's PRD, **Approved** (rule 10), and `docs/prd/00-*.md`, including `docs/prd/00-personas.md` for who uses each screen (device, frequency, skill).
-- The design canvas link in the module PRD's *Design* row, or, for a first design, the canvas the Design lead names. If none is available, return that missing input to the main session.
+- For a screen: the module's PRD, **Approved** (rule 10), `docs/prd/00-*.md`, including `docs/prd/00-personas.md`, and the design system *Approved* (`docs/process/lifecycle.md` § Design system). If the system is not *Approved*, stop. Do not draw the screen from ad hoc tokens.
+- For the design system itself: the personas and the canvas named in that section. A module PRD is not required to write the foundations.
+- The design canvas is `docs/design/` (static HTML). Do not use the Artifact tool.
 
 ## Source of truth
 
-<!-- TODO(stack): design system, brand tokens, fonts, source-of-truth files (e.g. canvas boards for System and Components in light and dark, brand assets, token file) -->
-
-Read the design system boards or files before every task, then the boards you will touch. They are the single source for every value: copy exact tokens from them, never from memory, and never contradict them without saying so.
+The design system in `docs/design/system/` is the single source for every value (`docs/process/lifecycle.md` § Design system). Read it before every screen task. Copy its tokens and components, and do not invent a value it does not have. A missing component is added to the system and approved before the screen that needs it.
 
 Product scope: the module's PRD in `docs/prd/` (index: `docs/prd/README.md`) plus `docs/prd/00-*.md` for roles, permissions and statuses. For an explicitly requested exploratory sketch before a PRD exists, use relevant specs; do not import another product's requirements.
 
@@ -46,10 +45,10 @@ A screen must look like a working tool built by a team that knows its users, not
 4. **Few notes, plain words.** Keep a note only when it changes what the user does next, one short line at most. Write every note and message in natural language of the users, in the language the PRD names, that an ordinary user understands: no rule IDs, no internal terms, no legal phrasing. Rationale goes in your reply, never on a board.
 5. Copy in the users' language, with real-looking data from the target module PRD or its confirmed specs. No lorem ipsum, no emoji, no invented features — a screen or element the spec doesn't cover is a question, not a design.
 6. Real controls (`<button>`, `<a href>`, `<input>` + `<label>`, or the platform's equivalents), accessible labels on icon-only buttons; touch targets ≥ 44px on phone layouts; pages work at phone width.
-7. Follow the design tool's own instructions that come back from the Artifact tool (file layout, one file per publish, no verification loop).
+7. Write boards as static HTML in `docs/design/`. The system lives in `docs/design/system/`. Screen boards for a module live in `docs/design/<module>/`. Do not use the Artifact tool.
 8. Add new boards to the canvas above unless the Design lead asks for a separate one; never delete or rewrite a board you weren't asked to change.
 9. A missing or conflicting business rule stops the task: return the question instead of designing an answer (`AGENTS.md` § Agent Workflow, Superpowers Integration). Business questions are fixed in the PRD (by `product-manager`), never decided on the canvas. If `docs/tech/` already holds a design for the module, check that the screens only need data and actions its API contract offers, and report any gap instead of designing around it.
-10. Design one REL at a time: `REL-1` at stage 1c-UI, later RELs at sprint refinement (`docs/process/lifecycle.md` § Sprint loop), only the stories the release plan puts in that REL. Do so only when the PRD and the release plan are **Approved**; if either isn't, say so and stop unless the brief explicitly asks for an exploratory sketch.
+10. Design one REL at a time: `REL-1` at stage 1c-UI, later RELs at sprint refinement (`docs/process/lifecycle.md` § Sprint loop), only the stories the release plan puts in that REL. Do so only when the PRD, the release plan and the design system are **Approved**. If any of them is not, say so and stop. A brief to write the design system is stage 1c-DS and is not a screen brief.
 11. Trace every board to its PRD: put the requirement IDs it covers (e.g. `PRD03-FR-04`) and its primary persona (e.g. `P-01`) in the board's title, design for that persona's device and density first, and list in your output any FR of the REL's stories that no board covers yet.
 12. **Client apps (multi-platform products):**
     - Each screen states its platform and target size (phone, tablet, desktop), taken from the persona's devices.

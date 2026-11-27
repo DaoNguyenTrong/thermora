@@ -32,7 +32,7 @@ Data classification, retention, and the personal-data law applicable to the prod
 
 ## UI design
 
-Design rules from `.claude/agents/ui-designer.md` apply. Design system and canvas: *Undetermined*; once approved, record the link in the PRD.
+Design rules from `.claude/agents/ui-designer.md` apply. Canvas: static HTML in `docs/design/` (PO and Design lead, 2026-11-27). The design system (`docs/design/system/`) is not started; screen design waits until it is *Approved* (`lifecycle.md` § Design system). A PRD's *Design* row gets the link when that release's boards are approved.
 
 ## Multi-platform (only if the product ships native or desktop apps)
 
@@ -47,4 +47,6 @@ Design rules from `.claude/agents/ui-designer.md` apply. Design system and canva
 
 | Date | Change | Source |
 |---|---|---|
+| 2026-11-27 | Design system is a gate before screen design. Canvas stays HTML in `docs/design/` | user decision (PO, Design lead and Tech lead: DaoNguyenTrong) |
+| 2026-11-27 | UI canvas recorded at `docs/design/` | user decision (PO and Design lead: DaoNguyenTrong) |
 | 2026-11-16 | Created the empty context skeleton from the AI-BASE template; no product requirements confirmed | Template |
