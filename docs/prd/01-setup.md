@@ -8,7 +8,7 @@
 | Approver | PO: DaoNguyenTrong |
 | Updated | 2026-11-25 |
 | Depends on | PRD-00 (Approved v0.3), Personas (Approved v0.5) |
-| Design | - |
+| Design | `docs/design/01-setup/` (REL-1, Approved v0.1) |
 | Plan | - |
 
 Terms (AI service, display name, project, procedure, report) and the single kind of user are defined in PRD-00 §1 and §3; this document does not redefine them. Terms specific to this module:
