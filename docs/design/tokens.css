@@ -1,0 +1,38 @@
+:root {
+  --bg: #f4f1ea;
+  --text: #1c1915;
+  --muted: #4e483f;
+  --border: #e4ddd2;
+  --accent: #1f4e5f;
+  --accent-text: #f4f1ea;
+  --surface: #fbf9f4;
+  --ready-bg: #e3f0e6;
+  --ready-text: #145c32;
+  --attn-bg: #f6e7d0;
+  --attn-text: #6f3d06;
+  --stop-bg: #f6e0dc;
+  --stop-text: #7a2424;
+  --font: 'Be Vietnam Pro', 'Segoe UI', sans-serif;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --radius: 4px;
+}
+
+[data-theme='dark'] {
+  --bg: #1c1915;
+  --text: #f4f1ea;
+  --muted: #c8bfb2;
+  --border: #3f3830;
+  --accent: #8fb8c4;
+  --accent-text: #1c1915;
+  --surface: #262219;
+  --ready-bg: #1a3324;
+  --ready-text: #b7dec4;
+  --attn-bg: #3a2c18;
+  --attn-text: #f0d3a6;
+  --stop-bg: #3a2220;
+  --stop-text: #f0c2bc;
+}

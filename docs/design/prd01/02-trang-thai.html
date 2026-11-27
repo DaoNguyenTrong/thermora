@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <title>PRD01-FR-04 · P-01 · Trạng thái kết nối</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../tokens.css" />
+    <link rel="stylesheet" href="../components.css" />
+  </head>
+  <body class="board">
+    <p class="board-meta">PRD01-FR-04 · PRD01-AC-12 · PRD01-AC-19 · P-01 · pattern mới: danh sách trạng thái</p>
+    <div class="pair">
+      <div>
+        <p class="board-meta">Sáng</p>
+        <div class="frame" data-theme="light">
+          <div class="titlebar">
+            <span class="product">Thermora</span>
+            <span class="who">Nguyễn Thị Hồng</span>
+            <span class="chip">Codex · Sẵn sàng</span>
+          </div>
+          <div class="content">
+            <h1>Kết nối</h1>
+            <ul class="services">
+              <li>
+                <span class="svc">Claude Code</span>
+                <span class="pill stop">Chưa có trên máy</span>
+              </li>
+              <li>
+                <span class="svc">Codex</span>
+                <span class="use">Đang dùng</span>
+                <span class="pill ready">Sẵn sàng</span>
+              </li>
+            </ul>
+            <p class="tell gap">Thermora sẽ dùng Codex.</p>
+            <div class="actions">
+              <a class="quiet" href="03-huong-dan.html">Hướng dẫn chuẩn bị</a>
+              <button class="quiet" type="button">Kiểm tra lại</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="board-meta">Tối</p>
+        <div class="frame" data-theme="dark">
+          <div class="titlebar">
+            <span class="product">Thermora</span>
+            <span class="who">Nguyễn Thị Hồng</span>
+            <span class="chip">Codex · Sẵn sàng</span>
+          </div>
+          <div class="content">
+            <h1>Kết nối</h1>
+            <ul class="services">
+              <li>
+                <span class="svc">Claude Code</span>
+                <span class="pill stop">Chưa có trên máy</span>
+              </li>
+              <li>
+                <span class="svc">Codex</span>
+                <span class="use">Đang dùng</span>
+                <span class="pill ready">Sẵn sàng</span>
+              </li>
+            </ul>
+            <p class="tell gap">Thermora sẽ dùng Codex.</p>
+            <div class="actions">
+              <a class="quiet" href="03-huong-dan.html">Hướng dẫn chuẩn bị</a>
+              <button class="quiet" type="button">Kiểm tra lại</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="state">
+      <p class="board-meta">PRD01-AC-12 · cả hai sẵn sàng, chưa chọn · sáng · không hỏi ở màn này</p>
+      <div class="frame" data-theme="light">
+        <div class="titlebar">
+          <span class="product">Thermora</span>
+          <span class="who">Nguyễn Thị Hồng</span>
+          <span class="chip">Chưa chọn</span>
+        </div>
+        <div class="content">
+          <h1>Kết nối</h1>
+          <ul class="services">
+            <li>
+              <span class="svc">Claude Code</span>
+              <span class="pill ready">Sẵn sàng</span>
+            </li>
+            <li>
+              <span class="svc">Codex</span>
+              <span class="pill ready">Sẵn sàng</span>
+            </li>
+          </ul>
+          <p class="tell gap">Chưa chọn. Thermora sẽ hỏi khi bạn bắt đầu việc.</p>
+          <div class="actions"><button class="quiet" type="button">Kiểm tra lại</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="state">
+      <p class="board-meta">PRD01-AC-39 · đang kiểm tra, cửa sổ vẫn dùng được · sáng</p>
+      <div class="frame" data-theme="light">
+        <div class="titlebar">
+          <span class="product">Thermora</span>
+          <span class="who">Nguyễn Thị Hồng</span>
+          <span class="chip">Đang kiểm tra</span>
+        </div>
+        <div class="content">
+          <h1>Kết nối</h1>
+          <ul class="services">
+            <li>
+              <span class="svc">Claude Code</span>
+              <span class="pill attn">Đang kiểm tra</span>
+            </li>
+            <li>
+              <span class="svc">Codex</span>
+              <span class="pill attn">Đang kiểm tra</span>
+            </li>
+          </ul>
+          <p class="tell gap">Đang kiểm tra. Bạn vẫn xem được màn này.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="state">
+      <p class="board-meta">PRD01-AC-11 · không có mạng · sáng</p>
+      <div class="frame" data-theme="light">
+        <div class="titlebar">
+          <span class="product">Thermora</span>
+          <span class="who">Nguyễn Thị Hồng</span>
+          <span class="chip">Chưa kiểm tra được</span>
+        </div>
+        <div class="content">
+          <h1>Kết nối</h1>
+          <ul class="services">
+            <li>
+              <span class="svc">Claude Code</span>
+              <span class="pill stop">Chưa kiểm tra được</span>
+            </li>
+            <li>
+              <span class="svc">Codex</span>
+              <span class="pill ready">Sẵn sàng</span>
+            </li>
+          </ul>
+          <p class="tell gap">Chưa kiểm tra được Claude Code vì không có mạng. Kiểm tra mạng, rồi kiểm tra lại.</p>
+          <div class="actions"><button class="quiet" type="button">Kiểm tra lại</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="state">
+      <p class="board-meta">PRD01-AC-39 · quá lâu · sáng</p>
+      <div class="frame" data-theme="light">
+        <div class="titlebar">
+          <span class="product">Thermora</span>
+          <span class="who">Nguyễn Thị Hồng</span>
+          <span class="chip">Chưa kiểm tra được</span>
+        </div>
+        <div class="content">
+          <h1>Kết nối</h1>
+          <ul class="services">
+            <li>
+              <span class="svc">Claude Code</span>
+              <span class="pill stop">Chưa kiểm tra được</span>
+            </li>
+            <li>
+              <span class="svc">Codex</span>
+              <span class="use">Đang dùng</span>
+              <span class="pill ready">Sẵn sàng</span>
+            </li>
+          </ul>
+          <p class="tell gap">Chưa kiểm tra được Claude Code vì quá lâu. Kiểm tra lại.</p>
+          <div class="actions"><button class="quiet" type="button">Kiểm tra lại</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="state">
+      <p class="board-meta">PRD01-AC-10 · bản không dùng được · PRD01-AC-09 · chưa đăng nhập · sáng</p>
+      <div class="frame" data-theme="light">
+        <div class="titlebar">
+          <span class="product">Thermora</span>
+          <span class="who">Nguyễn Thị Hồng</span>
+          <span class="chip">Chưa sẵn sàng</span>
+        </div>
+        <div class="content">
+          <h1>Kết nối</h1>
+          <ul class="services">
+            <li>
+              <span class="svc">Claude Code</span>
+              <span class="pill attn">Bản không dùng được</span>
+            </li>
+            <li>
+              <span class="svc">Codex</span>
+              <span class="pill attn">Đã có, chưa đăng nhập</span>
+            </li>
+          </ul>
+          <p class="tell gap">
+            Claude Code: nhờ người hỗ trợ bạn cập nhật. Codex: đăng nhập trên trang của Codex, rồi kiểm tra lại.
+          </p>
+          <div class="actions">
+            <a class="quiet" href="03-huong-dan.html">Hướng dẫn chuẩn bị</a>
+            <button class="quiet" type="button">Kiểm tra lại</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
