@@ -4,11 +4,11 @@
 |---|---|
 | Code | `PRD01` (prefix for every code in this document) |
 | Status | Approved |
-| Version | 0.2 |
+| Version | 0.3 |
 | Approver | PO: DaoNguyenTrong |
-| Updated | 2026-11-25 |
+| Updated | 2026-11-27 |
 | Depends on | PRD-00 (Approved v0.3), Personas (Approved v0.5) |
-| Design | `docs/design/01-setup/` (REL-1, Approved v0.1) |
+| Design | `docs/design/01-setup/` (REL-1, Approved v0.2) |
 | Plan | - |
 
 Terms (AI service, display name, project, procedure, report) and the single kind of user are defined in PRD-00 §1 and §3; this document does not redefine them. Terms specific to this module:
@@ -269,6 +269,9 @@ Accepted by the PO (user decision, PO: DaoNguyenTrong, 2026-11-25), on the evide
 | D18 | Messages to the person say "the person who supports you" and copyable text is for the "supporter"; the PO is not named in the app. | FR-05, BR-07, BR-08 | The supporter may not always be the PO (BA review). |
 | D19 | Provider-terms rules: Thermora drives only the official, unmodified tool signed in by the person, never touches login tokens or credential files, offers no login, never uses one person's sign-in for another, and is for the company's own staff only (PO decision, option A, 2026-11-25). | BR-01, BR-02, BR-11, BR-12, §13 | The PO chose to keep the plan within the providers' stated terms and accept the recorded risk. This is a PO decision, not a default to confirm. |
 | D20 | For the pilot the PO installs the AI tools; Thermora detects and guides. Whether the provider's sign-in can be started without a terminal is decided in the technical design; until then the sign-in step is written as two cases (SA on behalf of user; answers former question 1). | FR-05, FR-06, AC-14, §12 | Self-install is large and touches security; a post-pilot option if many machines still need the supporter. |
+| D21 | Thermora may start the provider's own sign-in program (claude auth login / codex login) for the person: it is the official, unmodified program, the person signs in on the provider's own page, and Thermora sees no password, code or token. Where this does not work on a machine, Thermora falls back to telling the person how to sign in (FR-06 case b). Settles the question left open in D20. | FR-05, FR-06, BR-01, BR-02, D19, AC-14 | Fits BR-01, BR-02 and D19; the person never types a credential into Thermora. (user decision (PO + Design lead: DaoNguyenTrong), 2026-11-27; technical design §14 Q3) |
+| D22 | A person signed in with an API key or a Console (pay-per-use) account shows Ready, per BR-09: Thermora cannot tell the account type without reading credentials (BR-02). The setup help adds one line: "Đăng nhập bằng tài khoản gói đăng ký của bạn." | FR-03, BR-09, D13 | Telling the account type would need credentials Thermora must not read. (user decision (PO + Design lead: DaoNguyenTrong), 2026-11-27; technical design §14 Q8) |
+| D23 | PRD-00 FR-12 and BR-05 ("no network call except through the person's AI service") apply to Thermora's own code and processes. The operating system's web engine (Microsoft WebView2 on Windows) keeps its own updates and diagnostics so it receives security fixes; this is a recorded residual risk. User-facing wording: "Thermora tự nó không gửi gì, trừ tới dịch vụ AI của bạn." | BR-05, NFR, PRD-00 FR-12 | Blocking the engine's own updates would leave security holes unfixed. (user decision (PO + Design lead: DaoNguyenTrong), 2026-11-27; technical design §14 Q12) |
 
 ## 14. Change log
 
@@ -282,3 +285,6 @@ Source labels: `user decision (<Role>: <name>)`, `SA (on behalf of user)`, `BA r
 | 2026-11-25 | 0.2 | Provider terms, option A: BR-01, BR-02, BR-11 to BR-12 and NFR added; accepted risks R1 and R2 with revisit triggers; question 3 removed | user decision (PO: DaoNguyenTrong) |
 | 2026-11-25 | 0.2 | Detection and health check use no plan; connection test only on request (FR-17, BR-13); D9 kept as a proposed default for the PO to confirm; former question 1 became D20 and question 2 merged into D15; status In review with no open questions | SA (on behalf of user) |
 | 2026-11-26 | 0.2 | User approval of PRD01 v0.2, including the Proposed defaults D1 to D20 (D9 confirmed as written) | user decision (PO: DaoNguyenTrong) |
+| 2026-11-27 | 0.3 | Recorded PO decisions on sign-in launch, account type and network scope from the technical design (D21 to D23) | user decision (PO + Design lead: DaoNguyenTrong), 2026-11-27 |
+| 2026-11-27 | 0.3 | Final review of D21 to D23: consistent with the FR, BR and AC, no blocking findings; two non-blocking notes (restate D23 in §11 NFR, optional AC-13 wording for the subscription line) parked for the next revision | BA review |
+| 2026-11-27 | 0.3 | User approval of PRD01 v0.3, including D21 to D23 | user decision (PO: DaoNguyenTrong) |
