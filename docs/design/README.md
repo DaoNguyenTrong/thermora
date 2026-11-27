@@ -1,13 +1,14 @@
 # Design
 
-The design canvas for Thermora. Static HTML boards, opened in a browser and reviewed on the module docs PR. Claude Design, Figma and Google Stitch are not used (PO and Design lead, 2026-11-27; `docs/process/decisions.md`).
+The design canvas for Thermora. Static HTML, opened in a browser. Claude Design, Figma and Google Stitch are not used (PO and Design lead, 2026-11-27).
+
+The files under `prd01/` are a set-aside sketch. They are not the design system and not the REL-1 design. The next work is `docs/design/system/`, and screens are drawn only after that system is Approved.
 
 | Item | Value |
 |---|---|
-| Language | Approved 2026-11-27 |
-| REL-1 boards | Draft, for PO and Design lead review |
-| Tokens | `tokens.css` |
-| Components | `components.css` |
+| Design system | Not started. Screens wait until `docs/design/system/` is Approved (`docs/process/lifecycle.md` § Design system) |
+| REL-1 boards | Set aside. Not stage 1c-UI. Do not extend them |
+| Tokens | `tokens.css` — a sketch of foundations, not the system |
 | Wording | `terms.md` |
 | Index | `index.html` |
 
