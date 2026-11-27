@@ -44,7 +44,8 @@ Work runs from idea to release, not only from code. Full detail (work sizes S/M/
 | 0 Idea and vision | personas (`docs/prd/00-personas.md`, required before any PRD), module list, priorities | main session (`brainstorming`); personas: `product-manager`, reviewed by `business-analyst`; PO approves |
 | 1 Requirements | PRD in `docs/prd/` | `product-manager`, reviewed by `business-analyst`; PO approves |
 | 1b Release plan | `docs/backlog/` | `product-manager`, sizes by `tech-lead`, reviewed by `business-analyst`; PO approves |
-| 1c-UI UI of `REL-1` | boards on the design canvas | `ui-designer`; PO + Design lead approve |
+| 1c-DS Design system | `docs/design/system/`, once before the first UI | `ui-designer`; PO + Design lead approve |
+| 1c-UI UI of `REL-1` | boards on the design canvas, from the approved system | `ui-designer`; PO + Design lead approve |
 | 1c Architecture runway | `docs/tech/` v1.0: common part and `REL-1` | `tech-lead`; `appsec` first when a security area is touched; Tech lead approves |
 | 2 UI design | boards of the next release | `ui-designer`; PO + Design lead approve |
 | 3 Technical design | the next release added to `docs/tech/` | `tech-lead`; `appsec` first when a security area is touched; Tech lead approves |
@@ -55,7 +56,7 @@ Work runs from idea to release, not only from code. Full detail (work sizes S/M/
 | 6c Sprint retro | sprint numbers, improvement ideas | main session |
 | 7 Release | tag, changelog | `release-kit:git-release`; Release manager approves |
 
-A module starts with 0 → 1 → 1b → 1c-UI → 1c; stages 2 to 6c then repeat every sprint (`docs/process/lifecycle.md` § Sprint loop). A story enters a sprint and is finished only by `docs/process/lifecycle.md` § Definition of Ready and Done.
+A module starts with 0 → 1 → 1b → 1c-DS → 1c-UI → 1c; stage 1c-DS is once for the product (`docs/process/lifecycle.md` § Design system). Stages 2 to 6c then repeat every sprint (`docs/process/lifecycle.md` § Sprint loop). A story enters a sprint and is finished only by `docs/process/lifecycle.md` § Definition of Ready and Done.
 
 The main session orchestrates: it sends every question first to `solution-architect`, which answers on the approvers' behalf, asks a human only what that agent escalates, relays answers, and calls agents in order. Subagents cannot ask a human or call each other. A business question found at any later stage goes back to the PRD; nothing downstream proceeds on an unapproved upstream document.
 

@@ -9,7 +9,8 @@ This document describes the path from idea to release: who does each stage, who 
 | 0 | Idea and vision | Personas (`docs/prd/00-personas.md`), vision, module list, priority order | Main session (`superpowers:brainstorming`) with the orchestrator; personas written by `product-manager`, reviewed by `business-analyst` (§ Personas) | PO | Personas are *Approved*, the module catalogue in `docs/prd/README.md` is fixed |
 | 1 | Requirements | PRD in `docs/prd/` | `product-manager`, reviewed by `business-analyst` | PO | PRD is *Approved* |
 | 1b | Backlog and release plan | `docs/backlog/PRDxx-<name>.md`: releases `REL-n`, T-shirt sizes, dependencies | `product-manager` cuts the releases, `tech-lead` sizes them, `business-analyst` reviews | PO | Release plan is *Approved* (§ Release plan) |
-| 1c-UI | UI design of `REL-1` | Design boards of the stories in `REL-1`, tagged with requirement codes | `ui-designer` | PO + Design lead | Every FR of those stories with a new screen or new interaction pattern has a board; screens that follow an existing pattern only name the pattern; dark boards only for new patterns (`ui-designer.md` rule 1); approved |
+| 1c-DS | Design system | `docs/design/system/`: foundations, components and patterns, light and dark | `ui-designer` | PO + Design lead | The system is *Approved* (§ Design system). Once per product, before the first 1c-UI |
+| 1c-UI | UI design of `REL-1` | Design boards of the stories in `REL-1`, tagged with requirement codes, built only from the approved system | `ui-designer` | PO + Design lead | Every FR of those stories with a new screen or new interaction pattern has a board; screens that follow an existing pattern only name the pattern; dark boards only for new patterns (`ui-designer.md` rule 1); approved |
 | 1c | Architecture runway | Technical design v1.0 in `docs/tech/`: common part and `REL-1`; points of the `REL-1` stories | `tech-lead` (`appsec` first when a security area is touched) | Tech lead (+ Security owner for a security area) | Common part and `REL-1` are *Approved* (§ Architecture runway) |
 | 2 | Refinement: UI design of the next release | Design boards of the stories in `REL-n` | `ui-designer` | PO + Design lead | As 1c-UI, for `REL-n` |
 | 3 | Refinement: technical design of the next release | A minor version of the tech doc with the sections of `REL-n` | `tech-lead` (`appsec` first when a security area is touched) | Tech lead (+ Security owner for a security area) | `REL-n` is *Approved*, each of its FR/AC has a design section, its stories have points |
@@ -21,7 +22,7 @@ This document describes the path from idea to release: who does each stage, who 
 | 7 | Release | Release, changelog; usually after one or a few releases of the release plan | Skill `release-kit:git-release` | Release manager | Tagged and merged into `main` |
 | 8 | Operation and feedback | Feedback from Thermora | PO | — | Feedback enters the backlog by work size (§2) |
 
-A module starts in the order 1 → 1b → 1c-UI → 1c → first sprint. Stages 2 to 6c then repeat every sprint (§ Sprint loop).
+A module starts in the order 1 → 1b → 1c-DS → 1c-UI → 1c → first sprint. Stage 1c-DS is once for the product; later modules start at 1c-UI and extend the system only when a screen needs a component it does not have (§ Design system). Stages 2 to 6c then repeat every sprint (§ Sprint loop).
 
 The main session is the orchestrator: it sends every question to `solution-architect` to answer on behalf of the user, asks the human approvers only the questions that agent escalates (business → PO, technical → Tech lead, security → Security owner), passes answers to agents, calls agents in order, and does not do an agent's work itself. Subagents cannot ask a human and cannot call other agents.
 
@@ -71,6 +72,20 @@ Once a PRD is *Approved*, the module has one file `docs/backlog/PRDxx-<name>.md`
 
 **Automated check.** `scripts/check-release-plan.ts` runs in `scripts/test-gate.sh` and CI. It compares each release plan with its PRD, and blocks a sprint plan whose release plan or PRD is not *Approved*, or that names a `REL` that does not exist. Coverage of Must stories is checked only once both the release plan and the PRD are *Approved*. An approved PRD without a release plan is not an error: the gate is where code starts.
 
+## Design system
+
+The product has one design system, written by `ui-designer` into `docs/design/system/` before any release's screens. The canvas is static HTML in `docs/design/`, opened in a browser. Claude Design, Figma and Google Stitch are not the canvas.
+
+The system holds:
+
+- **Foundations:** color, type, spacing, radius and elevation, in light and in dark.
+- **Components:** each control the product uses, with the states it actually has (at least default, focus and disabled; error where the control can fail), in light and in dark.
+- **Patterns:** the window shell and any other layout that more than one screen shares.
+
+A screen board is not part of this stage. `ui-designer` does not draw a REL screen until this system is *Approved*. A screen uses only foundations, components and patterns from the approved system. When a screen needs a component the system does not have, that component is added here and approved before the screen is drawn. Adding a component does not return the already approved specimens to *In review*.
+
+The PO and the Design lead approve the system. Status is the *Status* row of `docs/design/system/README.md`.
+
 ## Architecture runway
 
 Version 1.0 of a module's technical design holds:
@@ -90,7 +105,7 @@ Version 1.0 of a module's technical design holds:
 
 ## Sprint loop
 
-A sprint is half a month: `SPR-YYYY-MM-S1` from day 1 to 15, `SPR-YYYY-MM-S2` from day 16 to the end of the month. A sprint may hold stories of several modules, each module with its own sprint plan file. **Every sprint has one Sprint owner**, recorded in each of its sprint plans: that person's session computes velocity and writes the *Sprint* row of `progress.md`, also when the sprint holds several modules. For `REL-1`, refinement is stages 1c-UI and 1c; from `REL-2`, refinement for sprint N+1 runs during sprint N, so work is prepared exactly one sprint ahead.
+A sprint is half a month: `SPR-YYYY-MM-S1` from day 1 to 15, `SPR-YYYY-MM-S2` from day 16 to the end of the month. A sprint may hold stories of several modules, each module with its own sprint plan file. **Every sprint has one Sprint owner**, recorded in each of its sprint plans: that person's session computes velocity and writes the *Sprint* row of `progress.md`, also when the sprint holds several modules. For `REL-1`, refinement is stages 1c-DS (once), 1c-UI and 1c; from `REL-2`, refinement for sprint N+1 runs during sprint N, so work is prepared exactly one sprint ahead. A release's screens are not drawn until the design system is *Approved* (§ Design system).
 
 1. **Refinement.** For the stories meant for the next sprint, the main session calls `ui-designer` and then `tech-lead`, for those stories only. A story that meets the DoR (§ Definition of Ready and Done) moves to *Todo*.
 2. **Sprint planning**, on the first day.
@@ -111,7 +126,7 @@ The brief given to `implementer` and the review of `pr-reviewer` point to this s
 **Definition of Ready**, for a story or a part of a story by AC set:
 - it belongs to an *Approved* PRD and is in a release of an *Approved* release plan;
 - it has a persona and AC;
-- it has an approved design board, or says which existing pattern it uses;
+- the product design system is *Approved*, and the story has an approved design board that uses only that system, or names a pattern the system already has;
 - it has a section in the approved technical design (§ Architecture runway);
 - it has story points, at most 8;
 - no dependency blocks it;
@@ -158,7 +173,7 @@ The path and marker lists for each tier live only in `scripts/risk-tier.ts`. The
 
 ## 3. Gates Between Stages
 
-- **Do not enter a later stage until the earlier one is approved, story by story:** a story enters a sprint only when it meets the DoR (§ Definition of Ready and Done). The PRD, the release plan and the architecture runway are still gates for the whole module. Exception: a security-sensitive module may write its tech doc in parallel with UI design when the PO and Tech lead allow it and the scope of the exception is recorded in the module's document.
+- **Do not enter a later stage until the earlier one is approved, story by story:** a story enters a sprint only when it meets the DoR (§ Definition of Ready and Done). The PRD, the release plan, the design system and the architecture runway are still gates for the whole module. Screen design does not start until the design system is *Approved* (§ Design system). Exception: a security-sensitive module may write its tech doc in parallel with UI design when the PO and Tech lead allow it and the scope of the exception is recorded in the module's document.
 - **Business questions that arise in a later stage go back to the PRD**, edited by `product-manager`, not decided where found. Technical questions belong to `tech-lead`.
 - **Changes after approval:** editing a PRD returns it to *In review* and requires re-examining the affected design, tech doc and plan. Affected documents also return to *In review* and raise their version; a tech doc does so per release (§ Architecture runway). Exception: filling or fixing the link and metadata rows (*Design*, *Plan*, *Updated*) is not a change.
 - **After 3 fix rounds on a PR that still does not pass:** `pr-reviewer` returns `ESCALATE`, naming the document to rethink (PRD, design or plan). There is no 4th fix round.
