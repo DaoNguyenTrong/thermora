@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="canvas-head">
-      <p class="canvas-kicker">Design system · Thermora · v0.2</p>
+      <p class="canvas-kicker">Design system · Thermora · v0.3</p>
       <h1>Khung cửa sổ</h1>
       <p>
         Máy tính 1366×768. Rail có hai chế độ: hiện tại và minimal. Thanh trên và vùng nội dung giữ nguyên.
@@ -34,12 +34,7 @@
         <p class="pair-label">Sáng</p>
         <article class="frame" data-theme="light">
           <aside class="rail glass-thin">
-            <div class="rail-head">
-              <p class="rail-brand">Thermora</p>
-              <button class="icon-btn" type="button" aria-label="Thu gọn">
-                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M11 6.2 9 8l2 1.8"></path></svg>
-              </button>
-            </div>
+            <p class="rail-brand">Thermora</p>
             <nav aria-label="Chính">
               <span class="nav-item is-current" aria-current="page">Mục đang chọn</span>
               <a class="nav-item" href="#muc-hai">Mục hai</a>
@@ -52,7 +47,13 @@
           </aside>
           <div class="main-col">
             <header class="topbar glass-thin">
-              <h1>Tiêu đề trang</h1>
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Thu gọn">
+                  <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M11 6.2 9 8l2 1.8"></path></svg>
+                  <span class="tip is-below">Thu gọn</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
               <button class="btn btn-primary" type="button">Lưu</button>
             </header>
             <div class="frame-body glass">
@@ -89,12 +90,7 @@
         <p class="pair-label">Tối</p>
         <article class="frame" data-theme="dark">
           <aside class="rail glass-thin">
-            <div class="rail-head">
-              <p class="rail-brand">Thermora</p>
-              <button class="icon-btn" type="button" aria-label="Thu gọn">
-                <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M11 6.2 9 8l2 1.8"></path></svg>
-              </button>
-            </div>
+            <p class="rail-brand">Thermora</p>
             <nav aria-label="Chính">
               <span class="nav-item is-current" aria-current="page">Mục đang chọn</span>
               <a class="nav-item" href="#muc-hai-toi">Mục hai</a>
@@ -107,7 +103,13 @@
           </aside>
           <div class="main-col">
             <header class="topbar glass-thin">
-              <h1>Tiêu đề trang</h1>
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Thu gọn">
+                  <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M11 6.2 9 8l2 1.8"></path></svg>
+                  <span class="tip is-below">Thu gọn</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
               <button class="btn btn-primary" type="button">Lưu</button>
             </header>
             <div class="frame-body glass">
@@ -143,7 +145,7 @@
     </div>
 
     <h2 class="canvas-section">Minimal</h2>
-    <p class="canvas-note">Rail 72px, chỉ biểu tượng. Tên mục và tên người hiện bên cạnh biểu tượng.</p>
+    <p class="canvas-note">Rail 72px, chỉ biểu tượng. Nút trên thanh header mở lại rail. Tên mục và tên người hiện bên cạnh biểu tượng.</p>
     <div class="pair">
       <div>
         <p class="pair-label">Sáng</p>
@@ -151,10 +153,6 @@
           <aside class="rail glass-thin is-minimal">
             <p class="rail-brand">T</p>
             <nav aria-label="Chính">
-              <button class="nav-icon" type="button" aria-label="Mở rộng">
-                <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M9 6.2 11 8l-2 1.8"></path></svg>
-                <span class="tip is-side">Mở rộng</span>
-              </button>
               <span class="nav-icon is-current is-open" aria-current="page">
                 <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"></rect><rect x="9" y="2" width="5" height="5" rx="1"></rect><rect x="2" y="9" width="5" height="5" rx="1"></rect><rect x="9" y="9" width="5" height="5" rx="1"></rect></svg>
                 <span class="tip is-side">Mục đang chọn</span>
@@ -181,7 +179,13 @@
           </aside>
           <div class="main-col">
             <header class="topbar glass-thin">
-              <h1>Tiêu đề trang</h1>
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Mở rộng">
+                  <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M9 6.2 11 8l-2 1.8"></path></svg>
+                  <span class="tip is-below">Mở rộng</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
               <button class="btn btn-primary" type="button">Lưu</button>
             </header>
             <div class="frame-body glass">
@@ -220,10 +224,6 @@
           <aside class="rail glass-thin is-minimal">
             <p class="rail-brand">T</p>
             <nav aria-label="Chính">
-              <button class="nav-icon" type="button" aria-label="Mở rộng">
-                <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M9 6.2 11 8l-2 1.8"></path></svg>
-                <span class="tip is-side">Mở rộng</span>
-              </button>
               <span class="nav-icon is-current is-open" aria-current="page">
                 <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="2" y="2" width="5" height="5" rx="1"></rect><rect x="9" y="2" width="5" height="5" rx="1"></rect><rect x="2" y="9" width="5" height="5" rx="1"></rect><rect x="9" y="9" width="5" height="5" rx="1"></rect></svg>
                 <span class="tip is-side">Mục đang chọn</span>
@@ -250,7 +250,13 @@
           </aside>
           <div class="main-col">
             <header class="topbar glass-thin">
-              <h1>Tiêu đề trang</h1>
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Mở rộng">
+                  <svg class="icon icon-20" viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="11" rx="1.5"></rect><path d="M6 2.5v11"></path><path d="M9 6.2 11 8l-2 1.8"></path></svg>
+                  <span class="tip is-below">Mở rộng</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
               <button class="btn btn-primary" type="button">Lưu</button>
             </header>
             <div class="frame-body glass">
