@@ -6,6 +6,7 @@ Detailed PRD status lives in `docs/prd/README.md` and tech doc status in `docs/t
 
 | Module | Owner | PRD | Release plan | Runway | UI/Tech by REL | appsec | REL done | Merged |
 |---|---|---|---|---|---|---|---|---|
+| PRD01 Setup | DaoNguyenTrong | Approved | Approved | - | - | - | 0/2 | - |
 
 ## Story
 

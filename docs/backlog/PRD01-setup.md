@@ -4,10 +4,10 @@
 |---|---|
 | Code | `PRD01-REL` |
 | PRD | `PRD01` v0.2 |
-| Status | In review |
+| Status | Approved |
 | Version | 0.2 |
 | Approver | PO: DaoNguyenTrong |
-| Updated | 2026-11-26 |
+| Updated | 2026-11-27 |
 
 ## 1. Story map
 
@@ -75,3 +75,4 @@ Source labels: `user decision (PO: <name>)`, `SA (on behalf of user)`, `BA revie
 | 2026-11-26 | 0.2 | Order REL-1 then REL-2, REL-2 not split; US-06 split (AC-23, AC-25 to REL-1; AC-24 stays in REL-2); unsigned pilot installers recorded as a constraint | user decision (PO: DaoNguyenTrong) |
 | 2026-11-26 | 0.2 | AC-27 moved to REL-1 so it does not depend on REL-2 (US-07 split); platforms, "ready" boundary, straddling ACs, AC-21 stub and failure-message demonstration stated | BA review |
 | 2026-11-26 | 0.2 | §2 Notes extended: placeholder AI action also serves AC-17; placeholder lifetime and FR-09 re-readable only from REL-2; REL-1 demo needs both services or simulated states | BA review |
+| 2026-11-27 | 0.2 | User approval of PRD01-REL v0.2, including the order REL-1 then REL-2 and REL-2 not split | user decision (PO: DaoNguyenTrong) |
