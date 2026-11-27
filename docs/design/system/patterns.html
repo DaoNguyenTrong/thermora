@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khung · Thermora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="board.css" />
+  </head>
+  <body>
+    <header class="canvas-head">
+      <p class="canvas-kicker">Design system · Thermora · v0.1</p>
+      <h1>Khung cửa sổ</h1>
+      <p>
+        Máy tính 1366×768. Rail, thanh trên, vùng nội dung. Đây là khung dùng chung, không phải một màn hình.
+        Cuộn ngang để xem sáng và tối cạnh nhau.
+      </p>
+      <nav class="canvas-nav">
+        <a href="index.html">Mục lục</a>
+        <a href="foundations.html">Nền</a>
+        <a href="components.html">Thành phần</a>
+      </nav>
+    </header>
+
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="frame" data-theme="light">
+          <aside class="rail glass-thin">
+            <p class="rail-brand">Thermora</p>
+            <nav aria-label="Chính">
+              <span class="nav-item is-current" aria-current="page">Mục đang chọn</span>
+              <a class="nav-item" href="#muc-hai">Mục hai</a>
+              <span class="nav-item is-disabled">Mục tắt</span>
+            </nav>
+            <div class="rail-foot">
+              <strong>Nguyễn Thị Hồng</strong>
+              <span>Thermora 0.1.0</span>
+            </div>
+          </aside>
+          <div class="main-col">
+            <header class="topbar glass-thin">
+              <h1>Tiêu đề trang</h1>
+              <button class="btn btn-primary" type="button">Lưu</button>
+            </header>
+            <div class="frame-body glass">
+              <div class="stack">
+                <div>
+                  <h2 class="section-title">Mục</h2>
+                  <p class="item-meta">Một câu mô tả ngắn cho vùng này.</p>
+                </div>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <p class="item-title">Dòng ngắn</p>
+                      <p class="item-meta">Cập nhật lúc 14:32</p>
+                    </div>
+                    <span class="chip chip-neutral">Đóng</span>
+                  </div>
+                  <div class="item is-open">
+                    <div>
+                      <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                      <p class="item-meta">5 phút trước</p>
+                    </div>
+                    <span class="chip chip-success">Đã xong</span>
+                  </div>
+                </div>
+                <div class="sunken">
+                  <p>Khối thông tin nằm trên nền lõm, không thêm một lớp kính nữa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="frame" data-theme="dark">
+          <aside class="rail glass-thin">
+            <p class="rail-brand">Thermora</p>
+            <nav aria-label="Chính">
+              <span class="nav-item is-current" aria-current="page">Mục đang chọn</span>
+              <a class="nav-item" href="#muc-hai-toi">Mục hai</a>
+              <span class="nav-item is-disabled">Mục tắt</span>
+            </nav>
+            <div class="rail-foot">
+              <strong>Nguyễn Thị Hồng</strong>
+              <span>Thermora 0.1.0</span>
+            </div>
+          </aside>
+          <div class="main-col">
+            <header class="topbar glass-thin">
+              <h1>Tiêu đề trang</h1>
+              <button class="btn btn-primary" type="button">Lưu</button>
+            </header>
+            <div class="frame-body glass">
+              <div class="stack">
+                <div>
+                  <h2 class="section-title">Mục</h2>
+                  <p class="item-meta">Một câu mô tả ngắn cho vùng này.</p>
+                </div>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <p class="item-title">Dòng ngắn</p>
+                      <p class="item-meta">Cập nhật lúc 14:32</p>
+                    </div>
+                    <span class="chip chip-neutral">Đóng</span>
+                  </div>
+                  <div class="item is-open">
+                    <div>
+                      <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                      <p class="item-meta">5 phút trước</p>
+                    </div>
+                    <span class="chip chip-success">Đã xong</span>
+                  </div>
+                </div>
+                <div class="sunken">
+                  <p>Khối thông tin nằm trên nền lõm, không thêm một lớp kính nữa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </body>
+</html>

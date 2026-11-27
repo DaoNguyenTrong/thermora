@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thành phần · Thermora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="board.css" />
+  </head>
+  <body>
+    <header class="canvas-head">
+      <p class="canvas-kicker">Design system · Thermora · v0.1</p>
+      <h1>Thành phần</h1>
+      <p>Mỗi control có đủ trạng thái nó thực sự có. Sáng bên trái, tối bên phải.</p>
+      <nav class="canvas-nav">
+        <a href="index.html">Mục lục</a>
+        <a href="foundations.html">Nền</a>
+        <a href="patterns.html">Khung</a>
+      </nav>
+    </header>
+
+    <h2 class="canvas-section">Nút</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="buttons-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="buttons-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Ô nhập, chọn, tick, công tắc, tìm</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="fields-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="fields-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Thông báo, chip, tab</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="status-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="status-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Hàng, menu, panel, toast, trống, đang tải</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="list-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="list-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Sao chép và hộp thoại</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="dialog-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="dialog-dark"></div></article>
+      </div>
+    </div>
+
+    <template id="buttons">
+      <div class="glass stack">
+        <div class="matrix">
+          <span></span>
+          <span class="cap">Mặc định</span>
+          <span class="cap">Rê chuột</span>
+          <span class="cap">Focus</span>
+          <span class="cap">Đang nhấn</span>
+          <span class="cap">Đang tải</span>
+          <span class="cap">Tắt</span>
+          <span class="cap cap-name">Chính</span>
+          <button class="btn btn-primary" type="button">Lưu</button>
+          <button class="btn btn-primary is-hover" type="button">Lưu</button>
+          <button class="btn btn-primary is-focus" type="button">Lưu</button>
+          <button class="btn btn-primary is-pressed" type="button">Lưu</button>
+          <button class="btn btn-primary is-loading" type="button" aria-busy="true"><span class="spinner"></span>Lưu</button>
+          <button class="btn btn-primary" type="button" disabled>Lưu</button>
+          <span class="cap cap-name">Phụ</span>
+          <button class="btn btn-secondary" type="button">Xem</button>
+          <button class="btn btn-secondary is-hover" type="button">Xem</button>
+          <button class="btn btn-secondary is-focus" type="button">Xem</button>
+          <button class="btn btn-secondary is-pressed" type="button">Xem</button>
+          <button class="btn btn-secondary is-loading" type="button" aria-busy="true"><span class="spinner"></span>Xem</button>
+          <button class="btn btn-secondary" type="button" disabled>Xem</button>
+          <span class="cap cap-name">Không nền</span>
+          <button class="btn btn-ghost" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-hover" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-focus" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-pressed" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-loading" type="button" aria-busy="true"><span class="spinner"></span>Huỷ</button>
+          <button class="btn btn-ghost" type="button" disabled>Huỷ</button>
+          <span class="cap cap-name">Nguy hiểm nhẹ</span>
+          <button class="btn btn-danger-soft" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-hover" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-focus" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-pressed" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-loading" type="button" aria-busy="true"><span class="spinner"></span>Xoá</button>
+          <button class="btn btn-danger-soft" type="button" disabled>Xoá</button>
+          <span class="cap cap-name">Nguy hiểm</span>
+          <button class="btn btn-danger" type="button">Xoá</button>
+          <button class="btn btn-danger is-hover" type="button">Xoá</button>
+          <button class="btn btn-danger is-focus" type="button">Xoá</button>
+          <button class="btn btn-danger is-pressed" type="button">Xoá</button>
+          <button class="btn btn-danger is-loading" type="button" aria-busy="true"><span class="spinner"></span>Xoá</button>
+          <button class="btn btn-danger" type="button" disabled>Xoá</button>
+        </div>
+        <div class="row-gap">
+          <button class="btn btn-primary" type="button">Lưu</button>
+          <span class="caption">Máy tính · cao 40</span>
+          <button class="btn btn-primary btn-phone" type="button">Lưu</button>
+          <span class="caption">Điện thoại · cao 44</span>
+          <button class="btn btn-secondary btn-sm" type="button">Xem</button>
+          <span class="caption">Bảng dày · cao 32</span>
+        </div>
+        <div class="row-gap">
+          <button class="btn btn-danger" type="button" disabled>Xoá</button>
+          <p class="reason">Dòng này đang được dùng. Đổi chỗ khác trước rồi mới xoá được.</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="fields">
+      <div class="glass">
+        <div class="matrix matrix-5">
+          <span></span>
+          <span class="cap">Mặc định</span>
+          <span class="cap">Rê chuột</span>
+          <span class="cap">Focus</span>
+          <span class="cap">Tắt</span>
+          <span class="cap">Lỗi</span>
+
+          <span class="cap cap-name">Ô tick</span>
+          <label class="check"><input type="checkbox" /><span class="check-box"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.8"></path></svg></span><span>Chỉ của tôi</span></label>
+          <label class="check is-hover"><input type="checkbox" /><span class="check-box"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.8"></path></svg></span><span>Chỉ của tôi</span></label>
+          <label class="check is-focus"><input type="checkbox" checked /><span class="check-box"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.8"></path></svg></span><span>Chỉ của tôi</span></label>
+          <label class="check"><input type="checkbox" disabled /><span class="check-box"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.8"></path></svg></span><span>Chỉ của tôi</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Đã chọn</span>
+          <label class="check"><input type="checkbox" checked /><span class="check-box"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.8"></path></svg></span><span>Chỉ của tôi</span></label>
+          <span class="unused">—</span>
+          <span class="unused">—</span>
+          <label class="check"><input type="checkbox" checked disabled /><span class="check-box"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M3.2 8.2 6.4 11.2 12.8 4.8"></path></svg></span><span>Chỉ của tôi</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Công tắc</span>
+          <label class="switch"><input type="checkbox" /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <label class="switch is-hover"><input type="checkbox" /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <label class="switch is-focus"><input type="checkbox" checked /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <label class="switch"><input type="checkbox" disabled /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Đang bật</span>
+          <label class="switch"><input type="checkbox" checked /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <span class="unused">—</span>
+          <span class="unused">—</span>
+          <label class="switch"><input type="checkbox" checked disabled /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Ô nhập</span>
+          <label class="field"><span class="visually-hidden">Tên</span><input class="control" value="Nguyễn Thị Hồng" /></label>
+          <label class="field is-hover"><span class="visually-hidden">Tên</span><input class="control" value="Nguyễn Thị Hồng" /></label>
+          <label class="field is-focus"><span class="visually-hidden">Tên</span><input class="control is-focus" value="Nguyễn Thị Hồng" /></label>
+          <label class="field"><span class="visually-hidden">Tên</span><input class="control" value="Nguyễn Thị Hồng" disabled /></label>
+          <label class="field is-error"><span class="visually-hidden">Tên</span><input class="control" value=" " aria-invalid="true" /><span class="field-msg">Nhập tên trước khi lưu.</span></label>
+
+          <span class="cap cap-name">Chọn một</span>
+          <label class="field"><span class="visually-hidden">Chọn</span><select class="control select"><option>Một</option><option>Hai</option></select></label>
+          <label class="field is-hover"><span class="visually-hidden">Chọn</span><select class="control select"><option>Một</option></select></label>
+          <label class="field is-focus"><span class="visually-hidden">Chọn</span><select class="control select is-focus"><option>Một</option></select></label>
+          <label class="field"><span class="visually-hidden">Chọn</span><select class="control select" disabled><option>Một</option></select></label>
+          <label class="field is-error"><span class="visually-hidden">Chọn</span><select class="control select" aria-invalid="true"><option>Chọn một</option></select><span class="field-msg">Chọn một trước khi lưu.</span></label>
+
+          <span class="cap cap-name">Tìm kiếm</span>
+          <label class="field"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4"></circle><path d="m10.2 10.2 3 3"></path></svg><input class="control" placeholder="Tìm theo tên" /></span></label>
+          <label class="field is-hover"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4"></circle><path d="m10.2 10.2 3 3"></path></svg><input class="control" value="Hồng" /></span></label>
+          <label class="field is-focus"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4"></circle><path d="m10.2 10.2 3 3"></path></svg><input class="control is-focus" value="Hồng" /></span></label>
+          <label class="field"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4"></circle><path d="m10.2 10.2 3 3"></path></svg><input class="control" placeholder="Tìm theo tên" disabled /></span></label>
+          <span class="unused">Không dùng</span>
+        </div>
+      </div>
+    </template>
+
+    <template id="status">
+      <div class="glass stack">
+        <div class="banner banner-info">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M8 7.2V11"></path><path d="M8 5h.01"></path></svg>
+          <p>Việc này đang được xử lý. Dòng này luôn hiện.</p>
+        </div>
+        <div class="banner banner-success">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M5 8.2 7 10.2 11 6"></path></svg>
+          <p>Đã lưu.</p>
+          <button class="icon-btn" type="button" aria-label="Đóng"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4 4 12"></path></svg></button>
+        </div>
+        <div class="banner banner-warning">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.2 14.2 13.2H1.8L8 2.2z"></path><path d="M8 6.2v3.2"></path><path d="M8 11.4h.01"></path></svg>
+          <p>Còn thiếu một mục bắt buộc.</p>
+          <button class="btn-banner" type="button">Xem mục</button>
+        </div>
+        <div class="banner banner-danger">
+          <svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M8 5v3.4"></path><path d="M8 11h.01"></path></svg>
+          <p>Không lưu được. Không có gì bị xoá.</p>
+        </div>
+        <div class="row-gap">
+          <span class="chip chip-accent">Mới</span>
+          <span class="chip chip-success">Đã xong</span>
+          <span class="chip chip-warning">Cần thêm</span>
+          <span class="chip chip-danger">Lỗi</span>
+          <span class="chip chip-info">Đang xử lý</span>
+          <span class="chip chip-neutral">Đóng</span>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab is-current" type="button" role="tab" aria-selected="true">Đang mở 4</button>
+          <button class="tab is-hover" type="button" role="tab">Đã xong 12</button>
+          <button class="tab is-focus" type="button" role="tab">Cần thêm 1</button>
+        </div>
+      </div>
+    </template>
+
+    <template id="list">
+      <div class="stack">
+        <div class="cols-2">
+          <div class="glass">
+            <div class="list">
+              <div class="item">
+                <div>
+                  <p class="item-title">Dòng ngắn</p>
+                  <p class="item-meta">Cập nhật lúc 14:32</p>
+                </div>
+                <button class="btn btn-ghost btn-sm" type="button">Thao tác</button>
+              </div>
+              <div class="item is-hover">
+                <div>
+                  <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                  <p class="item-meta">5 phút trước</p>
+                </div>
+                <button class="btn btn-ghost btn-sm is-focus" type="button" aria-expanded="true">Thao tác</button>
+                <div class="menu" role="menu">
+                  <button type="button" role="menuitem" class="is-hover">Sửa</button>
+                  <button type="button" role="menuitem">Xem</button>
+                  <div class="menu-sep"></div>
+                  <button type="button" role="menuitem" class="is-danger">Xoá</button>
+                </div>
+              </div>
+              <div class="item is-confirm">
+                <p>Xoá dòng này? Việc này không hoàn tác được.</p>
+                <div class="item-actions">
+                  <button class="btn btn-danger btn-sm" type="button">Xoá</button>
+                  <button class="btn btn-secondary btn-sm" type="button">Huỷ</button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="edit-line">
+                  <label class="visually-hidden" for="row-name">Tên</label>
+                  <input id="row-name" class="control" value="Dòng đang sửa" />
+                  <button class="btn btn-primary btn-sm" type="button">Lưu</button>
+                  <button class="btn btn-ghost btn-sm" type="button">Huỷ</button>
+                </div>
+              </div>
+              <div class="item is-disabled">
+                <div>
+                  <p class="item-title">Dòng chỉ xem</p>
+                  <p class="item-meta">Không sửa được từ đây.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="glass panel">
+            <div class="panel-head">
+              <h2 class="section-title">Chi tiết</h2>
+              <button class="icon-btn" type="button" aria-label="Đóng"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4 4 12"></path></svg></button>
+            </div>
+            <label class="field">
+              <span>Tên</span>
+              <input class="control" value="Nguyễn Thị Hồng" />
+              <span class="field-msg">Tên hiện trên máy này.</span>
+            </label>
+            <div class="row-gap">
+              <button class="btn btn-primary" type="button">Lưu</button>
+              <button class="btn btn-ghost" type="button">Huỷ</button>
+            </div>
+          </aside>
+        </div>
+        <div class="row-gap" style="align-items: flex-start">
+          <div class="toast">
+            <span class="toast-success"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M5 8.2 7 10.2 11 6"></path></svg></span>
+            <p>Đã lưu.</p>
+            <button class="icon-btn" type="button" aria-label="Đóng"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 4l8 8M12 4 4 12"></path></svg></button>
+          </div>
+          <div class="toast">
+            <span class="toast-danger"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6"></circle><path d="M8 5v3.4"></path><path d="M8 11h.01"></path></svg></span>
+            <p>Chưa lưu được.</p>
+            <button class="btn btn-secondary btn-sm" type="button">Thử lại</button>
+          </div>
+        </div>
+        <div class="glass cols-2">
+          <div class="empty">
+            <h3>Chưa có mục nào</h3>
+            <p class="item-meta">Mục bạn thêm sẽ nằm ở đây.</p>
+            <button class="btn btn-primary" type="button">Thêm mục</button>
+          </div>
+          <div class="loading">
+            <h3>Đang tải</h3>
+            <span class="skel" style="width: 80%"></span>
+            <span class="skel" style="width: 55%"></span>
+            <span class="skel" style="width: 68%"></span>
+          </div>
+        </div>
+        <div class="tip-wrap">
+          <span class="tip" role="tooltip">Sao chép</span>
+          <button class="icon-btn is-focus" type="button" aria-label="Sao chép"><svg class="icon" viewBox="0 0 16 16" aria-hidden="true"><rect x="5.5" y="5.5" width="7" height="7" rx="1.5"></rect><path d="M10.5 5.5V3.8A1.3 1.3 0 0 0 9.2 2.5H3.8A1.3 1.3 0 0 0 2.5 3.8v5.4A1.3 1.3 0 0 0 3.8 10.5H5.5"></path></svg></button>
+        </div>
+      </div>
+    </template>
+
+    <template id="dialog">
+      <div class="stack">
+        <div class="glass cols">
+          <div class="copy-block">
+            <p class="caption">Thường</p>
+            <div class="copy-text">Thermora 0.1.0 trên Windows.</div>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Sao chép</button>
+            <span class="visually-hidden" role="status"></span>
+          </div>
+          <div class="copy-block">
+            <p class="caption">Đã sao chép</p>
+            <div class="copy-text">Thermora 0.1.0 trên Windows.</div>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Đã sao chép</button>
+            <span class="visually-hidden" role="status">Đã sao chép</span>
+          </div>
+          <div class="copy-block">
+            <p class="caption">Không sao chép được</p>
+            <div class="copy-text is-selected">Thermora 0.1.0 trên Windows.</div>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Sao chép</button>
+            <span class="visually-hidden" role="status">Chưa sao chép được. Dòng chữ đã được chọn sẵn.</span>
+          </div>
+        </div>
+        <div class="dialog-stage">
+          <div class="dialog" role="dialog" aria-labelledby="dlg-title">
+            <h2 id="dlg-title">Xoá dữ liệu trên máy này?</h2>
+            <p>Việc này không hoàn tác được. Mọi thứ đã lưu trên máy sẽ mất.</p>
+            <label class="field" style="margin-top: 16px">
+              <span>Lý do, nếu cần</span>
+              <input class="control" />
+            </label>
+            <div class="actions">
+              <button class="btn btn-ghost" type="button">Huỷ</button>
+              <button class="btn btn-danger" type="button">Xoá</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      const ids = ["buttons", "fields", "status", "list", "dialog"];
+      for (const id of ids) {
+        const html = document.getElementById(id).innerHTML;
+        document.getElementById(id + "-light").innerHTML = html;
+        document.getElementById(id + "-dark").innerHTML = html;
+      }
+      document.querySelectorAll("#dlg-title").forEach((node, index) => {
+        node.id = index === 0 ? "dlg-title-light" : "dlg-title-dark";
+        node.closest("[role=dialog]").setAttribute("aria-labelledby", node.id);
+      });
+      document.querySelectorAll("#row-name").forEach((node, index) => {
+        const next = index === 0 ? "row-name-light" : "row-name-dark";
+        node.id = next;
+        node.closest(".edit-line").querySelector("label").setAttribute("for", next);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+/* Thermora design system. Screens call these role names, not raw colors.
+   Light and dark are separate palettes. */
+
+[data-theme="light"] {
+  color-scheme: light;
+  --bg: #e9f1fa;
+  --surface: rgba(255, 255, 255, 0.78);
+  --surface-solid: #fafcfe;
+  --surface-thin: rgba(255, 255, 255, 0.55);
+  --surface-thin-solid: #f5f9fd;
+  --surface-raised: #ffffff;
+  --surface-sunken: #eef1f7;
+  --border-subtle: rgba(28, 26, 51, 0.1);
+  --border-control: #7c7896;
+  --focus: #5b3fd9;
+  --text: #1c1a33;
+  --text-secondary: #56536f;
+  --text-disabled: #8e8ba6;
+  --accent: #4f3d91;
+  --on-accent: #ffffff;
+  --accent-soft: #ece8f7;
+  --on-accent-soft: #3e2f7a;
+  --success: #256126;
+  --success-bg: #dcf1d8;
+  --warning: #7a4a00;
+  --warning-bg: #ffe8c2;
+  --danger: #a12a26;
+  --danger-bg: #fbdcdc;
+  --danger-button: #b4232a;
+  --on-danger: #ffffff;
+  --info: #14598f;
+  --info-bg: #dcedfb;
+  --neutral: #56536f;
+  --neutral-bg: #f0f1f6;
+  --brand: #4f3d91;
+  --ambient-1: #a9d3f5;
+  --ambient-2: #cbbef0;
+  --ambient-3: #cfe8a8;
+  --ambient-full: 0.75;
+  --ambient-quiet: 0.35;
+  --overlay: rgba(28, 26, 51, 0.4);
+  --elevation: 0 8px 24px rgba(28, 26, 51, 0.12);
+}
+
+[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0e1124;
+  --surface: rgba(31, 29, 61, 0.78);
+  --surface-solid: #1f1d3d;
+  --surface-thin: rgba(31, 29, 61, 0.55);
+  --surface-thin-solid: #171730;
+  --surface-raised: #2c2950;
+  --surface-sunken: #15132b;
+  --border-subtle: rgba(255, 255, 255, 0.1);
+  --border-control: #807ca6;
+  --focus: #e3dbff;
+  --text: #eceaf7;
+  --text-secondary: #a9a5c6;
+  --text-disabled: #6e6a90;
+  --accent: #b4a6f2;
+  --on-accent: #1b1242;
+  --accent-soft: #342d60;
+  --on-accent-soft: #d4cbfa;
+  --success: #9ede99;
+  --success-bg: #1b3b22;
+  --warning: #f7c873;
+  --warning-bg: #3d2f17;
+  --danger: #ff9c97;
+  --danger-bg: #47202a;
+  --danger-button: #ff8a84;
+  --on-danger: #3a1214;
+  --info: #9ccff7;
+  --info-bg: #173452;
+  --neutral: #a9a5c6;
+  --neutral-bg: #27243f;
+  --brand: #4f3d91;
+  --ambient-1: #3a2c7a;
+  --ambient-2: #14406b;
+  --ambient-3: #2e5418;
+  --ambient-full: 0.55;
+  --ambient-quiet: 0.3;
+  --overlay: rgba(0, 0, 0, 0.55);
+  --elevation: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+:root {
+  --font: "Be Vietnam Pro", "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Mono", "SFMono-Regular", Consolas, monospace;
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 20px;
+  --s-6: 24px;
+  --s-8: 32px;
+  --s-10: 40px;
+  --s-12: 48px;
+  --r-8: 8px;
+  --r-12: 12px;
+  --r-16: 16px;
+  --r-22: 22px;
+  --r-full: 999px;
+  --h-32: 32px;
+  --h-40: 40px;
+  --h-44: 44px;
+  --ease: cubic-bezier(0.2, 0, 0, 1);
+  --spring: cubic-bezier(0.2, 0.9, 0.3, 1);
+  --d-hover: 160ms;
+  --d-panel: 240ms;
+  --d-widget: 320ms;
+  --glass-blur-thin: 24px;
+  --glass-blur-thick: 30px;
+  --ambient-blur: 125px;
+}
