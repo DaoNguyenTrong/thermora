@@ -27,7 +27,8 @@ Status is tracked per release, in the *Status per release* table at the top of t
 
 ## Catalogue
 
-No module tech docs yet. *Status per release* reads, for example, `Common ✓, REL-1 ✓, REL-2 review`.
+*Status per release* reads, for example, `Common ✓, REL-1 ✓, REL-2 review`.
 
 | Code | Module | PRD | Status per release | Version | appsec |
 |---|---|---|---|---|---|
+| [`TECH01`](01-setup.md) | Setup and connection | `PRD01` v0.3 | Common ✓, REL-1 ✓ | 1.0 | Required (Common and REL-1); appsec reviewed the draft and the Tauri 2 rework on 2026-11-27, findings applied; approved by the Tech lead and the Security owner 2026-11-27 |

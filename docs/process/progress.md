@@ -6,7 +6,7 @@ Detailed PRD status lives in `docs/prd/README.md` and tech doc status in `docs/t
 
 | Module | Owner | PRD | Release plan | Runway | UI/Tech by REL | appsec | REL done | Merged |
 |---|---|---|---|---|---|---|---|---|
-| PRD01 Setup | DaoNguyenTrong | Approved | Approved | - | - | - | 0/2 | - |
+| PRD01 Setup | DaoNguyenTrong | Approved | Approved | Approved | REL-1/2 | Approved | 0/2 | - |
 
 ## Story
 
@@ -14,6 +14,13 @@ The source of truth for points and story status; how to write it: `lifecycle.md`
 
 | Story (or part by AC set) | REL | Points | Status | Sprint |
 |---|---|---|---|---|
+| PRD01-US-01 | PRD01-REL-1 | 3 | Todo | - |
+| PRD01-US-02 | PRD01-REL-1 | 5 | Todo | - |
+| PRD01-US-03 | PRD01-REL-1 | 5 | Todo | - |
+| PRD01-US-04 (AC-14, AC-15, AC-16) | PRD01-REL-1 | 8 | Todo | - |
+| PRD01-US-05 (AC-17, AC-19, AC-37) | PRD01-REL-1 | 3 | Todo | - |
+| PRD01-US-06 (AC-23, AC-25) | PRD01-REL-1 | 3 | Todo | - |
+| PRD01-US-07 (AC-27, AC-43) | PRD01-REL-1 | 2 | Todo | - |
 
 ## Sprint
 
