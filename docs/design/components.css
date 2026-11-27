@@ -28,9 +28,11 @@ body.board {
 }
 
 .frame {
+  display: flex;
+  flex-direction: column;
   width: 1366px;
   height: 768px;
-  overflow: auto;
+  overflow: hidden;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font);
@@ -39,13 +41,112 @@ body.board {
   border: 1px solid #cfc6b8;
 }
 
-.titlebar {
+.titlebar,
+.statusbar {
   display: flex;
   align-items: center;
   gap: 16px;
-  height: 48px;
-  padding: 0 24px;
+  flex: none;
+  height: 40px;
+  padding: 0 16px;
+  background: var(--nav);
+}
+
+.titlebar {
   border-bottom: 1px solid var(--border);
+}
+
+.statusbar {
+  justify-content: space-between;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.shell {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.nav {
+  width: 240px;
+  flex: none;
+  padding: 16px 12px;
+  background: var(--nav);
+  border-right: 1px solid var(--border);
+}
+
+.nav-label {
+  margin: 0 0 8px;
+  padding: 0 12px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  margin-bottom: 4px;
+  padding: 8px 12px;
+  border-left: 3px solid transparent;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-item.is-current {
+  background: var(--surface);
+  border-left-color: var(--accent);
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  overflow: auto;
+}
+
+.page-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-head h1 {
+  margin: 0 0 4px;
+  font-size: 20px;
+}
+
+.page-head .actions {
+  margin-top: 0;
+  flex: none;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 24px 24px;
+}
+
+.panel {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.panel.split {
+  display: grid;
+  grid-template-columns: minmax(280px, 520px) 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
 .product {
@@ -65,13 +166,9 @@ body.board {
   margin-left: auto;
 }
 
-.content {
-  padding: 24px 32px 32px;
-}
-
 h1 {
-  margin: 0 0 16px;
-  font-size: 16px;
+  margin: 0;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.3;
 }
@@ -81,7 +178,6 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  max-width: 420px;
 }
 
 label {
@@ -161,9 +257,7 @@ a:focus-visible {
 .services {
   margin: 0;
   padding: 0;
-  max-width: 640px;
   list-style: none;
-  border-top: 1px solid var(--border);
 }
 
 .services li {
@@ -173,6 +267,15 @@ a:focus-visible {
   min-height: 48px;
   padding: 8px 0;
   border-bottom: 1px solid var(--border);
+}
+
+.services li:first-child {
+  padding-top: 0;
+}
+
+.services li:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
 }
 
 .svc {
@@ -213,18 +316,13 @@ a:focus-visible {
   font-weight: 600;
 }
 
-.block {
-  margin-top: 24px;
-  max-width: 640px;
-}
-
-.block h2 {
+.panel h2 {
   margin: 0 0 8px;
   font-size: 14px;
   font-weight: 600;
 }
 
-.block h2 .pill {
+.panel h2 .pill {
   margin-left: 8px;
 }
 
@@ -242,7 +340,7 @@ ol li + li {
   padding: 12px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: var(--bg);
   color: var(--text);
   font-family: ui-monospace, monospace;
   font-size: 13px;
@@ -250,13 +348,8 @@ ol li + li {
   white-space: pre-wrap;
 }
 
-.banner {
-  margin-bottom: 24px;
-  padding: 16px;
-  max-width: 640px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--surface);
+.banner p + p {
+  margin-top: 8px;
 }
 
 .banner p {

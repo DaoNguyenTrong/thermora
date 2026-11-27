@@ -28,10 +28,22 @@ A desktop work tool for an office user on a 1366×768 screen (Personas D5). Left
 
 No gradient, glow, nested card or decorative icon. Status color never carries the meaning alone. Buttons are at least 40px tall.
 
+## Frame
+
+The window follows the left-navigation silhouette used by Windows Settings ([app silhouettes](https://learn.microsoft.com/en-us/windows/apps/design/basics/app-silhouette)): a title bar, a left pane, and a content region. Thermora adds a status bar so the connection summary stays visible (PRD01-FR-04).
+
+| Band | Holds |
+|---|---|
+| Title bar | Thermora, and the display name once it exists |
+| Left pane, 240px | Group Máy này: Kết nối, Hướng dẫn chuẩn bị, Bắt đầu việc. The current item has a mark. The first-run pane has only Tên hiển thị |
+| Page head | Screen title, one line of context, and the action for this screen |
+| Content | Panels: a bordered group, full width of the pane. Rows and steps sit inside, not on the empty page |
+| Status bar | Connection summary on the left, Thermora version on the right |
+
 ## Design calls for REL-1
 
-- The first-run screen asks only for the display name. It has no connection chip.
-- After that, the title bar always shows the display name and a chip for the connection. The chip opens the connection screen.
+- The first-run screen asks only for the display name. Its pane has no other destination.
+- After that, the title bar shows the display name. Kết nối in the pane opens the connection screen. The status bar repeats the summary.
 - The reminder is a banner on the next screen, with one button. It does not block the screen and does not say the training option is off.
 - When both services are Ready and no choice has been made, the connection screen says Chưa chọn. It does not ask. The question appears on the placeholder action (release plan N8). The two choices are equal buttons, so neither looks like the default.
 - When only one service is Ready, a line says Thermora will use it.

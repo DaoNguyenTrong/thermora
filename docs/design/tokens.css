@@ -1,5 +1,6 @@
 :root {
   --bg: #f4f1ea;
+  --nav: #ebe6dc;
   --text: #1c1915;
   --muted: #4e483f;
   --border: #e4ddd2;
@@ -23,6 +24,7 @@
 
 [data-theme='dark'] {
   --bg: #1c1915;
+  --nav: #161410;
   --text: #f4f1ea;
   --muted: #c8bfb2;
   --border: #3f3830;
