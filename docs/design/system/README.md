@@ -2,8 +2,8 @@
 
 | Item | Value |
 | --- | --- |
-| Status | In review |
-| Version | 0.1 |
+| Status | Approved |
+| Version | 0.2 |
 | Updated | 2026-11-27 |
 | Canvas | `docs/design/system/` |
 | Approver | PO + Design lead |
@@ -24,11 +24,11 @@ Foundations from the agreed Lớp kính reference, as their own light and dark p
 
 Components: button (primary, secondary, ghost, danger-soft, danger; heights 40, 44 and 32), text field, select, checkbox, switch, search, banner, status chip, tabs, list row, inline confirm, inline edit, side panel, toast, empty, loading, tooltip, menu, copy button, dialog.
 
-Shell: thin-glass rail (product name, destinations, display name and version), thin-glass top bar (page title and the one primary action), thick-glass content.
+Shell: thin-glass rail in two modes, thin-glass top bar (page title and the one primary action), thick-glass content. The current rail is 240px with labels, the display name and the version. The minimal rail is 72px with icons only; the same labels, the display name and "Mở rộng" sit in side tooltips, and the version stays visible. A control on the rail switches mode.
 
 ## Not in this version
 
-Organization switcher, roles, invites, command palette, avatars, pagination, radio, multi-select, priority marks, and the reference product's logo. Icon-only rail and phone layouts are not drawn. The 44px button height is a specimen only.
+Organization switcher, roles, invites, command palette, avatars, pagination, radio, multi-select, priority marks, and the reference product's logo. Phone layouts are not drawn. The 44px button height is a specimen only.
 
 ## Design calls
 
@@ -42,9 +42,12 @@ Organization switcher, roles, invites, command palette, avatars, pagination, rad
 8. Quiet ambient opacity follows the reference per theme: light .35, dark .30. Full ambient is light .75 and dark .55.
 9. Neutral and accent-soft chip colors come from the reference chip row. The reference teal "in review" chip and the priority orange are not tokens.
 10. Red is only danger. Green is only success.
+11. The minimal rail is a mode of the same 1366×768 window. Its mark is the letter T. Nav icons are 20px with the same 1.5 stroke. Icon-only controls keep a text name in a side tooltip.
 
 ## Change log
 
 | Date | Version | Change | Source |
 | --- | --- | --- | --- |
-| 2026-11-27 | 0.1 | First boards, from the agreed Lớp kính proposal. Not approved yet. | user decision (PO: DaoNguyenTrong) to write the system |
+| 2026-11-27 | 0.1 | First boards, from the agreed Lớp kính proposal. | user decision (PO: DaoNguyenTrong) to write the system |
+| 2026-11-27 | 0.1 | User approval of the design system v0.1 | user decision (PO + Design lead: DaoNguyenTrong) |
+| 2026-11-27 | 0.2 | Added the minimal rail beside the current rail | user decision (PO + Design lead: DaoNguyenTrong) |
