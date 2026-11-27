@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nền · Thermora</title>
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="board.css" />
+  </head>
+  <body>
+    <header class="canvas-head">
+      <p class="canvas-kicker">Design system · Thermora · v0.4</p>
+      <h1>Nền</h1>
+      <p>Màu theo vai trò, chữ, khoảng cách, bo góc và kính. Sáng bên trái, tối bên phải.</p>
+      <nav class="canvas-nav">
+        <a href="index.html">Mục lục</a>
+        <a href="components.html">Thành phần</a>
+        <a href="patterns.html">Khung</a>
+      </nav>
+    </header>
+
+    <h2 class="canvas-section">Màu</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage">
+            <div class="glass stack">
+              <h2 class="section-title">Bề mặt</h2>
+              <div class="swatches">
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--bg)"></span>
+                  <span><strong class="role">bg</strong><span class="meta">#E9F1FA · Nền trang</span></span>
+                </div>
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--surface-solid)"></span>
+                  <span><strong class="role">surface</strong><span class="meta">trắng .78 · đặc #FAFCFE · Kính dày</span></span>
+                </div>
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--surface-raised)"></span>
+                  <span><strong class="role">surface-raised</strong><span class="meta">#FFFFFF · Ô nhập, menu, toast</span></span>
+                </div>
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--surface-sunken)"></span>
+                  <span><strong class="role">surface-sunken</strong><span class="meta">#EEF1F7 · Khối thông tin, nút tắt</span></span>
+                </div>
+              </div>
+              <h2 class="section-title">Chữ, viền, nhấn</h2>
+              <div class="cols">
+                <div class="stack-sm">
+                  <span><strong class="role">text</strong> <span class="meta">#1C1A33 · 16.4:1</span></span>
+                  <span><strong class="role">text-secondary</strong> <span class="meta">#56536F · 7.1:1</span></span>
+                  <span><strong class="role">text-disabled</strong> <span class="meta">#8E8BA6</span></span>
+                  <span><strong class="role">border-subtle</strong> <span class="meta">rgba(28,26,51,.10)</span></span>
+                  <span><strong class="role">border-control</strong> <span class="meta">#7C7896 · 4.1:1</span></span>
+                  <span><strong class="role">focus</strong> <span class="meta">#5B3FD9 · 6.5:1</span></span>
+                </div>
+                <div class="stack-sm">
+                  <span><strong class="role">accent</strong> <span class="meta">#4F3D91 · 8.5:1</span></span>
+                  <span><strong class="role">on-accent</strong> <span class="meta">#FFFFFF · 8.7:1</span></span>
+                  <span><strong class="role">accent-soft</strong> <span class="meta">#ECE8F7</span></span>
+                  <a class="link" href="#mau">Liên kết</a>
+                </div>
+                <div class="stack-sm">
+                  <span><strong class="role">success</strong> <span class="meta">#256126 / #DCF1D8</span></span>
+                  <span><strong class="role">warning</strong> <span class="meta">#7A4A00 / #FFE8C2</span></span>
+                  <span><strong class="role">danger</strong> <span class="meta">#A12A26 / #FBDCDC</span></span>
+                  <span><strong class="role">danger-button</strong> <span class="meta">#B4232A</span></span>
+                  <span><strong class="role">info</strong> <span class="meta">#14598F / #DCEDFB</span></span>
+                  <span><strong class="role">brand</strong> <span class="meta">#4F3D91 · trùng accent</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage">
+            <div class="glass stack">
+              <h2 class="section-title">Bề mặt</h2>
+              <div class="swatches">
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--bg)"></span>
+                  <span><strong class="role">bg</strong><span class="meta">#0E1124 · Nền trang</span></span>
+                </div>
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--surface-solid)"></span>
+                  <span><strong class="role">surface</strong><span class="meta">tím đêm .78 · đặc #1F1D3D · Kính dày</span></span>
+                </div>
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--surface-raised)"></span>
+                  <span><strong class="role">surface-raised</strong><span class="meta">#2C2950 · Ô nhập, menu, toast</span></span>
+                </div>
+                <div class="swatch">
+                  <span class="swatch-chip" style="background: var(--surface-sunken)"></span>
+                  <span><strong class="role">surface-sunken</strong><span class="meta">#15132B · Khối thông tin, nút tắt</span></span>
+                </div>
+              </div>
+              <h2 class="section-title">Chữ, viền, nhấn</h2>
+              <div class="cols">
+                <div class="stack-sm">
+                  <span><strong class="role">text</strong> <span class="meta">#ECEAF7 · 13.6:1</span></span>
+                  <span><strong class="role">text-secondary</strong> <span class="meta">#A9A5C6 · 6.8:1</span></span>
+                  <span><strong class="role">text-disabled</strong> <span class="meta">#6E6A90</span></span>
+                  <span><strong class="role">border-subtle</strong> <span class="meta">rgba(255,255,255,.10)</span></span>
+                  <span><strong class="role">border-control</strong> <span class="meta">#807CA6 · 3.5:1</span></span>
+                  <span><strong class="role">focus</strong> <span class="meta">#E3DBFF · 12.2:1</span></span>
+                </div>
+                <div class="stack-sm">
+                  <span><strong class="role">accent</strong> <span class="meta">#B4A6F2 · 7.4:1</span></span>
+                  <span><strong class="role">on-accent</strong> <span class="meta">#1B1242 · 8.0:1</span></span>
+                  <span><strong class="role">accent-soft</strong> <span class="meta">#342D60</span></span>
+                  <a class="link" href="#mau">Liên kết</a>
+                </div>
+                <div class="stack-sm">
+                  <span><strong class="role">success</strong> <span class="meta">#9EDE99 / #1B3B22</span></span>
+                  <span><strong class="role">warning</strong> <span class="meta">#F7C873 / #3D2F17</span></span>
+                  <span><strong class="role">danger</strong> <span class="meta">#FF9C97 / #47202A</span></span>
+                  <span><strong class="role">danger-button</strong> <span class="meta">#FF8A84</span></span>
+                  <span><strong class="role">info</strong> <span class="meta">#9CCFF7 / #173452</span></span>
+                  <span><strong class="role">brand</strong> <span class="meta">#4F3D91 · chỉ logo</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Chữ</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage">
+            <div class="glass type-list">
+              <div class="type-row">
+                <span class="meta">Tiêu đề trang<br />18 / 700 · 1.3<br /><span class="role">type-page-title</span></span>
+                <strong class="t-page-title">Tên trang</strong>
+              </div>
+              <div class="type-row">
+                <span class="meta">Tiêu đề mục<br />15 / 600 · 1.3<br /><span class="role">type-section-title</span></span>
+                <strong class="t-section-title">Mục trong trang</strong>
+              </div>
+              <div class="type-row">
+                <span class="meta">Tiêu đề dòng<br />14 / 600 · 1.4<br /><span class="role">type-row-title</span></span>
+                <strong class="t-row-title">Dòng có tên dài hơn một cụm ngắn</strong>
+              </div>
+              <div class="type-row">
+                <span class="meta">Nội dung<br />14 / 400 · 1.5<br /><span class="role">type-body</span></span>
+                <span class="t-body">Một câu người dùng đọc được, viết bằng tiếng Việt.</span>
+              </div>
+              <div class="type-row">
+                <span class="meta">Thông tin phụ<br />13 / 500 · 1.4<br /><span class="role">type-secondary</span></span>
+                <span class="t-secondary">Nguyễn Thị Hồng · 5 phút trước</span>
+              </div>
+              <div class="type-row">
+                <span class="meta">Chú thích<br />12 / 500 · 1.4<br /><span class="role">type-caption</span></span>
+                <span class="caption">Cập nhật lúc 14:32</span>
+              </div>
+              <div class="type-row">
+                <span class="meta">Mã<br />Mono 12 / 400 · 1.5<br /><span class="role">type-mono</span></span>
+                <span class="t-mono">Thermora 0.1.0</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage">
+            <div class="glass type-list">
+              <div class="type-row">
+                <span class="meta">Tiêu đề trang<br />18 / 700 · 1.3<br /><span class="role">type-page-title</span></span>
+                <strong class="t-page-title">Tên trang</strong>
+              </div>
+              <div class="type-row">
+                <span class="meta">Tiêu đề mục<br />15 / 600 · 1.3<br /><span class="role">type-section-title</span></span>
+                <strong class="t-section-title">Mục trong trang</strong>
+              </div>
+              <div class="type-row">
+                <span class="meta">Tiêu đề dòng<br />14 / 600 · 1.4<br /><span class="role">type-row-title</span></span>
+                <strong class="t-row-title">Dòng có tên dài hơn một cụm ngắn</strong>
+              </div>
+              <div class="type-row">
+                <span class="meta">Nội dung<br />14 / 400 · 1.5<br /><span class="role">type-body</span></span>
+                <span class="t-body">Một câu người dùng đọc được, viết bằng tiếng Việt.</span>
+              </div>
+              <div class="type-row">
+                <span class="meta">Thông tin phụ<br />13 / 500 · 1.4<br /><span class="role">type-secondary</span></span>
+                <span class="t-secondary">Nguyễn Thị Hồng · 5 phút trước</span>
+              </div>
+              <div class="type-row">
+                <span class="meta">Chú thích<br />12 / 500 · 1.4<br /><span class="role">type-caption</span></span>
+                <span class="caption">Cập nhật lúc 14:32</span>
+              </div>
+              <div class="type-row">
+                <span class="meta">Mã<br />Mono 12 / 400 · 1.5<br /><span class="role">type-mono</span></span>
+                <span class="t-mono">Thermora 0.1.0</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Khoảng cách, bo góc, chuyển động</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage">
+            <div class="glass cols-2">
+              <div class="scale-list">
+                <div class="scale-row"><span class="meta">4</span><span class="scale-bar" style="width: 4px"></span></div>
+                <div class="scale-row"><span class="meta">8 · trong chip, giữa nút</span><span class="scale-bar" style="width: 8px"></span></div>
+                <div class="scale-row"><span class="meta">12 · đệm ô nhập</span><span class="scale-bar" style="width: 12px"></span></div>
+                <div class="scale-row"><span class="meta">16 · đệm hàng</span><span class="scale-bar" style="width: 16px"></span></div>
+                <div class="scale-row"><span class="meta">20 · giữa các khối</span><span class="scale-bar" style="width: 20px"></span></div>
+                <div class="scale-row"><span class="meta">24 · đệm panel</span><span class="scale-bar" style="width: 24px"></span></div>
+                <div class="scale-row"><span class="meta">32 · giữa các vùng</span><span class="scale-bar" style="width: 32px"></span></div>
+                <div class="scale-row"><span class="meta">40 · lề trang rộng</span><span class="scale-bar" style="width: 40px"></span></div>
+                <div class="scale-row"><span class="meta">48 · trang trống</span><span class="scale-bar" style="width: 48px"></span></div>
+              </div>
+              <div class="stack">
+                <div class="radius-demo">
+                  <span class="radius-box" style="border-radius: 8px">8</span>
+                  <span class="radius-box" style="border-radius: 12px">12</span>
+                  <span class="radius-box" style="border-radius: 16px">16</span>
+                  <span class="radius-box" style="border-radius: 22px">22</span>
+                  <span class="radius-box" style="width: 56px; height: 56px; border-radius: 999px; align-items: center; justify-content: center">tròn</span>
+                </div>
+                <p class="caption">Góc trong bằng góc ngoài trừ đệm, lấy bậc gần nhất, nhỏ nhất là 8. Panel 22, đệm 6, hàng 16.</p>
+                <p class="caption">160ms ease · rê chuột. 240ms spring · mở panel. 320ms spring · widget. Tắt khi giảm chuyển động.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage">
+            <div class="glass cols-2">
+              <div class="scale-list">
+                <div class="scale-row"><span class="meta">4</span><span class="scale-bar" style="width: 4px"></span></div>
+                <div class="scale-row"><span class="meta">8 · trong chip, giữa nút</span><span class="scale-bar" style="width: 8px"></span></div>
+                <div class="scale-row"><span class="meta">12 · đệm ô nhập</span><span class="scale-bar" style="width: 12px"></span></div>
+                <div class="scale-row"><span class="meta">16 · đệm hàng</span><span class="scale-bar" style="width: 16px"></span></div>
+                <div class="scale-row"><span class="meta">20 · giữa các khối</span><span class="scale-bar" style="width: 20px"></span></div>
+                <div class="scale-row"><span class="meta">24 · đệm panel</span><span class="scale-bar" style="width: 24px"></span></div>
+                <div class="scale-row"><span class="meta">32 · giữa các vùng</span><span class="scale-bar" style="width: 32px"></span></div>
+                <div class="scale-row"><span class="meta">40 · lề trang rộng</span><span class="scale-bar" style="width: 40px"></span></div>
+                <div class="scale-row"><span class="meta">48 · trang trống</span><span class="scale-bar" style="width: 48px"></span></div>
+              </div>
+              <div class="stack">
+                <div class="radius-demo">
+                  <span class="radius-box" style="border-radius: 8px">8</span>
+                  <span class="radius-box" style="border-radius: 12px">12</span>
+                  <span class="radius-box" style="border-radius: 16px">16</span>
+                  <span class="radius-box" style="border-radius: 22px">22</span>
+                  <span class="radius-box" style="width: 56px; height: 56px; border-radius: 999px; align-items: center; justify-content: center">tròn</span>
+                </div>
+                <p class="caption">Góc trong bằng góc ngoài trừ đệm, lấy bậc gần nhất, nhỏ nhất là 8. Panel 22, đệm 6, hàng 16.</p>
+                <p class="caption">160ms ease · rê chuột. 240ms spring · mở panel. 320ms spring · widget. Tắt khi giảm chuyển động.</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Kính và ánh nền</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage stage-full">
+            <span class="ambient-3"></span>
+            <div class="stack">
+              <div class="cols">
+                <div class="glass-thin" style="padding: 16px">
+                  <strong>Kính mỏng</strong>
+                  <p class="caption">Rail, thanh trên. blur 24 · trắng .55 · đặc #F5F9FD</p>
+                </div>
+                <div class="glass" style="padding: 16px">
+                  <strong>Kính dày</strong>
+                  <p class="caption">Panel nội dung. blur 30 · trắng .78 · đặc #FAFCFE</p>
+                </div>
+                <div class="raised" style="padding: 16px">
+                  <strong>Nền nổi</strong>
+                  <p class="caption">Menu, toast, hộp thoại. Không blur. #FFFFFF</p>
+                </div>
+              </div>
+              <div class="glass stack-sm">
+                <p>Ánh đầy đủ: 3 đốm, độ đậm .75. Chỉ trang trống.</p>
+                <p class="caption">Ánh dịu trên màn làm việc: 2 đốm, độ đậm .35, bỏ đốm xanh lá. Khi máy giảm trong suốt hoặc máy yếu, kính dùng màu đặc và ánh nền tắt.</p>
+                <div class="row-gap">
+                  <span class="swatch-chip solid-fallback" style="width: 96px; background: var(--surface-thin-solid)"></span>
+                  <span class="caption">Mỏng đặc #F5F9FD</span>
+                  <span class="swatch-chip solid-fallback" style="width: 96px; background: var(--surface-solid)"></span>
+                  <span class="caption">Dày đặc #FAFCFE</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage stage-full">
+            <span class="ambient-3"></span>
+            <div class="stack">
+              <div class="cols">
+                <div class="glass-thin" style="padding: 16px">
+                  <strong>Kính mỏng</strong>
+                  <p class="caption">Rail, thanh trên. blur 24 · tím đêm .55 · đặc #171730</p>
+                </div>
+                <div class="glass" style="padding: 16px">
+                  <strong>Kính dày</strong>
+                  <p class="caption">Panel nội dung. blur 30 · tím đêm .78 · đặc #1F1D3D</p>
+                </div>
+                <div class="raised" style="padding: 16px">
+                  <strong>Nền nổi</strong>
+                  <p class="caption">Menu, toast, hộp thoại. Không blur. #2C2950</p>
+                </div>
+              </div>
+              <div class="glass stack-sm">
+                <p>Ánh đầy đủ: 3 đốm, độ đậm .55. Chỉ trang trống.</p>
+                <p class="caption">Ánh dịu trên màn làm việc: 2 đốm, độ đậm .30, bỏ đốm xanh lá. Khi máy giảm trong suốt hoặc máy yếu, kính dùng màu đặc và ánh nền tắt.</p>
+                <div class="row-gap">
+                  <span class="swatch-chip solid-fallback" style="width: 96px; background: var(--surface-thin-solid)"></span>
+                  <span class="caption">Mỏng đặc #171730</span>
+                  <span class="swatch-chip solid-fallback" style="width: 96px; background: var(--surface-solid)"></span>
+                  <span class="caption">Dày đặc #1F1D3D</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <h2 class="canvas-section">Màu trạng thái</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage">
+            <div class="glass stack">
+              <h2 class="t-section-title">Màu trạng thái của nút và rail</h2>
+              <div class="swatches">
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-hover)"></span><span><strong class="role">accent-hover</strong><span class="meta">#6858A0 · Nút chính, rê chuột</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-pressed)"></span><span><strong class="role">accent-pressed</strong><span class="meta">#413277 · Nút chính, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-disabled)"></span><span><strong class="role">accent-disabled</strong><span class="meta">#CBC9E1 · Nút chính, tắt</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-soft-pressed)"></span><span><strong class="role">accent-soft-pressed</strong><span class="meta">#B2AEC0 · Nút phụ, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-soft-deep)"></span><span><strong class="role">accent-soft-deep</strong><span class="meta">#B5ACD3 · Nút không nền, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-soft-hover)"></span><span><strong class="role">danger-soft-hover</strong><span class="meta">#E2AAA9 · Nguy hiểm nhẹ, rê chuột</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-soft-pressed)"></span><span><strong class="role">danger-soft-pressed</strong><span class="meta">#D38C8A · Nguy hiểm nhẹ, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-button-hover)"></span><span><strong class="role">danger-button-hover</strong><span class="meta">#BD3D44 · Nguy hiểm, rê chuột</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-button-pressed)"></span><span><strong class="role">danger-button-pressed</strong><span class="meta">#971D23 · Nguy hiểm, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-button-disabled)"></span><span><strong class="role">danger-button-disabled</strong><span class="meta">#DEB7BE · Nguy hiểm, tắt</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-soft-wash)"></span><span><strong class="role">accent-soft-wash</strong><span class="meta">rgba(236,232,247,.8) · Rail, rê chuột</span></span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage">
+            <div class="glass stack">
+              <h2 class="t-section-title">Màu trạng thái của nút và rail</h2>
+              <div class="swatches">
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-hover)"></span><span><strong class="role">accent-hover</strong><span class="meta">#BFB2F4 · Nút chính, rê chuột</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-pressed)"></span><span><strong class="role">accent-pressed</strong><span class="meta">#9488C6 · Nút chính, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-disabled)"></span><span><strong class="role">accent-disabled</strong><span class="meta">#383357 · Nút chính, tắt</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-soft-pressed)"></span><span><strong class="role">accent-soft-pressed</strong><span class="meta">#68628A · Nút phụ, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-soft-deep)"></span><span><strong class="role">accent-soft-deep</strong><span class="meta">#615793 · Nút không nền, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-soft-hover)"></span><span><strong class="role">danger-soft-hover</strong><span class="meta">#7B4349 · Nguy hiểm nhẹ, rê chuột</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-soft-pressed)"></span><span><strong class="role">danger-soft-pressed</strong><span class="meta">#9A585B · Nguy hiểm nhẹ, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-button-hover)"></span><span><strong class="role">danger-button-hover</strong><span class="meta">#FF9893 · Nguy hiểm, rê chuột</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-button-pressed)"></span><span><strong class="role">danger-button-pressed</strong><span class="meta">#D6746F · Nguy hiểm, đang nhấn</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--danger-button-disabled)"></span><span><strong class="role">danger-button-disabled</strong><span class="meta">#573444 · Nguy hiểm, tắt</span></span></div>
+                <div class="swatch"><span class="swatch-chip" style="background: var(--accent-soft-wash)"></span><span><strong class="role">accent-soft-wash</strong><span class="meta">rgba(52,45,96,.8) · Rail, rê chuột</span></span></div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Biểu tượng: Lucide, nét 1.5</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage">
+            <div class="glass stack">
+              <div class="icon-sizes">
+                <span class="icon-cell"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="role">16 · trong chữ, chip, nút</span></span>
+                <span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="role">20 · rail, thanh trên</span></span>
+              </div>
+              <div class="icon-grid">
+                <span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="role">circle-check</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><span class="role">triangle-exclamation-point</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></svg><span class="role">circle-exclamation-point</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="M9 9.5a3 2.5 0 016 0c0 2-2 2-3 3.5" /> <path d="M12 17h.01" /></svg><span class="role">circle-question-mark</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="M12 16v-4" /> <path d="M12 8h.01" /></svg><span class="role">info</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V12" /> <path d="m16.5 14.5 5 5" /> <path d="m16.5 19.5 5-5" /> <path d="M21 10.5V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.13-.074" /> <path d="M3.29 7 12 12l8.71-5" /> <path d="m7.5 4.27 8.997 5.148" /></svg><span class="role">package-x</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m10 17 5-5-5-5" /> <path d="M15 12H3" /> <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /></svg><span class="role">log-in</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6" /> <path d="M10 14 21 3" /> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg><span class="role">external-link</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /></svg><span class="role">rotate-cw</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg><span class="role">copy</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="role">check</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg><span class="role">x</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg><span class="role">search</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg><span class="role">chevron-down</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m16 15-3-3 3-3" /></svg><span class="role">panel-left-close</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m14 9 3 3-3 3" /></svg><span class="role">panel-left-open</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg><span class="role">layout-grid</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg><span class="role">list</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg><span class="role">circle</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg><span class="role">user</span></span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage">
+            <div class="glass stack">
+              <div class="icon-sizes">
+                <span class="icon-cell"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="role">16 · trong chữ, chip, nút</span></span>
+                <span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="role">20 · rail, thanh trên</span></span>
+              </div>
+              <div class="icon-grid">
+                <span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="role">circle-check</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><span class="role">triangle-exclamation-point</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></svg><span class="role">circle-exclamation-point</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="M9 9.5a3 2.5 0 016 0c0 2-2 2-3 3.5" /> <path d="M12 17h.01" /></svg><span class="role">circle-question-mark</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="M12 16v-4" /> <path d="M12 8h.01" /></svg><span class="role">info</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V12" /> <path d="m16.5 14.5 5 5" /> <path d="m16.5 19.5 5-5" /> <path d="M21 10.5V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.13-.074" /> <path d="M3.29 7 12 12l8.71-5" /> <path d="m7.5 4.27 8.997 5.148" /></svg><span class="role">package-x</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m10 17 5-5-5-5" /> <path d="M15 12H3" /> <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /></svg><span class="role">log-in</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6" /> <path d="M10 14 21 3" /> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg><span class="role">external-link</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8" /> <path d="M21 3v5h-5" /></svg><span class="role">rotate-cw</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg><span class="role">copy</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg><span class="role">check</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg><span class="role">x</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg><span class="role">search</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg><span class="role">chevron-down</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m16 15-3-3 3-3" /></svg><span class="role">panel-left-close</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m14 9 3 3-3 3" /></svg><span class="role">panel-left-open</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg><span class="role">layout-grid</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg><span class="role">list</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg><span class="role">circle</span></span><span class="icon-cell"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg><span class="role">user</span></span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Rail, thanh trên, lớp, chữ</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage">
+            <div class="glass stack">
+              <div class="token-list">
+                <div class="token-row"><strong class="role">rail-w</strong><span class="meta">240 · rail hiện tại</span></div>
+                <div class="token-row"><strong class="role">rail-w-min</strong><span class="meta">72 · rail gọn</span></div>
+                <div class="token-row"><strong class="role">topbar-h</strong><span class="meta">64 · thanh trên</span></div>
+                <div class="token-row"><strong class="role">z-content</strong><span class="meta">1 · nội dung trên ánh nền</span></div>
+                <div class="token-row"><strong class="role">z-raised</strong><span class="meta">2 · rail trên nội dung</span></div>
+                <div class="token-row"><strong class="role">z-menu</strong><span class="meta">10 · menu, tooltip</span></div>
+                <div class="token-row"><strong class="role">z-toast</strong><span class="meta">20 · toast</span></div>
+                <div class="token-row"><strong class="role">z-overlay</strong><span class="meta">30 · lớp phủ và hộp thoại</span></div>
+              </div>
+              <p class="caption">Chữ Be Vietnam Pro đi kèm trong thư mục fonts, không tải từ mạng. Nếu thiếu, dùng chữ hệ thống của máy.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage">
+            <div class="glass stack">
+              <div class="token-list">
+                <div class="token-row"><strong class="role">rail-w</strong><span class="meta">240 · rail hiện tại</span></div>
+                <div class="token-row"><strong class="role">rail-w-min</strong><span class="meta">72 · rail gọn</span></div>
+                <div class="token-row"><strong class="role">topbar-h</strong><span class="meta">64 · thanh trên</span></div>
+                <div class="token-row"><strong class="role">z-content</strong><span class="meta">1 · nội dung trên ánh nền</span></div>
+                <div class="token-row"><strong class="role">z-raised</strong><span class="meta">2 · rail trên nội dung</span></div>
+                <div class="token-row"><strong class="role">z-menu</strong><span class="meta">10 · menu, tooltip</span></div>
+                <div class="token-row"><strong class="role">z-toast</strong><span class="meta">20 · toast</span></div>
+                <div class="token-row"><strong class="role">z-overlay</strong><span class="meta">30 · lớp phủ và hộp thoại</span></div>
+              </div>
+              <p class="caption">Chữ Be Vietnam Pro đi kèm trong thư mục fonts, không tải từ mạng. Nếu thiếu, dùng chữ hệ thống của máy.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+  </body>
+</html>

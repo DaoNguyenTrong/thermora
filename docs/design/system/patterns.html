@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Khung · Thermora</title>
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="board.css" />
+  </head>
+  <body>
+    <header class="canvas-head">
+      <p class="canvas-kicker">Design system · Thermora · v0.4</p>
+      <h1>Khung cửa sổ</h1>
+      <p>
+        Máy tính 1366×768. Rail có hai chế độ: hiện tại và minimal. Thanh trên và vùng nội dung giữ nguyên.
+        Đây là khung dùng chung, không phải một màn hình. Cuộn ngang để xem sáng và tối cạnh nhau.
+      </p>
+      <nav class="canvas-nav">
+        <a href="index.html">Mục lục</a>
+        <a href="foundations.html">Nền</a>
+        <a href="components.html">Thành phần</a>
+      </nav>
+    </header>
+
+    <h2 class="canvas-section">Hiện tại</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="frame" data-theme="light">
+          <aside class="rail glass-thin">
+            <p class="rail-brand">Thermora</p>
+            <nav aria-label="Chính">
+              <span class="nav-item is-current" aria-current="page">Mục đang chọn</span>
+              <a class="nav-item" href="#muc-hai">Mục hai</a>
+              <span class="nav-item is-disabled">Mục tắt</span>
+            </nav>
+            <div class="rail-foot">
+              <a class="svc-use is-ok" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="svc-use-text"><span class="svc-use-name">Claude Code</span><span class="svc-use-state">Đang dùng · Sẵn sàng</span></span></a>
+              <strong>Nguyễn Thị Hồng</strong>
+              <span>Thermora 0.1.0</span>
+            </div>
+          </aside>
+          <div class="main-col">
+            <header class="topbar glass-thin">
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Thu gọn">
+                  <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m16 15-3-3 3-3" /></svg>
+                  <span class="tip is-below">Thu gọn</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
+              <button class="btn btn-primary" type="button">Lưu</button>
+            </header>
+            <div class="frame-body glass">
+              <div class="stack">
+                <div>
+                  <h2 class="section-title">Mục</h2>
+                  <p class="item-meta">Một câu mô tả ngắn cho vùng này.</p>
+                </div>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <p class="item-title">Dòng ngắn</p>
+                      <p class="item-meta">Cập nhật lúc 14:32</p>
+                    </div>
+                    <span class="chip chip-neutral">Đóng</span>
+                  </div>
+                  <div class="item is-open">
+                    <div>
+                      <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                      <p class="item-meta">5 phút trước</p>
+                    </div>
+                    <span class="chip chip-success">Đã xong</span>
+                  </div>
+                </div>
+                <div class="sunken">
+                  <p>Khối thông tin nằm trên nền lõm, không thêm một lớp kính nữa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="frame" data-theme="dark">
+          <aside class="rail glass-thin">
+            <p class="rail-brand">Thermora</p>
+            <nav aria-label="Chính">
+              <span class="nav-item is-current" aria-current="page">Mục đang chọn</span>
+              <a class="nav-item" href="#muc-hai-toi">Mục hai</a>
+              <span class="nav-item is-disabled">Mục tắt</span>
+            </nav>
+            <div class="rail-foot">
+              <a class="svc-use is-ok" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="svc-use-text"><span class="svc-use-name">Claude Code</span><span class="svc-use-state">Đang dùng · Sẵn sàng</span></span></a>
+              <strong>Nguyễn Thị Hồng</strong>
+              <span>Thermora 0.1.0</span>
+            </div>
+          </aside>
+          <div class="main-col">
+            <header class="topbar glass-thin">
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Thu gọn">
+                  <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m16 15-3-3 3-3" /></svg>
+                  <span class="tip is-below">Thu gọn</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
+              <button class="btn btn-primary" type="button">Lưu</button>
+            </header>
+            <div class="frame-body glass">
+              <div class="stack">
+                <div>
+                  <h2 class="section-title">Mục</h2>
+                  <p class="item-meta">Một câu mô tả ngắn cho vùng này.</p>
+                </div>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <p class="item-title">Dòng ngắn</p>
+                      <p class="item-meta">Cập nhật lúc 14:32</p>
+                    </div>
+                    <span class="chip chip-neutral">Đóng</span>
+                  </div>
+                  <div class="item is-open">
+                    <div>
+                      <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                      <p class="item-meta">5 phút trước</p>
+                    </div>
+                    <span class="chip chip-success">Đã xong</span>
+                  </div>
+                </div>
+                <div class="sunken">
+                  <p>Khối thông tin nằm trên nền lõm, không thêm một lớp kính nữa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Minimal</h2>
+    <p class="canvas-note">Rail 72px, chỉ biểu tượng. Nút trên thanh header mở lại rail. Tên mục, tên người và tình trạng dịch vụ hiện bên cạnh biểu tượng.</p>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="frame" data-theme="light">
+          <aside class="rail glass-thin is-minimal">
+            <p class="rail-brand">T</p>
+            <nav aria-label="Chính">
+              <span class="nav-icon is-current is-open" aria-current="page">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg>
+                <span class="tip is-side">Mục đang chọn</span>
+              </span>
+              <a class="nav-icon" href="#muc-hai-gon">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg>
+                <span class="visually-hidden">Mục hai</span>
+                <span class="tip is-side">Mục hai</span>
+              </a>
+              <span class="nav-icon is-disabled" aria-disabled="true">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+                <span class="visually-hidden">Mục tắt</span>
+                <span class="tip is-side">Mục tắt</span>
+              </span>
+            </nav>
+            <div class="rail-foot">
+              <a class="nav-icon is-ok" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="visually-hidden">Dịch vụ đang dùng: Claude Code, sẵn sàng</span><span class="tip is-side">Claude Code · Sẵn sàng</span></a>
+              <span class="nav-icon is-open">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg>
+                <span class="visually-hidden">Nguyễn Thị Hồng</span>
+                <span class="tip is-side">Nguyễn Thị Hồng</span>
+              </span>
+              <span>0.1.0</span>
+            </div>
+          </aside>
+          <div class="main-col">
+            <header class="topbar glass-thin">
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Mở rộng">
+                  <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m14 9 3 3-3 3" /></svg>
+                  <span class="tip is-below">Mở rộng</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
+              <button class="btn btn-primary" type="button">Lưu</button>
+            </header>
+            <div class="frame-body glass">
+              <div class="stack">
+                <div>
+                  <h2 class="section-title">Mục</h2>
+                  <p class="item-meta">Một câu mô tả ngắn cho vùng này.</p>
+                </div>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <p class="item-title">Dòng ngắn</p>
+                      <p class="item-meta">Cập nhật lúc 14:32</p>
+                    </div>
+                    <span class="chip chip-neutral">Đóng</span>
+                  </div>
+                  <div class="item is-open">
+                    <div>
+                      <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                      <p class="item-meta">5 phút trước</p>
+                    </div>
+                    <span class="chip chip-success">Đã xong</span>
+                  </div>
+                </div>
+                <div class="sunken">
+                  <p>Khối thông tin nằm trên nền lõm, không thêm một lớp kính nữa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="frame" data-theme="dark">
+          <aside class="rail glass-thin is-minimal">
+            <p class="rail-brand">T</p>
+            <nav aria-label="Chính">
+              <span class="nav-icon is-current is-open" aria-current="page">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg>
+                <span class="tip is-side">Mục đang chọn</span>
+              </span>
+              <a class="nav-icon" href="#muc-hai-gon-toi">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg>
+                <span class="visually-hidden">Mục hai</span>
+                <span class="tip is-side">Mục hai</span>
+              </a>
+              <span class="nav-icon is-disabled" aria-disabled="true">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /></svg>
+                <span class="visually-hidden">Mục tắt</span>
+                <span class="tip is-side">Mục tắt</span>
+              </span>
+            </nav>
+            <div class="rail-foot">
+              <a class="nav-icon is-ok" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="visually-hidden">Dịch vụ đang dùng: Claude Code, sẵn sàng</span><span class="tip is-side">Claude Code · Sẵn sàng</span></a>
+              <span class="nav-icon is-open">
+                <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" /> <circle cx="12" cy="7" r="4" /></svg>
+                <span class="visually-hidden">Nguyễn Thị Hồng</span>
+                <span class="tip is-side">Nguyễn Thị Hồng</span>
+              </span>
+              <span>0.1.0</span>
+            </div>
+          </aside>
+          <div class="main-col">
+            <header class="topbar glass-thin">
+              <div class="topbar-title">
+                <button class="icon-btn menu-toggle" type="button" aria-label="Mở rộng">
+                  <svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" /> <path d="M9 3v18" /> <path d="m14 9 3 3-3 3" /></svg>
+                  <span class="tip is-below">Mở rộng</span>
+                </button>
+                <h1>Tiêu đề trang</h1>
+              </div>
+              <button class="btn btn-primary" type="button">Lưu</button>
+            </header>
+            <div class="frame-body glass">
+              <div class="stack">
+                <div>
+                  <h2 class="section-title">Mục</h2>
+                  <p class="item-meta">Một câu mô tả ngắn cho vùng này.</p>
+                </div>
+                <div class="list">
+                  <div class="item">
+                    <div>
+                      <p class="item-title">Dòng ngắn</p>
+                      <p class="item-meta">Cập nhật lúc 14:32</p>
+                    </div>
+                    <span class="chip chip-neutral">Đóng</span>
+                  </div>
+                  <div class="item is-open">
+                    <div>
+                      <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                      <p class="item-meta">5 phút trước</p>
+                    </div>
+                    <span class="chip chip-success">Đã xong</span>
+                  </div>
+                </div>
+                <div class="sunken">
+                  <p>Khối thông tin nằm trên nền lõm, không thêm một lớp kính nữa.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <h2 class="canvas-section">Dịch vụ đang dùng · PRD01-FR-04 · P-01</h2>
+    <p class="canvas-note">Ở chân rail, cạnh số phiên bản. Chọn vào đây mở nơi xem cả hai dịch vụ. Rail gọn hiện tên và tình trạng bên cạnh biểu tượng.</p>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board" data-theme="light">
+          <div class="stage">
+            <div class="rail-stage">
+              <aside class="rail glass-thin is-crop"><p class="rail-brand">Thermora</p><nav aria-label="Chính"><span class="nav-item is-current" aria-current="page">Mục đang chọn</span><a class="nav-item" href="#m-light-true">Mục hai</a></nav><div class="rail-foot"><a class="svc-use is-ok" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="svc-use-text"><span class="svc-use-name">Claude Code</span><span class="svc-use-state">Đang dùng · Sẵn sàng</span></span></a><strong>Nguyễn Thị Hồng</strong><span>Thermora 0.1.0</span></div></aside>
+              <aside class="rail glass-thin is-crop"><p class="rail-brand">Thermora</p><nav aria-label="Chính"><span class="nav-item is-current" aria-current="page">Mục đang chọn</span><a class="nav-item" href="#m-light-false">Mục hai</a></nav><div class="rail-foot"><a class="svc-use is-warn" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><span class="svc-use-text"><span class="svc-use-name">Chưa có dịch vụ AI</span><span class="svc-use-state">Cần thiết lập</span></span></a><strong>Nguyễn Thị Hồng</strong><span>Thermora 0.1.0</span></div></aside>
+              <aside class="rail glass-thin is-minimal is-crop rail-tipgap"><p class="rail-brand">T</p><nav aria-label="Chính"><span class="nav-icon is-current" aria-current="page"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg><span class="visually-hidden">Mục đang chọn</span></span><a class="nav-icon" href="#n-light-true"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg><span class="visually-hidden">Mục hai</span></a></nav><div class="rail-foot"><a class="nav-icon is-ok is-open" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="visually-hidden">Dịch vụ đang dùng: Claude Code, sẵn sàng</span><span class="tip is-side">Claude Code · Sẵn sàng</span></a><span>0.1.0</span></div></aside>
+              <aside class="rail glass-thin is-minimal is-crop "><p class="rail-brand">T</p><nav aria-label="Chính"><span class="nav-icon is-current" aria-current="page"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg><span class="visually-hidden">Mục đang chọn</span></span><a class="nav-icon" href="#n-light-false"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg><span class="visually-hidden">Mục hai</span></a></nav><div class="rail-foot"><a class="nav-icon is-warn is-open" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><span class="visually-hidden">Chưa có dịch vụ AI, cần thiết lập</span><span class="tip is-side">Chưa có dịch vụ AI · Cần thiết lập</span></a><span>0.1.0</span></div></aside>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board" data-theme="dark">
+          <div class="stage">
+            <div class="rail-stage">
+              <aside class="rail glass-thin is-crop"><p class="rail-brand">Thermora</p><nav aria-label="Chính"><span class="nav-item is-current" aria-current="page">Mục đang chọn</span><a class="nav-item" href="#m-dark-true">Mục hai</a></nav><div class="rail-foot"><a class="svc-use is-ok" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="svc-use-text"><span class="svc-use-name">Claude Code</span><span class="svc-use-state">Đang dùng · Sẵn sàng</span></span></a><strong>Nguyễn Thị Hồng</strong><span>Thermora 0.1.0</span></div></aside>
+              <aside class="rail glass-thin is-crop"><p class="rail-brand">Thermora</p><nav aria-label="Chính"><span class="nav-item is-current" aria-current="page">Mục đang chọn</span><a class="nav-item" href="#m-dark-false">Mục hai</a></nav><div class="rail-foot"><a class="svc-use is-warn" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><span class="svc-use-text"><span class="svc-use-name">Chưa có dịch vụ AI</span><span class="svc-use-state">Cần thiết lập</span></span></a><strong>Nguyễn Thị Hồng</strong><span>Thermora 0.1.0</span></div></aside>
+              <aside class="rail glass-thin is-minimal is-crop rail-tipgap"><p class="rail-brand">T</p><nav aria-label="Chính"><span class="nav-icon is-current" aria-current="page"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg><span class="visually-hidden">Mục đang chọn</span></span><a class="nav-icon" href="#n-dark-true"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg><span class="visually-hidden">Mục hai</span></a></nav><div class="rail-foot"><a class="nav-icon is-ok is-open" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><span class="visually-hidden">Dịch vụ đang dùng: Claude Code, sẵn sàng</span><span class="tip is-side">Claude Code · Sẵn sàng</span></a><span>0.1.0</span></div></aside>
+              <aside class="rail glass-thin is-minimal is-crop "><p class="rail-brand">T</p><nav aria-label="Chính"><span class="nav-icon is-current" aria-current="page"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1" /> <rect width="7" height="7" x="14" y="3" rx="1" /> <rect width="7" height="7" x="14" y="14" rx="1" /> <rect width="7" height="7" x="3" y="14" rx="1" /></svg><span class="visually-hidden">Mục đang chọn</span></span><a class="nav-icon" href="#n-dark-false"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h.01" /> <path d="M3 12h.01" /> <path d="M3 19h.01" /> <path d="M8 5h13" /> <path d="M8 12h13" /> <path d="M8 19h13" /></svg><span class="visually-hidden">Mục hai</span></a></nav><div class="rail-foot"><a class="nav-icon is-warn is-open" href="#dich-vu"><svg class="icon icon-20" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><span class="visually-hidden">Chưa có dịch vụ AI, cần thiết lập</span><span class="tip is-side">Chưa có dịch vụ AI · Cần thiết lập</span></a><span>0.1.0</span></div></aside>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Trang chạy lần đầu · PRD01-FR-01 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="frame frame-first frame-full" data-theme="light">
+          <span class="ambient-3"></span>
+          <p class="rail-brand">Thermora</p>
+          <main class="glass first-panel">
+            <h1 class="t-page-title">Nhập tên của bạn</h1>
+            <label class="field">
+              <span>Tên hiển thị</span>
+              <input class="control" placeholder="Ví dụ: Nguyễn Thị Hồng" aria-describedby="fr-light" autocomplete="off" />
+              <span class="field-msg" id="fr-light">Tên hiện trong lịch sử thao tác và trên quy trình bạn xuất ra.</span>
+            </label>
+            <div class="row-gap"><button class="btn btn-primary" type="button">Tiếp tục</button></div>
+          </main>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="frame frame-first frame-full" data-theme="dark">
+          <span class="ambient-3"></span>
+          <p class="rail-brand">Thermora</p>
+          <main class="glass first-panel">
+            <h1 class="t-page-title">Nhập tên của bạn</h1>
+            <label class="field">
+              <span>Tên hiển thị</span>
+              <input class="control" placeholder="Ví dụ: Nguyễn Thị Hồng" aria-describedby="fr-dark" autocomplete="off" />
+              <span class="field-msg" id="fr-dark">Tên hiện trong lịch sử thao tác và trên quy trình bạn xuất ra.</span>
+            </label>
+            <div class="row-gap"><button class="btn btn-primary" type="button">Tiếp tục</button></div>
+          </main>
+        </article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Trang chạy lần đầu, chưa nhập tên · PRD01-AC-02 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="frame frame-first frame-full" data-theme="light">
+          <span class="ambient-3"></span>
+          <p class="rail-brand">Thermora</p>
+          <main class="glass first-panel">
+            <h1 class="t-page-title">Nhập tên của bạn</h1>
+            <label class="field is-error is-focus">
+              <span>Tên hiển thị</span>
+              <input class="control" value="" aria-invalid="true" aria-describedby="fr-light" autocomplete="off" />
+              <span class="field-msg" id="fr-light">Hãy nhập tên để tiếp tục.</span>
+            </label>
+            <div class="row-gap"><button class="btn btn-primary" type="button">Tiếp tục</button></div>
+          </main>
+        </article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="frame frame-first frame-full" data-theme="dark">
+          <span class="ambient-3"></span>
+          <p class="rail-brand">Thermora</p>
+          <main class="glass first-panel">
+            <h1 class="t-page-title">Nhập tên của bạn</h1>
+            <label class="field is-error is-focus">
+              <span>Tên hiển thị</span>
+              <input class="control" value="" aria-invalid="true" aria-describedby="fr-dark" autocomplete="off" />
+              <span class="field-msg" id="fr-dark">Hãy nhập tên để tiếp tục.</span>
+            </label>
+            <div class="row-gap"><button class="btn btn-primary" type="button">Tiếp tục</button></div>
+          </main>
+        </article>
+      </div>
+    </div>
+
+  </body>
+</html>

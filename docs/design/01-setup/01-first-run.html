@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Trang chạy lần đầu · Thiết lập · Thermora</title>
+    <link rel="stylesheet" href="../system/tokens.css" />
+    <link rel="stylesheet" href="../system/board.css" />
+  </head>
+  <body>
+    <header class="canvas-head">
+      <p class="canvas-kicker">PRD01-REL-1 · Thiết lập và kết nối · v0.2 · Approved</p>
+      <h1>Trang chạy lần đầu</h1>
+      <p>Máy tính, cửa sổ 1366×768, Windows, macOS và Ubuntu. Khung cửa sổ và các thành phần theo hệ thống thiết kế v0.4. Bản tối của các thành phần dùng ở đây nằm trong system/components.html và system/patterns.html.</p>
+      <nav class="canvas-nav"><a href="index.html">Mục lục</a><a href="02-service-states.html">Dịch vụ AI: kết quả kiểm tra</a><a href="03-setup-help.html">Hướng dẫn thiết lập</a><a href="04-sign-in.html">Đăng nhập dịch vụ AI</a><a href="05-data-reminder.html">Nhắc nhở về dữ liệu</a><a href="06-choose-and-unavailable.html">Chọn dịch vụ và nút AI chưa dùng được</a></nav>
+    </header>
+
+    <h2 class="canvas-section">Trang chạy lần đầu · PRD01-FR-01, AC-01 · P-01</h2>
+    <p class="canvas-note">Không có rail. Chỉ hỏi tên hiển thị.</p>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng · chưa nhập</p>
+        <article class="frame frame-first frame-full" data-theme="light"><span class="ambient-3"></span><p class="rail-brand">Thermora</p><main class="glass first-panel"><h1 class="t-page-title">Nhập tên của bạn</h1><label class="field"><span>Tên hiển thị</span><input class="control" placeholder="Ví dụ: Nguyễn Thị Hồng" aria-describedby="fr-1" autocomplete="off" /><span class="field-msg" id="fr-1">Tên hiện trong lịch sử thao tác và trên quy trình bạn xuất ra.</span></label><div class="row-gap"><button class="btn btn-primary" type="button">Tiếp tục</button></div></main></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Chưa nhập tên · PRD01-AC-02, BR-03 · P-01</h2>
+    <p class="canvas-note">Để trống hoặc chỉ có dấu cách thì không tiếp tục được.</p>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="frame frame-first frame-full" data-theme="light"><span class="ambient-3"></span><p class="rail-brand">Thermora</p><main class="glass first-panel"><h1 class="t-page-title">Nhập tên của bạn</h1><label class="field is-error is-focus"><span>Tên hiển thị</span><input class="control" value="" aria-invalid="true" aria-describedby="fr-2" autocomplete="off" /><span class="field-msg" id="fr-2">Hãy nhập tên để tiếp tục.</span></label><div class="row-gap"><button class="btn btn-primary" type="button">Tiếp tục</button></div></main></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Tên quá 50 ký tự · PRD01-AC-04, BR-03 · P-01</h2>
+    <p class="canvas-note">Ô đang có 51 ký tự. Lỗi thay cho dòng ghi chú.</p>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng · 51 ký tự</p>
+        <article class="frame frame-first frame-full" data-theme="light"><span class="ambient-3"></span><p class="rail-brand">Thermora</p><main class="glass first-panel"><h1 class="t-page-title">Nhập tên của bạn</h1><label class="field is-error is-focus"><span>Tên hiển thị</span><input class="control" value="Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành Trần Văn B" aria-invalid="true" aria-describedby="fr-3" autocomplete="off" /><span class="field-msg" id="fr-3">Tên dài tối đa 50 ký tự.</span></label><div class="row-gap"><button class="btn btn-primary" type="button">Tiếp tục</button></div></main></article>
+      </div>
+    </div>
+  </body>
+</html>

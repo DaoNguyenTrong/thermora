@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Thành phần · Thermora</title>
+    <link rel="stylesheet" href="tokens.css" />
+    <link rel="stylesheet" href="board.css" />
+  </head>
+  <body>
+    <header class="canvas-head">
+      <p class="canvas-kicker">Design system · Thermora · v0.4</p>
+      <h1>Thành phần</h1>
+      <p>Mỗi control có đủ trạng thái nó thực sự có. Sáng bên trái, tối bên phải.</p>
+      <nav class="canvas-nav">
+        <a href="index.html">Mục lục</a>
+        <a href="foundations.html">Nền</a>
+        <a href="patterns.html">Khung</a>
+      </nav>
+    </header>
+
+    <h2 class="canvas-section">Nút</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="buttons-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="buttons-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Ô nhập, chọn, tick, công tắc, tìm</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="fields-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="fields-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Thông báo, chip, tab</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="status-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="status-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Hàng, menu, panel, toast, trống, đang tải</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="list-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="list-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Sao chép và hộp thoại</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="dialog-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="dialog-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Chọn một trong hai · PRD01-FR-07 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="choice-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="choice-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Trạng thái dịch vụ · PRD01-FR-03, FR-04 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="svc-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="svc-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Các bước đánh số · PRD01-FR-05 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="steps-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="steps-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Chờ đăng nhập và nút AI không dùng được · PRD01-FR-06, FR-08 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="wait-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="wait-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Khối chữ nhiều dòng · PRD01-FR-10 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="copy-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="copy-dark"></div></article>
+      </div>
+    </div>
+
+    <h2 class="canvas-section">Cấu trúc một thông báo · PRD01-BR-07 · P-01</h2>
+    <div class="pair">
+      <div>
+        <p class="pair-label">Sáng</p>
+        <article class="board board-wide" data-theme="light"><div class="stage" id="anatomy-light"></div></article>
+      </div>
+      <div>
+        <p class="pair-label">Tối</p>
+        <article class="board board-wide" data-theme="dark"><div class="stage" id="anatomy-dark"></div></article>
+      </div>
+    </div>
+
+    <template id="buttons">
+      <div class="glass stack">
+        <div class="matrix">
+          <span></span>
+          <span class="cap">Mặc định</span>
+          <span class="cap">Rê chuột</span>
+          <span class="cap">Focus</span>
+          <span class="cap">Đang nhấn</span>
+          <span class="cap">Đang tải</span>
+          <span class="cap">Tắt</span>
+          <span class="cap cap-name">Chính</span>
+          <button class="btn btn-primary" type="button">Lưu</button>
+          <button class="btn btn-primary is-hover" type="button">Lưu</button>
+          <button class="btn btn-primary is-focus" type="button">Lưu</button>
+          <button class="btn btn-primary is-pressed" type="button">Lưu</button>
+          <button class="btn btn-primary is-loading" type="button" aria-busy="true"><span class="spinner"></span>Lưu</button>
+          <button class="btn btn-primary" type="button" disabled>Lưu</button>
+          <span class="cap cap-name">Phụ</span>
+          <button class="btn btn-secondary" type="button">Xem</button>
+          <button class="btn btn-secondary is-hover" type="button">Xem</button>
+          <button class="btn btn-secondary is-focus" type="button">Xem</button>
+          <button class="btn btn-secondary is-pressed" type="button">Xem</button>
+          <button class="btn btn-secondary is-loading" type="button" aria-busy="true"><span class="spinner"></span>Xem</button>
+          <button class="btn btn-secondary" type="button" disabled>Xem</button>
+          <span class="cap cap-name">Không nền</span>
+          <button class="btn btn-ghost" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-hover" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-focus" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-pressed" type="button">Huỷ</button>
+          <button class="btn btn-ghost is-loading" type="button" aria-busy="true"><span class="spinner"></span>Huỷ</button>
+          <button class="btn btn-ghost" type="button" disabled>Huỷ</button>
+          <span class="cap cap-name">Nguy hiểm nhẹ</span>
+          <button class="btn btn-danger-soft" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-hover" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-focus" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-pressed" type="button">Xoá</button>
+          <button class="btn btn-danger-soft is-loading" type="button" aria-busy="true"><span class="spinner"></span>Xoá</button>
+          <button class="btn btn-danger-soft" type="button" disabled>Xoá</button>
+          <span class="cap cap-name">Nguy hiểm</span>
+          <button class="btn btn-danger" type="button">Xoá</button>
+          <button class="btn btn-danger is-hover" type="button">Xoá</button>
+          <button class="btn btn-danger is-focus" type="button">Xoá</button>
+          <button class="btn btn-danger is-pressed" type="button">Xoá</button>
+          <button class="btn btn-danger is-loading" type="button" aria-busy="true"><span class="spinner"></span>Xoá</button>
+          <button class="btn btn-danger" type="button" disabled>Xoá</button>
+        </div>
+        <div class="row-gap">
+          <button class="btn btn-primary" type="button">Lưu</button>
+          <span class="caption">Máy tính · cao 40</span>
+          <button class="btn btn-primary btn-phone" type="button">Lưu</button>
+          <span class="caption">Điện thoại · cao 44</span>
+          <button class="btn btn-secondary btn-sm" type="button">Xem</button>
+          <span class="caption">Bảng dày · cao 32</span>
+        </div>
+        <div class="row-gap">
+          <button class="btn btn-danger" type="button" disabled>Xoá</button>
+          <p class="reason">Dòng này đang được dùng. Đổi chỗ khác trước rồi mới xoá được.</p>
+        </div>
+      </div>
+    </template>
+
+    <template id="fields">
+      <div class="glass">
+        <div class="matrix matrix-5">
+          <span></span>
+          <span class="cap">Mặc định</span>
+          <span class="cap">Rê chuột</span>
+          <span class="cap">Focus</span>
+          <span class="cap">Tắt</span>
+          <span class="cap">Lỗi</span>
+
+          <span class="cap cap-name">Ô tick</span>
+          <label class="check"><input type="checkbox" /><span class="check-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Chỉ của tôi</span></label>
+          <label class="check is-hover"><input type="checkbox" /><span class="check-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Chỉ của tôi</span></label>
+          <label class="check is-focus"><input type="checkbox" checked /><span class="check-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Chỉ của tôi</span></label>
+          <label class="check"><input type="checkbox" disabled /><span class="check-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Chỉ của tôi</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Đã chọn</span>
+          <label class="check"><input type="checkbox" checked /><span class="check-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Chỉ của tôi</span></label>
+          <span class="unused">—</span>
+          <span class="unused">—</span>
+          <label class="check"><input type="checkbox" checked disabled /><span class="check-box"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg></span><span>Chỉ của tôi</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Công tắc</span>
+          <label class="switch"><input type="checkbox" /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <label class="switch is-hover"><input type="checkbox" /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <label class="switch is-focus"><input type="checkbox" checked /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <label class="switch"><input type="checkbox" disabled /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Đang bật</span>
+          <label class="switch"><input type="checkbox" checked /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <span class="unused">—</span>
+          <span class="unused">—</span>
+          <label class="switch"><input type="checkbox" checked disabled /><span class="switch-track"></span><span>Ẩn đã đóng</span></label>
+          <span class="unused">Không dùng</span>
+
+          <span class="cap cap-name">Ô nhập</span>
+          <label class="field"><span class="visually-hidden">Tên</span><input class="control" value="Nguyễn Thị Hồng" /></label>
+          <label class="field is-hover"><span class="visually-hidden">Tên</span><input class="control" value="Nguyễn Thị Hồng" /></label>
+          <label class="field is-focus"><span class="visually-hidden">Tên</span><input class="control is-focus" value="Nguyễn Thị Hồng" /></label>
+          <label class="field"><span class="visually-hidden">Tên</span><input class="control" value="Nguyễn Thị Hồng" disabled /></label>
+          <label class="field is-error"><span class="visually-hidden">Tên</span><input class="control" value=" " aria-invalid="true" /><span class="field-msg">Nhập tên trước khi lưu.</span></label>
+
+          <span class="cap cap-name">Chọn một</span>
+          <label class="field"><span class="visually-hidden">Chọn</span><span class="select-wrap"><select class="control select"><option>Một</option><option>Hai</option></select><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></span></label>
+          <label class="field is-hover"><span class="visually-hidden">Chọn</span><span class="select-wrap"><select class="control select"><option>Một</option></select><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></span></label>
+          <label class="field is-focus"><span class="visually-hidden">Chọn</span><span class="select-wrap"><select class="control select is-focus"><option>Một</option></select><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></span></label>
+          <label class="field"><span class="visually-hidden">Chọn</span><span class="select-wrap"><select class="control select" disabled><option>Một</option></select><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></span></label>
+          <label class="field is-error"><span class="visually-hidden">Chọn</span><span class="select-wrap"><select class="control select" aria-invalid="true"><option>Chọn một</option></select><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6" /></svg></span><span class="field-msg">Chọn một trước khi lưu.</span></label>
+
+          <span class="cap cap-name">Tìm kiếm</span>
+          <label class="field"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg><input class="control" placeholder="Tìm theo tên" /></span></label>
+          <label class="field is-hover"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg><input class="control" value="Hồng" /></span></label>
+          <label class="field is-focus"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg><input class="control is-focus" value="Hồng" /></span></label>
+          <label class="field"><span class="visually-hidden">Tìm</span><span class="search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.34-4.34" /> <circle cx="11" cy="11" r="8" /></svg><input class="control" placeholder="Tìm theo tên" disabled /></span></label>
+          <span class="unused">Không dùng</span>
+        </div>
+      </div>
+    </template>
+
+    <template id="status">
+      <div class="glass stack">
+        <div class="banner banner-info">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="M12 16v-4" /> <path d="M12 8h.01" /></svg>
+          <p>Việc này đang được xử lý. Dòng này luôn hiện.</p>
+        </div>
+        <div class="banner banner-success">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg>
+          <p>Đã lưu.</p>
+          <button class="icon-btn" type="button" aria-label="Đóng"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg></button>
+        </div>
+        <div class="banner banner-warning">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg>
+          <p>Còn thiếu một mục bắt buộc.</p>
+          <button class="btn-banner" type="button">Xem mục</button>
+        </div>
+        <div class="banner banner-danger">
+          <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></svg>
+          <p>Không lưu được. Không có gì bị xoá.</p>
+        </div>
+        <div class="row-gap">
+          <span class="chip chip-accent">Mới</span>
+          <span class="chip chip-success">Đã xong</span>
+          <span class="chip chip-warning">Cần thêm</span>
+          <span class="chip chip-danger">Lỗi</span>
+          <span class="chip chip-info">Đang xử lý</span>
+          <span class="chip chip-neutral">Đóng</span>
+        </div>
+        <div class="tabs" role="tablist">
+          <button class="tab is-current" type="button" role="tab" aria-selected="true">Đang mở 4</button>
+          <button class="tab is-hover" type="button" role="tab">Đã xong 12</button>
+          <button class="tab is-focus" type="button" role="tab">Cần thêm 1</button>
+        </div>
+      </div>
+    </template>
+
+    <template id="list">
+      <div class="stack">
+        <div class="cols-2">
+          <div class="glass">
+            <div class="list">
+              <div class="item">
+                <div>
+                  <p class="item-title">Dòng ngắn</p>
+                  <p class="item-meta">Cập nhật lúc 14:32</p>
+                </div>
+                <button class="btn btn-ghost btn-sm" type="button">Thao tác</button>
+              </div>
+              <div class="item is-hover">
+                <div>
+                  <p class="item-title">Nguyễn Thị Hồng Lê Minh Anh Vũ Đức Thành</p>
+                  <p class="item-meta">5 phút trước</p>
+                </div>
+                <button class="btn btn-ghost btn-sm is-focus" type="button" aria-expanded="true">Thao tác</button>
+                <div class="menu" role="menu">
+                  <button type="button" role="menuitem" class="is-hover">Sửa</button>
+                  <button type="button" role="menuitem">Xem</button>
+                  <div class="menu-sep"></div>
+                  <button type="button" role="menuitem" class="is-danger">Xoá</button>
+                </div>
+              </div>
+              <div class="item is-confirm">
+                <p>Xoá dòng này? Việc này không hoàn tác được.</p>
+                <div class="item-actions">
+                  <button class="btn btn-danger btn-sm" type="button">Xoá</button>
+                  <button class="btn btn-secondary btn-sm" type="button">Huỷ</button>
+                </div>
+              </div>
+              <div class="item">
+                <div class="edit-line">
+                  <label class="visually-hidden" for="row-name">Tên</label>
+                  <input id="row-name" class="control" value="Dòng đang sửa" />
+                  <button class="btn btn-primary btn-sm" type="button">Lưu</button>
+                  <button class="btn btn-ghost btn-sm" type="button">Huỷ</button>
+                </div>
+              </div>
+              <div class="item is-disabled">
+                <div>
+                  <p class="item-title">Dòng chỉ xem</p>
+                  <p class="item-meta">Không sửa được từ đây.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <aside class="glass panel">
+            <div class="panel-head">
+              <h2 class="section-title">Chi tiết</h2>
+              <button class="icon-btn" type="button" aria-label="Đóng"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg></button>
+            </div>
+            <label class="field">
+              <span>Tên</span>
+              <input class="control" value="Nguyễn Thị Hồng" />
+              <span class="field-msg">Tên hiện trên máy này.</span>
+            </label>
+            <div class="row-gap">
+              <button class="btn btn-primary" type="button">Lưu</button>
+              <button class="btn btn-ghost" type="button">Huỷ</button>
+            </div>
+          </aside>
+        </div>
+        <div class="row-gap" style="align-items: flex-start">
+          <div class="toast">
+            <span class="toast-success"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg></span>
+            <p>Đã lưu.</p>
+            <button class="icon-btn" type="button" aria-label="Đóng"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18" /> <path d="m6 6 12 12" /></svg></button>
+          </div>
+          <div class="toast">
+            <span class="toast-danger"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></svg></span>
+            <p>Chưa lưu được.</p>
+            <button class="btn btn-secondary btn-sm" type="button">Thử lại</button>
+          </div>
+        </div>
+        <div class="glass cols-2">
+          <div class="empty">
+            <h3>Chưa có mục nào</h3>
+            <p class="item-meta">Mục bạn thêm sẽ nằm ở đây.</p>
+            <button class="btn btn-primary" type="button">Thêm mục</button>
+          </div>
+          <div class="loading">
+            <h3>Đang tải</h3>
+            <span class="skel" style="width: 80%"></span>
+            <span class="skel" style="width: 55%"></span>
+            <span class="skel" style="width: 68%"></span>
+          </div>
+        </div>
+        <div class="tip-wrap">
+          <span class="tip" role="tooltip">Sao chép</span>
+          <button class="icon-btn is-focus" type="button" aria-label="Sao chép"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg></button>
+        </div>
+      </div>
+    </template>
+
+    <template id="dialog">
+      <div class="stack">
+        <div class="glass cols">
+          <div class="copy-block">
+            <p class="caption">Thường</p>
+            <div class="copy-text">Thermora 0.1.0 trên Windows.</div>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Sao chép</button>
+            <span class="visually-hidden" role="status"></span>
+          </div>
+          <div class="copy-block">
+            <p class="caption">Đã sao chép</p>
+            <div class="copy-text">Thermora 0.1.0 trên Windows.</div>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Đã sao chép</button>
+            <span class="visually-hidden" role="status">Đã sao chép</span>
+          </div>
+          <div class="copy-block">
+            <p class="caption">Không sao chép được</p>
+            <div class="copy-text is-selected">Thermora 0.1.0 trên Windows.</div>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Sao chép</button>
+            <span class="visually-hidden" role="status">Chưa sao chép được. Dòng chữ đã được chọn sẵn.</span>
+          </div>
+        </div>
+        <div class="dialog-stage">
+          <div class="dialog" role="dialog" aria-labelledby="dlg-title">
+            <h2 id="dlg-title">Xoá dữ liệu trên máy này?</h2>
+            <p>Việc này không hoàn tác được. Mọi thứ đã lưu trên máy sẽ mất.</p>
+            <label class="field" style="margin-top: 16px">
+              <span>Lý do, nếu cần</span>
+              <input class="control" />
+            </label>
+            <div class="actions">
+              <button class="btn btn-ghost" type="button">Huỷ</button>
+              <button class="btn btn-danger" type="button">Xoá</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="choice">
+      <div class="glass stack">
+        <div class="matrix matrix-5">
+          <span></span>
+          <span class="cap">Mặc định</span>
+          <span class="cap">Rê chuột</span>
+          <span class="cap">Focus</span>
+          <span class="cap">Đã chọn</span>
+          <span class="cap">Tắt</span>
+          <span class="cap cap-name">Radio</span>
+          <label class="radio"><input type="radio" name="rd1"  /><span class="radio-dot"></span><span>Claude Code</span></label>
+          <label class="radio is-hover"><input type="radio" name="rd2"  /><span class="radio-dot"></span><span>Claude Code</span></label>
+          <label class="radio is-focus"><input type="radio" name="rd3"  /><span class="radio-dot"></span><span>Claude Code</span></label>
+          <label class="radio"><input type="radio" name="rd4" checked /><span class="radio-dot"></span><span>Claude Code</span></label>
+          <label class="radio"><input type="radio" name="rd5" disabled /><span class="radio-dot"></span><span>Codex</span></label>
+          <span class="cap cap-name">Thẻ chọn</span>
+          <label class="choice"><input type="radio" name="cc6"  /><span class="radio-dot"></span><span><span class="choice-title">Claude Code</span><br /><span class="choice-meta">2.1.4</span></span></label>
+          <label class="choice is-hover"><input type="radio" name="cc7"  /><span class="radio-dot"></span><span><span class="choice-title">Claude Code</span><br /><span class="choice-meta">2.1.4</span></span></label>
+          <label class="choice is-focus"><input type="radio" name="cc8"  /><span class="radio-dot"></span><span><span class="choice-title">Claude Code</span><br /><span class="choice-meta">2.1.4</span></span></label>
+          <label class="choice"><input type="radio" name="cc9" checked /><span class="radio-dot"></span><span><span class="choice-title">Claude Code</span><br /><span class="choice-meta">2.1.4</span></span></label>
+          <label class="choice"><input type="radio" name="cc10" disabled /><span class="radio-dot"></span><span><span class="choice-title">Codex</span><br /><span class="choice-meta">Chưa đăng nhập</span></span></label>
+        </div>
+        <fieldset class="choice-group">
+          <legend class="t-section-title">Dùng dịch vụ AI nào?</legend>
+          <label class="choice"><input type="radio" name="grp" checked /><span class="radio-dot"></span><span><span class="choice-title">Claude Code</span><br /><span class="choice-meta">2.1.4 · Đăng nhập bằng tài khoản Claude</span></span></label>
+          <label class="choice"><input type="radio" name="grp" /><span class="radio-dot"></span><span><span class="choice-title">Codex</span><br /><span class="choice-meta">0.46.0 · Đăng nhập bằng tài khoản ChatGPT</span></span></label>
+        </fieldset>
+        <div class="row-gap">
+          <button class="btn btn-primary" type="button">Dùng dịch vụ này</button>
+          <span class="caption">Bạn đổi lại được trong phần cài đặt.</span>
+        </div>
+      </div>
+    </template>
+
+    <template id="svc">
+      <div class="glass stack">
+        <div class="row-gap">
+          <span class="chip chip-success has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Sẵn sàng</span>
+          <span class="chip chip-warning has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V12" /> <path d="m16.5 14.5 5 5" /> <path d="m16.5 19.5 5-5" /> <path d="M21 10.5V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.13-.074" /> <path d="M3.29 7 12 12l8.71-5" /> <path d="m7.5 4.27 8.997 5.148" /></svg>Chưa cài đặt</span>
+          <span class="chip chip-warning has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m10 17 5-5-5-5" /> <path d="M15 12H3" /> <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /></svg>Chưa đăng nhập</span>
+          <span class="chip chip-warning has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg>Phiên bản chưa được hỗ trợ</span>
+          <span class="chip chip-neutral has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="M9 9.5a3 2.5 0 016 0c0 2-2 2-3 3.5" /> <path d="M12 17h.01" /></svg>Không kiểm tra được</span>
+          <span class="chip chip-info has-icon" role="status"><span class="spinner" aria-hidden="true"></span>Đang kiểm tra</span>
+        </div>
+        <div>
+          
+          <div class="svc-row">
+            <div><p class="svc-name"><span class="t-row-title">Claude Code</span><span class="chip chip-accent">Đang dùng</span></p><span class="svc-ver">2.1.4</span></div>
+            <div><span class="chip chip-success has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg>Sẵn sàng</span></div>
+            <p class="svc-step">Đang dùng cho công việc của bạn.</p>
+            <span></span>
+          </div>
+          
+          <div class="svc-row">
+            <div><p class="svc-name"><span class="t-row-title">Codex</span></p><span class="svc-ver">0.46.0</span></div>
+            <div><span class="chip chip-warning has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m10 17 5-5-5-5" /> <path d="M15 12H3" /> <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" /></svg>Chưa đăng nhập</span></div>
+            <p class="svc-step">Đăng nhập bằng tài khoản ChatGPT của bạn.</p>
+            <button class="btn btn-secondary btn-sm" type="button">Xem hướng dẫn</button>
+          </div>
+          
+          <div class="svc-row">
+            <div><p class="svc-name"><span class="t-row-title">Codex</span></p><span class="svc-ver">Chưa có</span></div>
+            <div><span class="chip chip-warning has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V12" /> <path d="m16.5 14.5 5 5" /> <path d="m16.5 19.5 5-5" /> <path d="M21 10.5V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.729l7 4a2 2 0 0 0 2 .001l.13-.074" /> <path d="M3.29 7 12 12l8.71-5" /> <path d="m7.5 4.27 8.997 5.148" /></svg>Chưa cài đặt</span></div>
+            <p class="svc-step">Nhờ người hỗ trợ bạn cài Codex trên máy này.</p>
+            <button class="btn btn-secondary btn-sm" type="button">Xem hướng dẫn</button>
+          </div>
+          
+          <div class="svc-row">
+            <div><p class="svc-name"><span class="t-row-title">Claude Code</span></p><span class="svc-ver">1.0.9</span></div>
+            <div><span class="chip chip-warning has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg>Phiên bản chưa được hỗ trợ</span></div>
+            <p class="svc-step">Phiên bản quá cũ. Nhờ người hỗ trợ bạn cập nhật.</p>
+            <button class="btn btn-secondary btn-sm" type="button">Xem hướng dẫn</button>
+          </div>
+          
+          <div class="svc-row">
+            <div><p class="svc-name"><span class="t-row-title">Codex</span></p><span class="svc-ver">0.46.0</span></div>
+            <div><span class="chip chip-neutral has-icon"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="M9 9.5a3 2.5 0 016 0c0 2-2 2-3 3.5" /> <path d="M12 17h.01" /></svg>Không kiểm tra được</span></div>
+            <p class="svc-step">Máy chưa có mạng. Kiểm tra mạng rồi kiểm tra lại.</p>
+            <button class="btn btn-secondary btn-sm" type="button">Kiểm tra lại</button>
+          </div>
+          
+          <div class="svc-row">
+            <div><p class="svc-name"><span class="t-row-title">Claude Code</span></p><span class="svc-ver">—</span></div>
+            <div><span class="chip chip-info has-icon" role="status"><span class="spinner" aria-hidden="true"></span>Đang kiểm tra</span></div>
+            <p class="svc-step">Chờ tối đa 10 giây. Bạn vẫn dùng các phần khác được.</p>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="steps">
+      <div class="glass stack">
+        <div class="cols">
+          <div class="stack-sm">
+            <p class="caption">Mặc định</p>
+            <ol class="steps">
+              <li><div class="step-body"><p>Nhờ người hỗ trợ bạn cài Codex trên máy này.</p></div></li>
+              <li><div class="step-body"><p>Gửi người hỗ trợ bạn dòng dưới đây, hoặc mở trang hướng dẫn của Codex.</p>
+                <div class="cmd"><code>npm install -g @openai/codex</code><button class="icon-btn" type="button" aria-label="Sao chép dòng này"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg></button></div>
+                <a class="link link-ext" href="#huong-dan-codex">Mở trang hướng dẫn của Codex<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6" /> <path d="M10 14 21 3" /> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg></a></div></li>
+              <li><div class="step-body"><p>Khi cài xong, chọn Kiểm tra lại.</p></div></li>
+            </ol>
+            <div class="steps-foot"><button class="btn btn-secondary" type="button">Kiểm tra lại</button></div>
+          </div>
+          <div class="stack-sm">
+            <p class="caption">Đang kiểm tra lại</p>
+            <ol class="steps">
+              <li><div class="step-body"><p>Nhờ người hỗ trợ bạn cài Codex trên máy này.</p></div></li>
+              <li><div class="step-body"><p>Gửi người hỗ trợ bạn dòng dưới đây, hoặc mở trang hướng dẫn của Codex.</p>
+                <div class="cmd"><code>npm install -g @openai/codex</code><button class="icon-btn" type="button" aria-label="Sao chép dòng này"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg></button></div>
+                <a class="link link-ext" href="#huong-dan-codex">Mở trang hướng dẫn của Codex<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6" /> <path d="M10 14 21 3" /> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg></a></div></li>
+              <li><div class="step-body"><p>Khi cài xong, chọn Kiểm tra lại.</p></div></li>
+            </ol>
+            <div class="steps-foot"><button class="btn btn-secondary is-loading" type="button" aria-busy="true"><span class="spinner" aria-hidden="true"></span>Kiểm tra lại</button><span class="visually-hidden" role="status">Đang kiểm tra Codex</span></div>
+          </div>
+          <div class="stack-sm">
+            <p class="caption">Vẫn chưa sẵn sàng</p>
+            <div class="banner banner-warning"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><p>Codex vẫn chưa sẵn sàng. Công việc của bạn vẫn được giữ nguyên. Làm lại bước 2, rồi kiểm tra lại.</p></div>
+            <ol class="steps">
+              <li><div class="step-body"><p>Nhờ người hỗ trợ bạn cài Codex trên máy này.</p></div></li>
+              <li><div class="step-body"><p>Gửi người hỗ trợ bạn dòng dưới đây, hoặc mở trang hướng dẫn của Codex.</p>
+                <div class="cmd"><code>npm install -g @openai/codex</code><button class="icon-btn" type="button" aria-label="Sao chép dòng này"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /> <path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></svg></button></div>
+                <a class="link link-ext" href="#huong-dan-codex">Mở trang hướng dẫn của Codex<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h6v6" /> <path d="M10 14 21 3" /> <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /></svg></a></div></li>
+              <li><div class="step-body"><p>Khi cài xong, chọn Kiểm tra lại.</p></div></li>
+            </ol>
+            <div class="steps-foot"><button class="btn btn-secondary" type="button">Kiểm tra lại</button></div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="wait">
+      <div class="glass stack">
+        <div class="cols">
+          <section class="wait" role="status">
+            <p class="caption">Đang chờ</p>
+            <div class="wait-head"><span class="spinner" aria-hidden="true"></span><h3 class="t-section-title">Đang chờ bạn đăng nhập</h3></div>
+            <p>Trang đăng nhập của Claude đã mở trong trình duyệt. Hãy đăng nhập ở đó bằng tài khoản của bạn. Thermora không hỏi mật khẩu hay mã nào.</p>
+            <button class="btn btn-ghost" type="button">Huỷ</button>
+          </section>
+          <section class="wait">
+            <p class="caption">Đăng nhập xong</p>
+            <div class="banner banner-success" role="status"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <path d="m16 9-5.5 5.5L8 12" /></svg><p>Claude Code đã sẵn sàng.</p></div>
+          </section>
+          <section class="wait">
+            <p class="caption">Chưa đăng nhập xong</p>
+            <div class="banner banner-warning" role="status"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><p>Claude Code vẫn chưa đăng nhập. Công việc của bạn vẫn được giữ nguyên. Mở lại trang đăng nhập, hoặc nhờ người hỗ trợ bạn.</p></div>
+            <div class="row-gap"><button class="btn btn-secondary" type="button">Mở lại trang đăng nhập</button><button class="btn btn-ghost" type="button">Huỷ</button></div>
+          </section>
+        </div>
+        <div class="stack-sm">
+          <p class="caption">Nút cần AI khi chưa có dịch vụ sẵn sàng</p>
+          <div class="unavail">
+            <button class="btn btn-primary" type="button" aria-disabled="true" aria-describedby="why1">Gửi cho AI</button>
+            <p class="unavail-reason" id="why1">Chưa có dịch vụ AI nào sẵn sàng. <a class="link" href="#thiet-lap">Xem hướng dẫn thiết lập</a></p>
+          </div>
+          <div class="unavail">
+            <button class="btn btn-primary is-focus" type="button" aria-disabled="true" aria-describedby="why2">Gửi cho AI</button>
+            <p class="unavail-reason" id="why2">Chưa có dịch vụ AI nào sẵn sàng. <a class="link" href="#thiet-lap">Xem hướng dẫn thiết lập</a></p>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <template id="copy">
+      <div class="glass cols">
+          <div class="copy-block">
+            <p class="caption">Thường</p>
+            <pre class="copy-text" tabindex="0" aria-label="Thông tin gửi cho người hỗ trợ">Thermora 0.1.0
+Dịch vụ đang dùng: Claude Code
+Claude Code 2.1.4: Sẵn sàng
+Codex 0.31.2: Phiên bản chưa được hỗ trợ</pre>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Sao chép</button>
+            <span class="visually-hidden" role="status"></span>
+          </div>
+          <div class="copy-block">
+            <p class="caption">Đã sao chép</p>
+            <pre class="copy-text" tabindex="0" aria-label="Thông tin gửi cho người hỗ trợ">Thermora 0.1.0
+Dịch vụ đang dùng: Claude Code
+Claude Code 2.1.4: Sẵn sàng
+Codex 0.31.2: Phiên bản chưa được hỗ trợ</pre>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Đã sao chép</button>
+            <span class="visually-hidden" role="status">Đã sao chép</span>
+          </div>
+          <div class="copy-block">
+            <p class="caption">Không sao chép được</p>
+            <pre class="copy-text is-selected" tabindex="0" aria-label="Thông tin gửi cho người hỗ trợ">Thermora 0.1.0
+Dịch vụ đang dùng: Claude Code
+Claude Code 2.1.4: Sẵn sàng
+Codex 0.31.2: Phiên bản chưa được hỗ trợ</pre>
+            <button class="btn btn-secondary btn-sm copy-btn" type="button">Sao chép</button>
+            <span class="visually-hidden" role="status">Chưa sao chép được. Nội dung đã được chọn sẵn.</span>
+          </div>
+      </div>
+    </template>
+
+    <template id="anatomy">
+      <div class="glass cols-2">
+        <div class="stack">
+          <div class="banner banner-warning"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3" /> <path d="M12 9v4" /> <path d="M12 17h.01" /></svg><p>Gói Claude của bạn đã dùng hết lượt. Công việc đến giờ vẫn được giữ nguyên. Dùng lại được sau 14:30, hoặc bạn chuyển sang Codex.</p><div class="banner-actions"><button class="btn-banner" type="button">Thử lại</button><button class="btn-banner" type="button">Chuyển sang Codex</button></div></div>
+          <div class="banner banner-danger"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" /> <line x1="12" x2="12" y1="8" y2="12" /> <line x1="12" x2="12.01" y1="16" y2="16" /></svg><p>Không kết nối được với Claude Code. Công việc đến giờ vẫn được giữ nguyên. Hãy thử lại, hoặc sao chép thông tin để gửi người hỗ trợ bạn.</p><div class="banner-actions"><button class="btn-banner" type="button">Thử lại</button><button class="btn-banner" type="button">Sao chép thông tin</button></div></div>
+          <div class="empty">
+            <h3>Chưa có dịch vụ AI nào sẵn sàng</h3>
+            <p class="item-meta">Dữ liệu trên máy bạn không bị ảnh hưởng. Hãy làm theo hướng dẫn để Claude Code hoặc Codex dùng được.</p>
+            <button class="btn btn-primary" type="button">Xem hướng dẫn thiết lập</button>
+          </div>
+        </div>
+        <div class="stack">
+          <h3 class="t-section-title">Mỗi thông báo trả lời ba câu</h3>
+          <ol class="rule-list">
+            <li><p><strong class="t-row-title">Chuyện gì đã xảy ra.</strong> <span class="t-secondary">Một câu thẳng, không nêu nguyên nhân kỹ thuật.</span></p></li>
+            <li><p><strong class="t-row-title">Công việc có an toàn không.</strong> <span class="t-secondary">Nói rõ công việc còn nguyên hay chưa.</span></p></li>
+            <li><p><strong class="t-row-title">Làm gì tiếp theo.</strong> <span class="t-secondary">Câu cuối, kèm nút nếu có.</span></p></li>
+          </ol>
+          <dl class="term-table">
+            <dt>Không viết</dt><dd>Viết</dd>
+            <dt>token, mã xác thực</dt><dd>đăng nhập</dd>
+            <dt>API, máy chủ, timeout</dt><dd>không kết nối được, mất quá lâu</dd>
+            <dt>CLI, terminal, dòng lệnh</dt><dd>nhờ người hỗ trợ bạn</dd>
+            <dt>quota, rate limit</dt><dd>gói của bạn đã dùng hết lượt</dd>
+            <dt>mã lỗi, stack trace</dt><dd>không hiện; chỉ nằm trong thông tin sao chép</dd>
+          </dl>
+        </div>
+      </div>
+    </template>
+
+    <script>
+      const ids = ["buttons", "fields", "status", "list", "dialog", "choice", "svc", "steps", "wait", "copy", "anatomy"];
+      for (const id of ids) {
+        const html = document.getElementById(id).innerHTML;
+        for (const theme of ["light", "dark"]) {
+          const stage = document.getElementById(id + "-" + theme);
+          stage.innerHTML = html;
+          const renamed = new Map();
+          stage.querySelectorAll("[id]").forEach((node) => {
+            const next = node.id + "-" + theme;
+            renamed.set(node.id, next);
+            node.id = next;
+          });
+          stage.querySelectorAll("[aria-labelledby], [aria-describedby], label[for]").forEach((node) => {
+            for (const attr of ["aria-labelledby", "aria-describedby", "for"]) {
+              const value = node.getAttribute(attr);
+              if (value && renamed.has(value)) node.setAttribute(attr, renamed.get(value));
+            }
+          });
+          stage.querySelectorAll("input[name]").forEach((node) => {
+            node.name = node.name + "-" + theme;
+          });
+        }
+      }
+    </script>
+  </body>
+</html>

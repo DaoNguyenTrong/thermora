@@ -17,7 +17,6 @@ Editing a release plan (reordering, moving a story) raises its own version and t
 
 ## Catalogue
 
-No release plans yet.
-
 | Code | PRD | Status | Version | REL done |
 |---|---|---|---|---|
+| [`PRD01-REL`](PRD01-setup.md) | PRD01 Setup and connection | Approved | 0.2 | 0/2 |
