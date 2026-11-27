@@ -3,7 +3,7 @@
 | Item | Value |
 | --- | --- |
 | Status | Approved |
-| Version | 0.1 |
+| Version | 0.2 |
 | Updated | 2026-11-27 |
 | Canvas | `docs/design/01-setup/` (open `index.html`) |
 | Approver | PO + Design lead |
@@ -21,7 +21,7 @@ The boards use only `../system/tokens.css`, `../system/board.css` and the system
 | `03-setup-help.html` | Hướng dẫn thiết lập (1 frame) | PRD01-FR-05, FR-08, AC-08, AC-13, AC-22, AC-27 | P-01 |
 | `04-sign-in.html` | Đăng nhập dịch vụ AI, cases a and b (5 frames) | PRD01-FR-06, AC-09, AC-14, AC-15, AC-16, AC-27 | P-01 |
 | `05-data-reminder.html` | Nhắc nhở về dữ liệu (light and dark) | PRD01-FR-09, AC-23, AC-25 | P-01 |
-| `06-choose-and-unavailable.html` | Chọn dịch vụ và nút AI chưa dùng được (3 frames, placeholder) | PRD01-FR-07, FR-08, AC-17, AC-21 | P-01 |
+| `06-choose-and-unavailable.html` | Chọn dịch vụ và nút AI chưa dùng được (4 frames, placeholder) | PRD01-FR-07, FR-08, AC-17, AC-21 | P-01 |
 
 Boards 05 and 06 show a placeholder screen named "Dự án" with a "Gửi cho AI" button. It stands for the work PRD02 builds, is labelled as a placeholder on the board, and is not a product control.
 
@@ -37,14 +37,14 @@ Boards 05 and 06 show a placeholder screen named "Dự án" with a "Gửi cho AI
 | AC-08 | 03 | Not installed |
 | AC-09 | 04 frames 1 to 3 and 5 | Installed but not signed in |
 | AC-10 | 02 frame 2 | Version not supported |
-| AC-11 | 02 frame 3 | Cannot be checked, offline |
+| AC-11 | 02 frame 3 | Cannot be checked; the text never says the machine is offline, only "took too long" or "not confirmed", then "check the network and check again" |
 | AC-39 | 02 frames 1 and 3 | Working indicator; "took too long" |
 | FR-04, AC-12 | rail indicator in every frame; 02 | Both services listed, the one in use marked |
 | FR-05, AC-13 | 03 | Numbered steps for each service; supporter text |
 | FR-06, AC-14, AC-15, AC-16 | 04 | Both case a and case b; no field for password, code or token |
-| FR-07, AC-17 | 06 frames 1 and 2 | Asked once, at first use of the placeholder action |
+| FR-07, AC-17 | 06 frames 1 and 2, rail in frame 4 | Asked once, at first use of the placeholder action; the rail then shows the chosen service |
 | AC-19 | 02 frame 2, 04 frame 4 | One Ready service used without asking, and said so |
-| FR-08, AC-21 | 06 frame 3 | Placeholder action unavailable, reason and link to setup help |
+| FR-08, AC-21 | 06 frames 3 and 4 | Placeholder action unavailable, reason and link to setup help; frame 4 is the chosen service no longer Ready, with no switch to the other service |
 | AC-22 | 03 | Opens to the setup help |
 | FR-09, AC-23, AC-25 | 05 (light and dark) | One button, no claim about the training option |
 | FR-10 (AC-27 only) | 03, 04 frame 5 | Multi-line copy block with states, versions and service names |
@@ -72,6 +72,11 @@ Not covered: none of the REL-1 FRs or ACs lacks a board, except the ones above t
 14. [assumption] Landing after the first-run page (PRD01 does not state it): the "Dịch vụ AI" page while no service is Ready or the check is running, then "Dự án" once one is Ready. Design lead to confirm.
 15. [call] FR-06: cases a and b both stay drawn until the technical design decides (Tech lead, with appsec), because the providers' behaviour when launched without a terminal is not confirmed.
 
+16. [call] (0.2, Q4) Offline is never stated. Thermora cannot tell no network from another failed check, so each "Không kiểm tra được" row says "Kiểm tra mất quá lâu." or "Chưa xác nhận được.", then "Kiểm tra kết nối mạng rồi kiểm tra lại."; the banner already says only that nothing is confirmed.
+17. [call] (0.2, Q5) Chosen service not Ready: rail shows the service name with "Đã chọn · Chưa sẵn sàng" (the system's warning indicator, new text only). The action keeps the unavailable-action pattern, reason "Dịch vụ bạn đã chọn chưa sẵn sàng." and the link "Xem hướng dẫn thiết lập". The reason does not say why (not installed, signed out, too old); the setup help does. No switch to the other service.
+18. [call] (0.2, Q10) The waiting block of case a also says "Đừng gửi mật khẩu hay mã cho ai.", as case b does.
+19. [call] (0.2, Q8) Subscription line: in 03 each install list gains a step "Khi cài xong, đăng nhập bằng tài khoản gói đăng ký của bạn." before "Chọn Kiểm tra lại."; in 04 the sign-in steps say "tài khoản gói đăng ký" (Claude, in case a and b).
+
 ## Open questions
 
 1. Tech-lead: can the provider's own sign-in be started without a terminal for each tool (case a or b of FR-06)? Both are drawn until it is decided. Which tool is which case may differ.
@@ -86,3 +91,5 @@ Not covered: none of the REL-1 FRs or ACs lacks a board, except the ones above t
 | 2026-11-27 | 0.1 | First boards of PRD01-REL-1 for review | metadata |
 | 2026-11-27 | 0.1 | SA rulings: provider setting paths, checking indicator, landing and sign-in cases recorded | SA (on behalf of user) |
 | 2026-11-27 | 0.1 | User approval of the REL-1 boards, including the reminder side panel, the two new rail-indicator wordings, the landing after the first-run page and the case b sign-in wording. FR-06 case a or b stays open for the technical design | user decision (PO + Design lead: DaoNguyenTrong) |
+| 2026-11-27 | 0.2 | Q4 offline wording, Q5 chosen-service-not-ready frame, Q10 waiting text, Q8 subscription line | user decision (PO + Design lead: DaoNguyenTrong), 2026-11-27 |
+| 2026-11-27 | 0.2 | User approval of v0.2, including the rail wording "Claude Code · Đã chọn · Chưa sẵn sàng" and the subscription-account wording in boards 03 and 04 | user decision (Design lead: DaoNguyenTrong) |
